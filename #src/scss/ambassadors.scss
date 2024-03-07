@@ -50,7 +50,7 @@
         .media-cover {
             height: 100%;
             border-radius: 50%;
-            transition: all .3s ease-in-out;
+           // transition: all .3s ease-in-out;
         }
         .swiper {
             display: flex;
@@ -79,6 +79,7 @@
             }
             .media-cover {
                 transform: scale(1.25);
+                transition: all .3s ease-in-out;
             }
         }
     }

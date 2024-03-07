@@ -2071,8 +2071,6 @@ h6,
 .ambassadors__thumbswiper .media-cover {
   height: 100%;
   border-radius: 50%;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .ambassadors__thumbswiper .swiper {
@@ -2117,6 +2115,8 @@ h6,
   -webkit-transform: scale(1.25);
   -ms-transform: scale(1.25);
   transform: scale(1.25);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .ambassadors__svg {

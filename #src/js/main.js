@@ -268,30 +268,6 @@ if (mainInfo) {
 // ambassadors swiper
 const ambass = document.querySelector(".ambassadors")
 if (ambass) {
-  let slideCount = ambass.querySelectorAll(".ambassadors__mainswiper .swiper-slide").length
-  const ambassThumbs = new Swiper(document.querySelector(".ambassadors__thumbswiper"),{
-    slidesPerView: 'auto',
-    observe: true,
-    observeParents: true,
-    centeredSlides: true,
-    loop: true,
-    slideToClickedSlide: true,
-  })
-  const ambassSwiper = new Swiper(document.querySelector(".ambassadors__mainswiper"),{
-    observe: true,
-    observeParents: true,
-    effect: "fade",
-    fadeEffect: {
-      crossFade: true
-    },
-    loop: true,
-    loopedSlides: slideCount,
-     autoplay: {
-      delay: 11000,
-    },
-  })
-  ambassSwiper.controller.control = ambassThumbs;
-  ambassThumbs.controller.control = ambassSwiper;
   let svgCircle = ambass.querySelectorAll(".ambassadors__svg-circle")
   let svgProgress = ambass.querySelectorAll(".ambassadors__svg-progress")
   let svgPath = svgCircle[0].getTotalLength()
@@ -303,6 +279,31 @@ if (ambass) {
     item.style.strokeDasharray = svgPath + 10 + "px"
     item.style.strokeDashoffset = svgPath + 10 + "px"
   })
+  let slideCount = ambass.querySelectorAll(".ambassadors__mainswiper .swiper-slide").length
+  const ambassThumbs = new Swiper(document.querySelector(".ambassadors__thumbswiper"),{
+    slidesPerView: 'auto',
+    observe: true,
+    observeParents: true,
+    centeredSlides: true,
+    loop: true,
+    slideToClickedSlide: true,
+    autoplay: {
+      delay: 10500,
+      disableOnInteraction: false
+    },
+  })
+  const ambassSwiper = new Swiper(document.querySelector(".ambassadors__mainswiper"),{
+    observe: true,
+    observeParents: true,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true
+    },
+    loop: true,
+    loopedSlides: slideCount,
+  })
+  ambassSwiper.controller.control = ambassThumbs;
+  ambassThumbs.controller.control = ambassSwiper;
 }
 const svgPath = document.querySelectorAll(".svg-path")
 if (svgPath) {
