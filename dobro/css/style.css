@@ -977,10 +977,6 @@ h6,
   opacity: 1;
 }
 
-.header.show-menu .header__profile {
-  border-color: #E6ECFF;
-}
-
 .header.show-menu .header__profile svg {
   stroke: #E6ECFF;
 }
@@ -3162,7 +3158,6 @@ h6,
     font-size: 0;
     padding: 0;
     margin-right: 16px;
-    border: 1px solid #41536D;
     border-radius: 50%;
   }
 
