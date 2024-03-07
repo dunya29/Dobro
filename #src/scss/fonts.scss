@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Graphik";
+    font-weight: 300;
+    font-style: normal;
+    src: local("GraphikLight"), local("Graphik-Light"), url("../fonts/Graphik-Light.woff2") format("woff2"), url("../fonts/Graphik-Light.woff") format("woff"), url("../fonts/Graphik-Light.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Graphik";
+    font-weight: 400;
+    font-style: normal;
+    src: local("GraphikRegular"), local("Graphik-Regular"), url("../fonts/Graphik-Regular.woff2") format("woff2"), url("../fonts/Graphik-Regular.woff") format("woff"), url("../fonts/Graphik-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Graphik";
+    font-weight: 500;
+    font-style: normal;
+    src: local("GraphikMedium"), local("Graphik-Medium"), url("../fonts/Graphik-Medium.woff2") format("woff2"), url("../fonts/Graphik-Medium.woff") format("woff"), url("../fonts/Graphik-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Graphik";
+    font-weight: 700;
+    font-style: normal;
+    src: local("GraphikBold"), local("Graphik-Bold"), url("../fonts/Graphik-Bold.woff2") format("woff2"), url("../fonts/Graphik-Bold.woff") format("woff"), url("../fonts/Graphik-Bold.ttf") format("truetype");
+}

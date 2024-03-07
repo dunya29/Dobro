@@ -1,0 +1,397 @@
+
+.header {
+    padding-top: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+    &.fixed {
+        .header__logo, .header__right {
+            padding: 16px;
+            border-radius: 60px;
+            background: $white-blue;
+        }
+        .header__logo {
+            padding: 20px 25px;
+            svg {
+                max-width: 238px;
+            }
+        }
+        .logo-nn {
+            opacity: 0;
+        }
+    }
+    &.show-menu {
+        .menu {
+            visibility: visible;
+            opacity: 1;
+        }
+        .header__logo, .header__right {
+            padding-left: 0!important;
+            padding-right: 0!important;
+            background: transparent!important;
+        }
+        .logo-nn,.header__logo, .header__menu--btn {
+            svg {
+                fill: $light-blue;
+            }
+        }
+        .header__menu--btn {
+            border-color: $light-blue;
+            .menu-open {
+                opacity: 0;
+            }
+            .menu-close {
+                opacity: 1;
+            }
+        }
+        .header__profile {
+            border-color: $light-blue;
+            svg {
+                stroke: $light-blue;
+            }
+        }
+    }
+    &.header--main {
+        .header__logo {
+            pointer-events: none;
+        }
+    }
+    .logo-nn {
+        grid-column: 7/9;
+        transition: all .3s linear;
+        svg {
+            max-width: 135px;
+            max-height: 91px;
+        }
+    }
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(24,1fr);
+        gap: 24px;
+        align-items: center;
+    }
+    &__logo, &__right {
+        padding: 16px 0;
+        transition: all .3s linear;
+    }
+    &__logo {
+        grid-column: 2/6;
+        svg {
+            fill: $carmine;
+            max-width: 277px;
+            max-height: 67px;
+            
+        transition: all .3s linear;
+        }
+    }
+    &__right {
+        grid-column: 10/25;
+        justify-self: end;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &__btns {
+        width: 371px;
+        height: 61px;
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+        margin-right: 104px;
+        background: url(../img/menu-btn.svg) 100% no-repeat;
+    }
+    &__menu--btn {
+        position: relative;
+        z-index: 1;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 1px;
+            bottom: 1px;
+            left: 2px;
+            right: 2px;
+            border-radius: 80px;
+            background: $carmine;
+            opacity: 0;
+            transition: all .3s linear;
+            z-index: -1;
+        } 
+        svg {
+            fill: $carmine;
+            flex: 0 0 16px;
+            width: 16px;
+            height: 7px;
+            margin-right: 12px;
+            transition: all .3s linear;
+            pointer-events: none;
+        }
+        .menu-close {
+            display: none;
+        }
+    }
+    &__menu--btn, &__contact {
+        width: 100%;
+        color: $carmine;
+        height: 100%;
+        white-space: nowrap;
+    }
+    &__profile {
+        padding: 17.5px 32px;
+        svg {
+            display: none;
+        }
+    }
+    @media (min-width: $bp3) {
+        &__menu {
+            position: relative;
+            &:hover{
+                .header__menu--btn {
+                    color: $light-blue;
+                    &:before {
+                        opacity: 1;
+                    }
+                    svg {
+                        fill: $light-carmine;
+                    }
+                }
+                .menu {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+        &__profile {
+            color: $pol-blue;
+            white-space: nowrap;
+            border: 1px solid $pol-blue;
+            border-radius: 80px;
+            position: relative;
+            &:hover {
+              background: $light-blue;
+              &:before {
+                border-color: $white;
+              }
+            }
+            &:before {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              border: 1px solid transparent;
+              border-radius: 80px;
+              transition: all .3s linear;
+            }
+            svg {
+                display: none;
+            }
+        }
+    }
+    @media (max-width: $bp1) {
+        &.fixed {
+            .header__right {
+                padding: 9px;
+            }
+            .header__logo {
+                padding: 16px;
+            }
+        }
+        .logo-nn {
+            grid-column: 6/9;
+            max-width: 105px;
+        }
+        &__logo, &__right {
+            padding: 9px 0;
+        }
+        &__logo {
+           grid-column: 1/6;
+           max-width: 185px;
+        }
+        &__btns {
+            width: 300px;
+            height: 50px;
+            margin-right: -1px;
+        }
+        &__profile {
+            padding: 14px 24px;
+        }
+    }
+    @media (max-width: $bp3) {
+        .logo-nn {
+            grid-column: 2/3;
+            max-width: 63px;
+        }
+        &__inner {
+            grid-template-columns: 134px auto 1fr;
+            gap: 16px;
+        }
+        &__logo {
+            grid-column: 1/2;
+        }
+        &__right {
+            grid-column: 3/4;
+            flex-direction: row-reverse;
+        }
+        &__btns {
+            width: auto;
+            height: auto;
+            display: block;
+            background: none;
+        }
+        &__profile {
+            flex: 0 0 32px;
+            width: 32px;
+            height: 32px;
+            font-size: 0;
+            padding: 0;
+            margin-right: 16px;
+            border: 1px solid $pol-blue;
+            border-radius: 50%;
+            svg {
+                stroke: $pol-blue;
+                display: block;
+                transition: all .3s linear;
+            }
+        }
+        &__contact {
+            display: none;
+        }
+        &__menu--btn {
+            flex: 0 0 32px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 0;
+            border: 1px solid $carmine;
+            position: relative;
+            &:before { 
+                content: none;
+            }
+            svg {
+                margin: 0;
+                transition: all .3s linear;
+            }
+            .menu-close {
+                display: block;
+                width: 14px;
+                height: 14px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+            }
+        }
+    }
+}
+.logo-nn {
+    svg {
+        fill: $carmine;
+        width: 100%;
+        height: 100%;
+    }
+}
+.menu {
+    position: absolute;
+    width: 358px;
+    padding-top: 17px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s linear;
+    .main-btn, .menu__contacts {
+        display: none;
+    }
+    nav {
+        padding: 32px;
+        border-radius: 40px;
+        background: $carmine;
+        a {
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            &:before {
+                right: -8px
+            }
+            &:last-child {
+                margin-bottom: 0
+            };
+            svg {
+                flex: 0 0 24px;
+                width: 24px;
+                height: 24px;
+                margin-right: 8px;
+            }
+        }
+    }
+    a {
+        color: $light-blue;
+    }
+    @media (max-width: $bp1) {
+        width: 288px;
+        padding-top: 8px;
+        nav {
+            padding: 24px;
+        }
+    }
+    @media (max-width: $bp3) {
+        padding-top: 120px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 500;
+        background: $carmine;
+        z-index: -1;
+        overflow: hidden;
+        transition-duration: .6s;
+        transition-timing-function: cubic-bezier(.25,.74,.22,.99);
+        nav {
+            padding: 0;
+            border-radius: 0;
+            margin-bottom: 40px;
+            a {
+                font-size: 20px;
+                margin-bottom: 24px;
+                &:before {
+                    content: none;
+                }
+            }
+        }
+        .main-btn, .menu__contacts {
+            display: flex
+        }
+        .main-btn {
+            color: $carmine;
+            background: $light-blue;
+            margin-bottom: 40px;
+        }
+        &__inner {
+            height: 100%;
+            padding: 0 17px 40px;
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+        }
+        &__contacts {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: auto;
+            a {
+                margin-bottom: 16px;
+            }
+            .social {
+                margin-top: 24px;
+                a {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

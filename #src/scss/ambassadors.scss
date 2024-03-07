@@ -1,0 +1,278 @@
+.ambassadors {
+    padding: 80px 0;
+    position: relative;
+    .svg-path{
+        &:nth-child(1) {
+            top: -8%;
+            left: 0%;
+        }
+        &:nth-child(2) {
+            top: 25%;
+            right: 0%;
+        }
+    }
+    &__top {
+        text-align: center;
+        margin-bottom: 60px;
+        h2 {
+            display: inline-flex;
+            color: $carmine;
+            position: relative;
+            padding: 0 52px;
+            &:after {
+                content: "";
+                display: block;
+                width: 36px;
+                height: 34px;
+                background: url(../img/icons/heart.svg) center/ contain no-repeat;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transform: translateY(-80%);
+            }
+        }
+    }
+	&__mainswiper {
+        max-width: 926px;
+        margin: 0 auto 60px;
+        text-align: center;
+        h5 {
+            max-width: 450px;
+            margin: 32px auto 0;
+            span {
+                color: $carmine;
+            }
+        }
+    }
+	&__thumbswiper {
+        max-width: 926px;
+        margin: 0 auto;
+        .media-cover {
+            height: 100%;
+            border-radius: 50%;
+            transition: all .3s ease-in-out;
+        }
+        .swiper {
+            display: flex;
+            justify-content: center;
+        }
+        .swiper-wrapper {
+            position: relative;
+            right: 24px;
+        }
+        .swiper-slide {
+            width: 182px;
+            height: 182px;
+            padding: 24px;
+            position: relative;
+        }
+        .swiper-slide-active {
+            margin: 0 24px;
+            .ambassadors__svg-circle {
+                stroke-dashoffset: 0!important;
+                transition: all .3s linear;
+            }
+            .ambassadors__svg-progress {
+                stroke-dashoffset: 0!important;
+                transition: all 11s linear;
+            }
+            .media-cover {
+                transform: scale(1.25);
+            }
+        }
+    }
+    &__svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: rotate(-90deg);
+        &-circle, &-progress {
+            transition: all 0s linear;
+        }
+    }
+    @media (max-width: $bp1) {
+        padding-bottom: 0;
+        .svg-path {
+            transform: scale(0.8);
+            &:nth-child(1) {
+                top: -3%;
+                left: -5%;
+                transform-origin: left;
+            }
+            &:nth-child(2) {
+                transform-origin: right;
+                top: 30%;
+                right: -2%;
+            }
+        }
+        &__top {
+            margin-bottom: 40px;
+            &:after {
+                transform: translateY(-60%);
+            }
+        }
+        &__mainswiper {
+            max-width: 700px;
+            h5 {
+                max-width: 400px;
+            }
+        }
+    }
+    @media (max-width: $bp2) {
+        &__mainswiper {
+            margin-bottom: 32px;
+            h5 {
+                margin-top: 20px;
+            }
+        }
+        &__thumbswiper {
+            max-width: 600px;
+            .swiper-wrapper {
+                right: 0
+            }
+            .swiper-slide {
+                width: 120px;
+                height: 120px;
+                padding: 29px;
+            }
+            .swiper-slide-active {
+                margin: 0;
+                .media-cover {
+                    transform: scale(1.75);
+                }
+            }
+        }
+    }
+    @media (max-width: $bp4) {
+        &__top {
+            margin-bottom: 24px;
+        }
+        &__top h2 {
+            max-width: 284px;
+            padding: 0 12px;
+            &::after {
+                transform: translateY(-30%);
+            }
+        }
+        &__thumbswiper {
+            max-width: calc(100% + 48px);
+            margin: 0 -24px;
+            overflow: visible;
+        }
+    }
+}
+.main-block {
+    h2 {
+        color: $light-blue;
+        margin-bottom: 16px;
+    }
+    .h4 {
+        color: $light-blue;
+        margin-bottom: 32px;
+    }
+    .main-btn {
+        color: $carmine;
+        background: $light-blue;
+        svg {
+            fill: $carmine;
+        }
+    }
+    .media-cover {
+        flex: 0 0 255px;
+        width: 255px;
+        height: 255px;
+        margin-right: -138px;
+        &:first-child {
+            margin-right: 0;
+        }
+        img {
+            border-radius: 50%;
+        }
+    }
+    &__bg {
+        padding: 119px 0;
+        background: $carmine;
+        border-radius: 60px;
+    }
+	&__inner {
+        max-width: calc(100% / 24 * 22);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 24px;
+    }
+	&__images {
+        display: flex;
+        align-items: center;
+        direction: rtl;
+    }
+	&__center {
+        justify-self: center;
+        max-width: 688px;
+        text-align: center;
+    }
+    @media (max-width: $bp1) {
+        h2 {
+            margin-bottom: 8px;
+        }
+        .h4 {
+            margin-bottom: 24px;
+        }
+        .media-cover {
+            flex: 0 0 165px;
+            width: 165px;
+            height: 165px;
+            margin-right: -92px;
+        }
+        &__bg {
+            padding: 71px 0;
+        }
+        &__center {
+            max-width: 406px;
+        }
+    }
+    @media (max-width: $bp2) {
+        .media-cover {
+            flex: 0 0 130px;
+            width: 130px;
+            height: 130px;
+            margin-right: -70px;
+        }
+        &__bg {
+            padding: 42px 24px;
+            border-radius: 40px;
+        }
+        &__inner {
+            max-width: 100%;
+        }
+    }
+    @media (max-width: $bp3) {
+        h2 {
+            margin-bottom: 16px;
+        }
+        .h4 {
+            margin-bottom: 32px;
+        }
+        .media-cover {
+            flex: 0 0 100px;
+            width: 100px;
+            height: 100px;
+            margin-right: -55px;
+        }
+        .main-btn {
+            width: 100%;
+            max-width: 312px;
+        }
+        &__bg {
+            padding: 42px 16px;
+        }
+        &__inner {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        } 
+    }
+}
+

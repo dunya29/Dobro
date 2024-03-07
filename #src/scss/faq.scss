@@ -1,0 +1,44 @@
+.faq {
+    position: relative;
+    .svg-path {
+        top: 45%;
+        transform: translateY(-50%);
+    }
+    .accordion {
+        margin-bottom: 8px;
+        &:last-child {
+            margin-bottom: 0
+        };
+    }
+	&__items {
+        max-width: 923px;
+        margin: 0 auto;
+    }
+    @media (max-width: $bp1) {
+        &__items {
+            max-width: 709px;
+        }
+    }
+    @media (max-width: $bp2) {
+        .accordion__header h3 {
+            font-size: 20px;
+        }
+        &__items {
+            max-width: 600px;
+        }
+    }
+    @media (max-width: $bp5) {
+        .page-top h2 {
+            max-width: 250px;
+            margin: 0 auto;
+        }
+    }
+    @media (max-width: $bp6) {
+        .accordion__header {
+            min-height: 44px;
+            h3 {
+                max-width: 200px;
+            }
+        }
+    }
+}
