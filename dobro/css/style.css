@@ -3280,6 +3280,8 @@ h6,
     -ms-flex-align: start;
     align-items: flex-start;
     margin-top: auto;
+    -webkit-transition: margin-top 0.3s linear;
+    transition: margin-top 0.3s linear;
   }
 
   .menu__contacts a {

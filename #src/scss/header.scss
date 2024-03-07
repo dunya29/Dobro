@@ -383,6 +383,7 @@
             flex-direction: column;
             align-items: flex-start;
             margin-top: auto;
+            transition: margin-top .3s linear;
             a {
                 margin-bottom: 16px;
             }

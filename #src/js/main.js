@@ -267,6 +267,7 @@ if (mainInfo) {
 // ambassadors swiper
 const ambass = document.querySelector(".ambassadors")
 if (ambass) {
+  let slideCount = ambass.querySelectorAll(".ambassadors__mainswiper .swiper-slide").length
   const ambassThumbs = new Swiper(document.querySelector(".ambassadors__thumbswiper"),{
     slidesPerView: 'auto',
     observe: true,
@@ -283,7 +284,7 @@ if (ambass) {
       crossFade: true
     },
     loop: true,
-    loopedSlides: 5,
+    loopedSlides: slideCount,
      autoplay: {
       delay: 10000,
     },
