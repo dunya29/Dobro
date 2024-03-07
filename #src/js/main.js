@@ -287,7 +287,7 @@ if (ambass) {
     loop: true,
     loopedSlides: slideCount,
      autoplay: {
-      delay: 10000,
+      delay: 11000,
     },
   })
   ambassSwiper.controller.control = ambassThumbs;
