@@ -117,17 +117,18 @@ if (customSelect) {
 }
 //menu
 iconMenu.addEventListener("click", () => {
-  if (!header.classList.contains("show-menu")) {
+  if (window.innerWidth <= 991.98 && !header.classList.contains("show-menu")) {
     disableScroll()
     header.classList.add("show-menu")
-  } else {
+  } else if (window.innerWidth <= 991.98 && header.classList.contains("show-menu")) {
     enableScroll()
     header.classList.remove("show-menu")
   }
 })
 window.addEventListener("resize", () => {
   if (window.innerWidth > 991.98 && header.classList.contains("show-menu")) {
-    iconMenu.click()
+    enableScroll()
+    header.classList.remove("show-menu")
   }
 })
 //set price

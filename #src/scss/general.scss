@@ -511,7 +511,7 @@ h5, .h5, p {
     }
   }
   @media (max-width: $bp5) {
-    max-width: 343px;
+    max-width: 384px;
   }
 }
 .hover-bg {
@@ -527,8 +527,8 @@ h5, .h5, p {
       display: block;
       background: rgba($light-carmine, 20%);
       position: absolute;
-      top: 0;
-      bottom: -16px;
+      top: -8px;
+      bottom: -8px;
       left: -16px;
       right: -16px;
       border-radius: 80px;
@@ -538,8 +538,8 @@ h5, .h5, p {
   }
   @media (max-width: $bp1) {
     &:before {
-      top: -2px;
-      bottom: -10px;
+      top: -6px;
+      bottom: -6px;
       left: -12px;
       right: -12px
     }
