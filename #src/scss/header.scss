@@ -163,6 +163,7 @@
                 .menu {
                     visibility: visible;
                     opacity: 1;
+                    pointer-events: auto;
                 }
             }
         }
@@ -319,6 +320,7 @@
     visibility: hidden;
     opacity: 0;
     transition: all .3s linear;
+    pointer-events: none;
     .main-btn, .menu__contacts {
         display: none;
     }
@@ -369,6 +371,7 @@
         overflow: hidden;
         transition-duration: .6s;
         transition-timing-function: cubic-bezier(.25,.74,.22,.99);
+        pointer-events: auto;
         nav {
             padding: 0;
             border-radius: 0;
