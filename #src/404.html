@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {   
+    "title": "404"
+})
+
+<body>
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->  
+        <main class="main">
+            @@include('_breadcrumbs.html', {
+                "page": "404"
+            })
+            <!--notfound-->
+            <section class="notfound">
+                <svg class="intro-path" width="417" height="210" viewBox="0 0 417 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.726562 -23.0244C24.9545 -8.7079 54.2877 7.60832 70.387 31.3336C86.2749 54.7473 100.417 81.094 105.331 109.216C110.329 137.812 114.364 156.384 108.492 183.008C106.717 191.053 103.722 199.329 96.9533 204.024C85.1494 212.213 68.6357 210.324 58.5586 202.321C54.7177 199.271 52.1653 194.857 50.932 190.11C47.9393 178.59 49.1797 160.33 71.4148 140.278C101.035 116.582 134.789 115.611 172.137 115.611C207.74 115.611 243.041 122.743 278.683 118.466C312.304 114.432 353.464 100.473 376.55 74.5002C392.84 56.1744 403.343 23.4975 407.384 -0.0707016C410.23 -16.6728 415.72 -31.879 415.72 -48.833" stroke="#B71351" stroke-linecap="round" />
+                </svg>
+                <div class="container">
+                    <div class="notfound__inner">
+                        <div class="notfound__img"><img src="img/404.svg" alt=""></div>
+                        <div class="notfound__content">
+                            <h1>Ой, что-то пошло не так</h1>
+                            <h4>Страница, которую вы ищите - не существует, пожалуйста, вернитесь на главную</h4>
+                            <a href="#" class="btn main-btn">На главную</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+         <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

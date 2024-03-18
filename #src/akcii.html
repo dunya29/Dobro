@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {   
+    "title": "Акции"
+})
+
+<body>
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->  
+        <main class="main">
+            @@include('_breadcrumbs.html', {
+                "page": "Акции"
+            })
+            <section class="section help">
+                <div class="container">
+                    <div class="page-top help__top">
+                        <h1>Вы можете помочь</h1>
+                        <div class="help__actions">
+                            <div class="help__tabs">
+                                <button type="button" class="btn help__tab active">Действующие (36)</button>
+                                <button type="button" class="btn help__tab">Завершённые</button>
+                            </div>
+                            <div class="help__selects">
+                                <div class="custom-select">
+                                    <div class="custom-select__selected"><span>Фонд</span>
+                                        <svg><use xlink:href="img/icons/sprite.svg#dropdown"></use></svg>
+                                    </div>
+                                    <div class="custom-select__options">
+                                        <label class="hover-bg item-checkbox">
+                                            <input type="checkbox">
+                                            <span>Во Благо — Дар</span>
+                                        </label>
+                                        <label class="hover-bg item-checkbox">
+                                            <input type="checkbox">
+                                            <span>Жизнь без границ</span>
+                                        </label>
+                                        <label class="hover-bg item-checkbox">
+                                            <input type="checkbox">
+                                            <span>Нижег. онко-научный центр</span>
+                                        </label>
+                                        <label class="hover-bg item-checkbox">
+                                            <input type="checkbox">
+                                            <span>Благотворительный фонд «Время РАСсвета»</span>
+                                        </label>
+                                        <label class="hover-bg item-checkbox">
+                                            <input type="checkbox">
+                                            <span>НРООИ «Инватур»</span>
+                                        </label>
+                                        <label class="hover-bg item-checkbox">
+                                            <input type="checkbox">
+                                            <span>Волонтерское движение</span>
+                                        </label>
+                                        <label class="hover-bg item-checkbox">
+                                            <input type="checkbox">
+                                            <span>«Милосердие»</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="custom-select">
+                                    <div class="custom-select__selected"><span>Кому помочь</span>
+                                        <svg><use xlink:href="img/icons/sprite.svg#dropdown"></use></svg>
+                                    </div>
+                                    <div class="custom-select__options">
+                                        <label class="hover-bg item-checkbox">
+                                            <input type="checkbox">
+                                            <span>Во Благо — Дар</span>
+                                        </label>
+                                        <label class="hover-bg item-checkbox">
+                                            <input type="checkbox">
+                                            <span>Жизнь без границ</span>
+                                        </label>
+                                        <label class="hover-bg item-checkbox">
+                                            <input type="checkbox">
+                                            <span>Нижег. онко-научный центр</span>
+                                        </label>
+                                        <label class="hover-bg item-checkbox">
+                                            <input type="checkbox">
+                                            <span>Благотворительный фонд «Время РАСсвета»</span>
+                                        </label>
+                                        <label class="hover-bg item-checkbox">
+                                            <input type="checkbox">
+                                            <span>НРООИ «Инватур»</span>
+                                        </label>
+                                        <label class="hover-bg item-checkbox">
+                                            <input type="checkbox">
+                                            <span>Волонтерское движение</span>
+                                        </label>
+                                        <label class="hover-bg item-checkbox">
+                                            <input type="checkbox">
+                                            <span>«Милосердие»</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="help__block active">
+                        <div class="help__items">
+                            <div class="item-help" data-coll="126000" data-aim="159000">
+                                <div class="item-help__status"><span class="fulfilled">Средства собраны</span></div>
+                                <div class="item-help__body">
+                                    <div class="media-cover">
+                                        <img src="img/help-1.jpg" alt="Работа мечты для Хулиганодома">
+                                    </div>
+                                    <div class="item-help__content">
+                                        <div class="item-help__info">
+                                            <div class="item-help__auth">
+                                                <img src="img/help-auth-1.jpg" alt="@@auth">
+                                                <span>Горская Антонина</span>
+                                            </div>
+                                            <div class="item-help__fund">Фонд «Нижегородский онкологический научный центр»</div>
+                                        </div>
+                                        <h3>Работа мечты для Хулиганодома</h3>
+                                        <div class="progress-bar"><span></span></div>
+                                        <div class="item-help__details">
+                                            <div class="item-help__det">
+                                                <span>Собрано:</span>
+                                                <span class="h4 rub">126000</span>
+                                            </div>
+                                            <div class="item-help__det">
+                                                <span>Осталось:</span>
+                                                <span class="h4 rub">33000</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn main-btn">
+                                            <svg><use xlink:href="img/icons/sprite.svg#heart"></use></svg>Поддержать
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            @@include('_item-help.html', {"nmb": "1", "auth":"Горская Антонина"})
+                            @@include('_item-help.html', {"nmb": "2", "auth":"Филиппов Алексей"})
+                            @@include('_item-help.html', {"nmb": "3", "auth":"Калинина Александра"})                 
+                            @@include('_item-help.html', {"nmb": "2", "auth":"Филиппов Алексей"})
+                            @@include('_item-help.html', {"nmb": "1", "auth":"Горская Антонина"})
+                            @@include('_item-help.html', {"nmb": "3", "auth":"Калинина Александра"}) 
+                        </div>
+                    </div>
+                    <div class="help__block">
+                        <div class="help__items">
+                            <div class="item-help closed" data-coll="126000" data-aim="159000">
+                                <div class="item-help__status">  
+                                    <span class="fulfilled">Средства собраны</span>       
+                                    <span class="closed">Сбор закрыт</span>
+                                </div>
+                                <div class="item-help__body">
+                                    <div class="media-cover">
+                                        <img src="img/help-1.jpg" alt="Работа мечты для Хулиганодома">
+                                    </div>
+                                    <div class="item-help__content">
+                                        <div class="item-help__info">
+                                            <div class="item-help__auth">
+                                                <img src="img/help-auth-1.jpg" alt="@@auth">
+                                                <span>Горская Антонина</span>
+                                            </div>
+                                            <div class="item-help__fund">Фонд «Нижегородский онкологический научный центр»</div>
+                                        </div>
+                                        <h3>Работа мечты для Хулиганодома</h3>
+                                        <div class="progress-bar"><span></span></div>
+                                        <div class="item-help__details">
+                                            <div class="item-help__det">
+                                                <span>Собрано:</span>
+                                                <span class="h4 rub">126000</span>
+                                            </div>
+                                            <div class="item-help__det">
+                                                <span>Осталось:</span>
+                                                <span class="h4 rub">33000</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn main-btn">
+                                            <svg><use xlink:href="img/icons/sprite.svg#heart"></use></svg>Поддержать
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            @@include('_item-help-closed.html', {"nmb": "1", "auth":"Горская Антонина"})
+                            @@include('_item-help-closed.html', {"nmb": "2", "auth":"Филиппов Алексей"})
+                            @@include('_item-help-closed.html', {"nmb": "3", "auth":"Калинина Александра"})                 
+                            @@include('_item-help-closed.html', {"nmb": "2", "auth":"Филиппов Алексей"})
+                            @@include('_item-help-closed.html', {"nmb": "1", "auth":"Горская Антонина"})
+                            @@include('_item-help-closed.html', {"nmb": "3", "auth":"Калинина Александра"}) 
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+         <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

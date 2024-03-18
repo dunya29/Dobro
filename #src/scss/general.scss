@@ -28,7 +28,6 @@ body {
     font-size: 16px;
   }
 }
-
 .no-scroll {
   overflow: hidden;
 }
@@ -50,15 +49,20 @@ body {
 .text-l, h1, .h1, h2, .h2, h3, .h3 {
   font-weight: 500;
 }
+.text-l, h1, .h1, h2, .h2 {
+  color: $carmine;
+}
 .text-l {
   font-size: 84px;
   line-height: 1.04;
-  color: $carmine;
   @media (max-width: $bp1) {
     font-size: 56px;
   }
   @media (max-width: $bp2) {
     font-size: 38px;
+  }
+  @media (max-width: $bp3) {
+    font-size: 32px;
   }
 }
 h1, .h1, h2, .h2 {
@@ -175,6 +179,18 @@ h5, .h5, p {
     margin-bottom: 60px;
   }
 }
+.mb-100 {
+  margin-bottom: 100px;
+  @media (max-width: $bp3) {
+    margin-bottom: 40px;
+  }
+}
+.mb-48 {
+  margin-bottom: 48px;
+}
+.mb-60 {
+  margin-bottom: 60px;
+}
 .page-top {
   margin-bottom: 80px;
   text-align: center;
@@ -189,34 +205,94 @@ h5, .h5, p {
   }
 }
 .page-content {
-  h1, h2, h3, h4, h5, .h5, h6,.h6, p, hr, ol, ul {
+  max-width: 1027px;
+  h1, h2 {
+    color: $maincolor;
+  }
+  h1, h2, ul, ol, p {
     margin-bottom: 32px;
   }
-  ul li {
-    padding-left: 16px;
-    position: relative;
-      &::before {
-        content: "";
-        flex: 0 0 4px;
-        display: block;
-        width: 4px;
-        height: 4px;
-        background-color: $maincolor;
-        border-radius: 50%;
-        position: absolute;
-        top: 11px;
-        left: 0px;
-      }
-  }
-  ol li, ul li {
-    font-size: 20px;
-    line-height: 130%;
+  h3, h4, h5, h6, hr {
     margin-bottom: 16px;
   }
-  img, figure, iframe, video {
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 40px 0;   
+  li {
+    margin-bottom: 24px;
+  }
+  p, li {
+    font-size: 24px;
+    line-height: 1.25;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  ul li {
+    padding-left: 32px;
+    position: relative;
+    &::before {
+      content: "";
+      flex: 0 0 16px;
+      width: 16px;
+      height: 16px;
+      display: block;
+      position: absolute;
+      top: 3px;
+      left: 0;
+      background: url(../img/icons/bullet.svg) center/contain no-repeat;
+    }
+  }
+  ol li {
+    list-style: decimal;
+    margin-left: 24px;
+    padding-left: 8px;
+    &::marker {
+      font-weight: 500;
+      color: $carmine;
+    }
+  }
+  a {
+    color: inherit;
+    &:hover {
+      color: $light-carmine;
+    }
+  }
+  img, figure, iframe, video, table {
+    margin: 0 auto 40px;  
+  }
+  table {
+    thead {
+        tr {
+            padding-bottom: 24px;
+        }
+        td {
+            font-size: 24px;
+            font-weight: 500;
+            color: $carmine;
+        }
+    }
+    tbody{
+        tr {
+            padding: 16px 0;
+            border-bottom: 1px solid $light-carmine;
+        }
+    }
+  }
+  @media (max-width: $bp1) {
+    max-width: 628px;
+    img, figure, iframe, video, table {
+      margin-bottom: 32px;
+    }
+    h1, h2, ul, ol, p {
+      margin-bottom: 24px;
+    }
+    p, li {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: $bp2) {
+    p, li {
+      font-size: 16px; 
+      margin-bottom: 16px;
+    }    
   }
 }
 .rub {
@@ -387,7 +463,7 @@ h5, .h5, p {
       height: 16px;
       border-radius: 4px;
       border: 1px solid $light-carmine;
-      margin: 4px 12px 4px 4px;
+      margin: 3px 12px 4px 4px;
     }
     &:after {
       width: 10px;
@@ -395,7 +471,7 @@ h5, .h5, p {
       background: url(../img/icons/check.svg) center / contain no-repeat;
       opacity: 0;
       position: absolute;
-      top: 9px;
+      top: 8px;
       left: 7px;
       z-index: 2;
     }
@@ -407,7 +483,7 @@ h5, .h5, p {
       }
       &:after {
         top: 5px;
-        left: 3.5px;
+        left: 3px;
       }
     }
   }
@@ -500,7 +576,7 @@ h5, .h5, p {
   }
   @media (max-width: $bp3) {
     width: 100%;
-    max-width: 289px;
+    max-width: 269px;
     &__selected {
       padding: 16px 24px;
     }
@@ -602,7 +678,468 @@ h5, .h5, p {
     display: none;
   }
 }
-
-
-
-
+.tabs,.form-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  a, span {
+    font-weight: 500;
+    color: $carmine;
+    display: block;
+    padding: 15px 31px;
+    border-radius: 20px;
+    border: 1px solid $carmine;
+    cursor: pointer;
+    transition: all .3s linear;
+    user-select: none;
+  }
+  @media (max-width: $bp1) {
+    a, span {
+      padding: 15px 23px;
+    }
+  }
+  @media (max-width: $bp5) {
+    a,span {
+      font-size: 15px;
+      border-radius: 16px;
+    }
+  }
+}
+.tabs {
+  margin: -12px -8px;
+  a, span {
+    margin: 12px 8px;
+    &.active {
+      color: $light-blue;
+      background: $carmine;
+      pointer-events: none
+    }
+  }
+  @media (max-width: $bp3) {
+    flex-wrap: nowrap;
+    overflow: auto;
+    margin: 0 -15px;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+    a, span {
+      white-space: nowrap;
+      margin: 0 4px;
+      &:first-child {
+        margin-left: 15px
+      }
+      &:last-child {
+          margin-right: 15px
+      }
+    }
+  }
+  @media (max-width: $bp7) {
+    margin-left: -10px;
+    margin-right: -10px;
+    a, span {
+      &:first-child {
+        margin-left: 10px
+      }
+      &:last-child {
+          margin-right: 10px
+      }
+    }
+  }
+}
+.form-tabs {
+  margin: -7px;
+  label {
+    input {
+      display: none;
+      &:checked + span {
+        color: $light-blue;
+        background: $carmine;
+      }
+    }
+  }
+  a, span {
+    margin: 7px;
+  }
+  @media (max-width: $bp2) {
+    margin: -4px;
+    a, span {
+      margin: 4px;
+    }
+  }
+}
+.my-cursor {
+ cursor: none;
+}
+.cursor-img {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  opacity: 0;
+  pointer-events: none; 
+  z-index: 10000; 
+  transform: translate(-50%, -50%);  
+  transition: opacity 0.3s ease; 
+  overflow: show; 
+}
+.item-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  span {
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 4px;
+    &:first-child {
+      color: $pol-blue;
+      font-weight: 400;
+    }
+  }
+  a {
+    font-weight: 500;
+    color: $carmine;
+    &:hover {
+      color: $light-carmine;
+    }
+  }
+  .social {
+    margin-top: 8px;
+  }
+}
+.icon-heart {
+  display: inline-flex;
+  position: relative;
+  padding-right: 50px;
+  &:after {
+      content: "";
+      display: block;
+      width: 36px;
+      height: 34px;
+      background: url(../img/icons/heart.svg) center / contain no-repeat;
+      position: absolute;
+      right: 0;
+  }
+}
+.item-form {
+  margin-bottom: 16px;
+  position: relative;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &.show-reset {
+    .item-form__reset {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  input,
+  textarea {
+    font-size: 18px;
+    font-weight: 500;
+    color: $maincolor;
+    padding: 14px 23px;
+    border: 1px solid #D2628C;
+    transition: all .3s linear;
+    &::placeholder {
+      font-size: 18px;
+      color: #D2628C;
+    }
+    &:hover, &:focus {
+      border-color: $carmine;
+    }
+  }
+  input {
+    line-height: 24px;
+    padding-right: 110px;
+    border-radius: 80px;
+    &.error {
+      color: $maincolor;
+      border-color: $red !important;
+      margin-top: 0;
+    }
+  }
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: -6px;
+  }
+  .error {
+    font-size: 16px;
+    color: $red;
+    margin-top: 4px;
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 14px;
+    right: 23px;
+    button {
+      padding-right: 16px;
+      margin-right: 16px;
+      border-right: 1px solid $carmine;
+      &:last-child {
+        border-right: 0;
+        padding-right: 0;
+        margin-right: 0;
+      }
+    }
+    svg {
+      width: 24px;
+      height: 24px;
+      pointer-events: none;
+    }
+  }
+  &__reset {
+    visibility: hidden;
+    opacity: 0;
+    svg {
+      fill: $carmine;
+    }
+  }
+  &__eye {
+    svg {
+      fill: #D2628C;
+    }
+  }
+  @media  (max-width: $bp1) {
+    margin-bottom: 12px;
+    .error {
+      font-size: 14px;
+    }
+    input,textarea {
+      font-size: 16px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      &::placeholder {
+        font-size: 16px;
+      }
+      .error {
+        font-size: 16px;
+      }
+    }
+    textarea {
+      min-height: 80px;
+    }
+  }
+  @media  (max-width: $bp2) {
+    textarea {
+      border-radius: 24px;
+    }
+  }
+  @media  (max-width: $bp3) {
+    input {
+      padding-right: 75px;
+    }
+   &__icons {
+    button {
+      width: 20px;
+      height: 20px;
+      padding-right: 6px;
+      margin-right: 6px;
+      &:first-child {
+        width: 22px;
+        height: 22px;
+      }
+    }
+   }
+  }
+}
+.file-form {
+  margin-bottom: 32px;
+  .media-contain {
+    padding-top: 100%;
+  }
+  &__ava {
+    position: relative;
+  }
+  &__top {
+    padding: 16px 32px;
+    display: grid;
+    grid-template-columns: 144px 1fr;
+    align-items: start;
+    gap: 24px;
+    border: 1px dashed $pol-blue;
+    position: relative;
+    input {
+      display: block;
+      position: absolute;
+      opacity: 0;
+    }
+    p {
+      align-self: center;
+      text-align: center;
+      max-width: 277px;
+      span {
+        font-weight: 500;
+        color: $carmine;
+      }
+    }
+  }
+  &__img {
+    position: absolute;
+    width: 144px;
+    height: 144px;
+    top: 16px;
+    left: 32px;
+    bottom: 16px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+  &__body {
+    margin-top: 16px;
+    p {
+      color: $pol-blue;
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @media (max-width: $bp1) {
+    &__top {
+      grid-template-columns: 122px 1fr;
+    }
+    &__img {
+      width: 122px;
+      height: 122px;
+    }
+  }
+  @media (max-width: $bp2){
+    p {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: $bp4){
+    &__top {
+      padding: 8px 16px;
+      grid-template-columns: 80px 1fr;
+      gap: 16px;
+    }
+    &__img {
+      width: 80px;
+      height: 80px;
+      top: 8px;
+      left: 16px;
+    }
+  }
+}
+.form {
+  button {
+    cursor: pointer;
+  }
+  p {
+    font-size: 18px;
+  }
+  .form-tabs {
+    margin-bottom: 32px;
+  }
+  .item-checkbox {
+    display: inline-block;
+    position: relative;
+    input {
+      display: block;
+      position: absolute;
+      opacity: 0;
+    }
+    span {
+      font-size: 18px;
+      font-weight: 400;
+      color: $pol-blue;
+      display: block;
+      padding-left: 28px;
+      &:before {
+        position: absolute;
+        left: 0;
+      }
+      a {
+        font-weight: 500;
+        text-decoration: underline;
+      }
+    }
+  }
+  &__fieldset {
+    margin-bottom: 32px;
+    h4, h6 {
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+    h4 {
+      font-size: 22px;
+    }
+    h6 {
+      color: $carmine;
+    }
+    .item-checkbox {
+      margin: 16px 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    & +.form__footer {
+      margin-top: 32px;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .item-form {
+      margin-bottom: 0!important;
+    }
+  }
+  &__footer {
+    margin-top: 56px;
+    .main-btn {
+      width: 100%;
+    }
+  }
+  @media  (max-width: $bp1) {
+    p {
+      font-size: 16px;
+    }
+    .item-checkbox span {
+      font-size: 16px;
+    }
+    &__grid {
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    &__fieldset {
+      h4 {
+        font-size: 20px;
+      }
+      .item-checkbox span {
+        font-size: 16px;
+      }
+    }
+    &__footer{
+      margin-top: 32px;
+    }
+  }
+  @media  (max-width: $bp2) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+    &__fieldset {
+      h4 {
+        font-size: 16px;
+      }
+      .item-checkbox {
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

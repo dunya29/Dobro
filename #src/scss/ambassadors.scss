@@ -15,18 +15,8 @@
         text-align: center;
         margin-bottom: 60px;
         h2 {
-            display: inline-flex;
-            color: $carmine;
-            position: relative;
-            padding: 0 52px;
+            padding: 0 50px;
             &:after {
-                content: "";
-                display: block;
-                width: 36px;
-                height: 34px;
-                background: url(../img/icons/heart.svg) center/ contain no-repeat;
-                position: absolute;
-                right: 0;
                 top: 0;
                 transform: translateY(-80%);
             }
@@ -50,7 +40,7 @@
         .media-cover {
             height: 100%;
             border-radius: 50%;
-           transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
         }
         .swiper {
             display: flex;
@@ -166,19 +156,10 @@
 }
 .main-block {
     h2 {
-        color: $light-blue;
-        margin-bottom: 16px;
-    }
-    .h4 {
-        color: $light-blue;
         margin-bottom: 32px;
     }
-    .main-btn {
-        color: $carmine;
-        background: $light-blue;
-        svg {
-            fill: $carmine;
-        }
+    h3, .h4 {
+        margin-bottom: 32px;
     }
     .media-cover {
         flex: 0 0 255px;
@@ -192,9 +173,27 @@
             border-radius: 50%;
         }
     }
+    &--dark {
+        h2 {
+            color: $light-blue;
+            margin-bottom: 16px;
+        }
+        .h4 {
+            color: $light-blue;
+        }
+        .main-btn {
+            color: $carmine;
+            background: $light-blue;
+            svg {
+                fill: $carmine;
+            }
+        }
+        .main-block__bg {
+            background: $carmine;
+        }
+    }
     &__bg {
         padding: 119px 0;
-        background: $carmine;
         border-radius: 60px;
     }
 	&__inner {
@@ -216,9 +215,6 @@
         text-align: center;
     }
     @media (max-width: $bp1) {
-        h2 {
-            margin-bottom: 8px;
-        }
         .h4 {
             margin-bottom: 24px;
         }
@@ -228,11 +224,16 @@
             height: 165px;
             margin-right: -92px;
         }
+        &--dark {
+            h2 {
+                margin-bottom: 8px;
+            }
+            .main-block__center {
+                max-width: 406px;
+            }
+        }
         &__bg {
             padding: 71px 0;
-        }
-        &__center {
-            max-width: 406px;
         }
     }
     @media (max-width: $bp2) {
@@ -265,7 +266,7 @@
         }
         .main-btn {
             width: 100%;
-            max-width: 312px;
+            max-width: 384px;
         }
         &__bg {
             padding: 42px 16px;

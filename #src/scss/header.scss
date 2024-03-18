@@ -18,6 +18,9 @@
                 max-width: 238px;
             }
         }
+        .header__btns {
+            margin-right: 102px;
+        }
         .logo-nn {
             opacity: 0;
         }
@@ -96,27 +99,35 @@
         width: 371px;
         height: 61px;
         display: grid;
-        grid-template-columns: 1fr 1.4fr;
-        margin-right: 104px;
+        grid-template-columns: 1.01fr 1.4fr;
+        gap: 3px;
+        margin-right: 118px;
         background: url(../img/menu-btn.svg) 100% no-repeat;
+        transition: all .3s linear;
     }
-    &__menu--btn {
+    &__menu--btn, &__contact {
+        width: 100%;
+        color: $carmine;
+        height: 100%;
+        white-space: nowrap;
         position: relative;
         z-index: 1;
         &:before {
             content: "";
             display: block;
             position: absolute;
-            top: 1px;
-            bottom: 1px;
-            left: 2px;
-            right: 2px;
+            top: 3px;
+            bottom: 3px;
+            left: 3px;
+            right: 3px;
             border-radius: 80px;
             background: $carmine;
             opacity: 0;
             transition: all .3s linear;
             z-index: -1;
         } 
+    }
+    &__menu--btn {
         svg {
             fill: $carmine;
             flex: 0 0 16px;
@@ -129,12 +140,6 @@
         .menu-close {
             display: none;
         }
-    }
-    &__menu--btn, &__contact {
-        width: 100%;
-        color: $carmine;
-        height: 100%;
-        white-space: nowrap;
     }
     &__profile {
         padding: 17.5px 32px;
@@ -157,6 +162,14 @@
                 }
                 .menu {
                     visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+        &__contact {
+            &:hover {
+                color: $light-blue;
+                &:before {
                     opacity: 1;
                 }
             }
@@ -198,6 +211,9 @@
             .header__logo {
                 padding: 16px;
             }
+            .header__btns {
+                margin-right: 0;
+            }
         }
         .logo-nn {
             grid-column: 6/9;
@@ -214,6 +230,7 @@
             width: 300px;
             height: 50px;
             margin-right: -1px;
+            background-size: 300px 50px;
         }
         &__profile {
             padding: 14px 24px;

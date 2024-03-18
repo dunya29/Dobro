@@ -21,23 +21,18 @@
         overflow: visible;
     }
     .swiper-wrapper {
-        display: grid;
-        grid-template-columns: repeat(22, 1fr);
-        gap: 100px 24px;
+        display: block
     }
     .swiper-slide {
-        grid-column: 1/7;
+        width: calc(100% / 22 * 6 - 16px);
         &:nth-child(2n) {
-            grid-column: 17/23;
-            margin-left: auto;  
-            position: relative;
-            top: 150px;         
+            margin-left: auto;      
         }
         &:nth-child(3) {
-            grid-column: 2/8;
+            margin-left: calc(100% / 22 ) ;
         }
         &:nth-child(4) {
-            grid-column: 16/22;
+            margin-right: calc(100% / 22 ) ;
         }
     }
     .swiper-pagination {
@@ -70,15 +65,6 @@
         }
     }
     @media (max-width: $bp1) {
-        .swiper-wrapper {
-            gap: 24px;
-        }
-        .swiper-slide {
-            &:nth-child(2n) {
-                position: static;
-                top: 0;         
-            }
-        }
         &__content {
             max-width: 393px;
             p {
@@ -111,19 +97,19 @@
     }
     @media (max-width: $bp3) {
         .swiper-slide {
-            grid-column: 1/8;
+            width: calc(100% / 22 * 7 - 10px);
             &:nth-child(3) {
-                grid-column: 1/8;
+                margin-left: 0;
             }
-            &:nth-child(2n),&:nth-child(4) {
-                grid-column: 16/23;
+            &:nth-child(4) {
+                margin-right: 0;
             }
         }
     }
     @media (max-width: $bp4) {
         .main-btn {
             width: 100%;
-            max-width: 312px;
+            max-width: 384px;
         }
         .swiper {
             max-width: 100%;

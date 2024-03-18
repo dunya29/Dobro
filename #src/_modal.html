@@ -1,0 +1,387 @@
+<!--cursor-img-->
+<div class="cursor-img">
+    <img src="img/icons/cursor.svg" alt="">
+</div>
+<!--overlay-->
+<div class="overlay">
+    <svg class="overlay__path" width="260" height="371" viewBox="0 0 260 371" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M108.213 -39.924C97.2981 -19.3831 85.57 0.915489 85.3892 24.921C84.9325 85.5432 122.681 144.264 161.224 188.224C180.949 210.721 206.654 236.002 238.504 237.95C258.099 239.149 262.089 223.276 256.593 208.333C245.709 178.744 206.867 168.047 178.838 175.803C151.861 183.268 135.429 211.243 126.893 236.065C117.822 262.447 122.997 292.154 111.412 318.3C90.3982 365.723 26.3821 367.962 -18.4762 369.444C-57.6278 370.737 -96.8051 368.163 -135.998 369.367" stroke="#E6ECFF" stroke-linecap="round" />
+    </svg>
+    <svg class="overlay__path" width="307" height="519" viewBox="0 0 307 519" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M393.76 0C393.76 24.5454 362.406 51.8566 344.583 64.9127C278.932 113.006 203.487 125.462 123.618 123.815C105.641 123.444 51.4926 120.08 51.4926 92.4514C51.4926 80.2144 62.2266 75 73.2266 74C84.9888 74 91.2266 74 99.7266 82.5C104.623 87.3964 107.227 96 107.227 107C107.227 121.499 104.087 131.517 97.8276 144.906C84.931 172.491 55.865 191.889 36.6304 214.518C11.5447 244.03 -3.27837 278.773 2.09778 317.788C10.7839 380.825 42.8208 422.616 102.854 443.461C141.227 456.784 156.708 457.639 183.066 466.628C189.137 468.699 210.805 476.819 215.727 484C223.305 495.056 221.343 505.305 214.649 512C198.698 527.951 183.285 507.856 183.285 493.621C183.285 462.505 204.539 445.742 232.898 438.652C269.684 429.456 308.904 430.362 346.55 427.834C362.698 426.749 379.638 422.916 395.727 422.916" stroke="#E6ECFF" stroke-linecap="round" />
+    </svg>
+    <svg class="overlay__path" width="1920" height="332" viewBox="0 0 1920 332" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-47.2318 329.246C-0.080346 335.108 48.3393 319.439 93.5567 307.118C132.569 296.488 173.043 290.502 210.396 274.355C268.803 249.105 324.549 216.351 373.52 175.742C397.792 155.615 468.465 79.3329 449.736 43.1594C443.898 31.8833 424.499 27.4773 422.565 43.0363C421.039 55.313 422.583 60.2099 426.731 71.1234C485.079 224.639 675.522 273.106 819.98 302.084C989.988 336.187 1166.29 337.856 1337.7 312.648C1519.05 285.977 1708.41 226.282 1864.92 129.687C1909.98 101.879 1943.11 73.6141 1966.54 26.874C1969.72 20.5271 1979.06 6.22089 1971.63 1.27853" stroke="#E6ECFF" stroke-linecap="round" />
+    </svg>
+</div>
+<!--log-modal-->
+<modal class="modal log-modal" id="log-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <div class="modal__scroll">
+                <button class="modal__close"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                <div class="modal__top"><h3>Вход в аккаунт</h3></div>
+                <div class="modal__body">
+                    <form class="form" action="" id="login-form">
+                        <div class="item-form">
+                            <input type="email" name="email" placeholder="E-mail">
+                            <div class="item-form__icons">
+                                <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                            </div>
+                        </div>
+                        <div class="item-form">
+                            <input type="password" name="password" placeholder="Пароль">
+                            <div class="item-form__icons">
+                                <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                <button type="button" class="item-form__eye"><svg><use xlink:href="img/icons/sprite.svg#password-eye"></use></svg></button>
+                            </div>
+                        </div>
+                        <div class="log-modal__forget-password modal-show-btn" data-modal="recovery-modal"><span>Забыли пароль?</span></div>
+                        <label class="item-checkbox">
+                            <input type="checkbox" name="rememberme">
+                            <span>Запомнить меня</span>
+                        </label>
+                        <div class="form__footer">
+                            <button type="submit" class="btn main-btn">Войти</button>
+                        </div>
+                    </form>
+                    <div class="text-align log-modal__reg">Впервые на сайте? <span class="modal-show-btn" data-modal="reg-modal">Зарегистрируйтесь</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</modal>
+<!--recovery-modal-->
+<modal class="modal recovery-modal" id="recovery-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <div class="modal__scroll">
+                <button class="modal__close"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                <div class="modal__top"><h3>Восстановление пароля</h3></div>
+                <div class="modal__body">
+                    <form class="form" action="" id="recovery-form">
+                        <div class="item-form">
+                            <input type="email" name="email" placeholder="E-mail">
+                            <div class="item-form__icons">
+                                <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                            </div>
+                        </div>
+                        <div class="form__footer">
+                            <button type="submit" class="btn main-btn">Отправить письмо</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</modal>
+<!--recovery-success-modal-->
+<modal class="modal recovery-success-modal" id="recovery-success-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <div class="modal__scroll">
+                <button class="modal__close"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                <div class="modal__top"><h3>Восстановление пароля</h3></div>
+                <div class="modal__body">
+                    <p>Проверьте почту. В течение 15 минут вы получите письмо на адрес 123@gmail.com. Откройте его и перейдите по ссылке на страницу восстановления пароля.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</modal>
+<!--password-modal-->
+<modal class="modal password-modal" id="password-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <div class="modal__scroll">
+                <button class="modal__close"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                <div class="modal__top"><h3>Восстановление пароля</h3></div>
+                <div class="modal__body">
+                    <form class="form" action="" id="password-form">
+                        <div class="item-form">
+                            <input type="password" name="password" placeholder="Новый пароль" id="enter-pass">
+                            <div class="item-form__icons">
+                                <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                <button type="button" class="item-form__eye"><svg><use xlink:href="img/icons/sprite.svg#password-eye"></use></svg></button>
+                            </div>
+                        </div>
+                        <div class="item-form">
+                            <input type="password" name="repeat_password" placeholder="Еще раз новый пароль">
+                            <div class="item-form__icons">
+                                <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                <button type="button" class="item-form__eye"><svg><use xlink:href="img/icons/sprite.svg#password-eye"></use></svg></button>
+                            </div>
+                        </div>
+                        <div class="form__footer">
+                            <button type="submit" class="btn main-btn">Сохранить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</modal>
+<!--password-success-modal-->
+<modal class="modal password-success-modal" id="password-success-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <div class="modal__scroll">
+                <button class="modal__close"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                <div class="modal__top"><h3>Пароль успешно изменён </h3></div>
+                <div class="form__footer"><button type="button" class="btn main-btn modal-show-btn" data-modal="log-modal">Войти</button></div>
+            </div>
+        </div>
+    </div>
+</modal>
+<!--reg-modal-->
+<modal class="modal reg-modal" id="reg-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <div class="modal__scroll">
+                <button class="modal__close"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                <div class="modal__top"><h3>Регистрация</h3></div>
+                <div class="modal__body">
+                    <form class="form" action="" id="reg-form">
+                        <div class="form__fieldset">
+                            <div class="item-form">
+                                <input type="email" name="email" placeholder="E-mail">
+                                <div class="item-form__icons">
+                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                </div>
+                            </div>
+                            <div class="item-form">
+                                <input type="password" name="password" placeholder="Пароль" id="confirm-pass">
+                                <div class="item-form__icons">
+                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                    <button type="button" class="item-form__eye"><svg><use xlink:href="img/icons/sprite.svg#password-eye"></use></svg></button>
+                                </div>
+                            </div>
+                            <div class="item-form">
+                                <input type="password" name="repeat_password" placeholder="Пароль">
+                                <div class="item-form__icons">
+                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                    <button type="button" class="item-form__eye"><svg><use xlink:href="img/icons/sprite.svg#password-eye"></use></svg></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__fieldset">
+                            <h4>Информация о себе</h4>
+                            <div class="item-form">
+                                <input type="text" name="fullname" placeholder=" Имя Фамилия Отчество">
+                                <div class="item-form__icons">
+                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__fieldset">
+                            <h4>Аватар пользователя</h4>
+                            <div class="item-form file-form">
+                                <div class="file-form__ava">
+                                    <input type="hidden" name="avatar" value="">
+                                    <label class="file-form__top">
+                                        <input type="file" accept=".png, .jpg, .jpeg, .gif" name="reg_file" class="reg_file">
+                                        <div class="media-contain"><img src="img/icons/file-bg.svg" alt="выберете файл"></div>     
+                                        <p>Перетащите фото в это поле или <span>выберете файл</span> с вашего компьютера</p>
+                                    </label>
+                                    <div class="file-form__img" style="background-image: url()"></div>
+                                </div>                
+                                <div class="file-form__body">
+                                    <p>Желательный размер не более 200x200 px, не более 2 Мб</p>
+                                    <p>Допустимые форматы: JPG, GIF, PNG</p>
+                                    <p>Важно! На фото не должно быть надписей и водяных знаков</p>
+                                </div>
+                            </div>
+                            <label class="item-checkbox">
+                                <input type="checkbox" name="agree" checked>
+                                <span>Нажимая кнопку далее, я подтверждаю, что ознакомился и принимаю <a href="#" target="_blank">политику обработки персональных данных</a></span>
+                            </label>
+                        </div>
+                        <div class="form__footer">
+                            <button type="submit" class="btn main-btn">Далее</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</modal>
+<!--fund-modal-->
+<modal class="modal fund-modal" id="fund-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <div class="modal__scroll">
+                <button class="modal__close"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                <div class="modal__top"><h3>Анкета фонда</h3></div>
+                <div class="modal__body">
+                    <form class="form" action="" id="fund-form">
+                        <div class="form__fieldset">
+                            <div class="item-form">
+                                <input type="text" name="pagetitle" placeholder="Название организации">
+                                <div class="item-form__icons">
+                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                </div>
+                            </div>
+                            <div class="item-form">
+                                <input type="text" name="introtext" placeholder="Краткое описание фонда">
+                                <div class="item-form__icons">
+                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                </div>
+                            </div>
+                            <div class="item-form">
+                                <textarea name="content" placeholder="Описание фонда" oninput="this.style.height = this.scrollHeight + 'px'"></textarea>
+                            </div>
+                            <div class="item-form">
+                                <input type="text" name="fund_aim" placeholder="Цель фонда">
+                                <div class="item-form__icons">
+                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                </div>
+                            </div>
+                            <div class="item-form">
+                                <input type="text" name="fund_city" placeholder="Город">
+                                <div class="item-form__icons">
+                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                </div>
+                            </div>
+                            <div class="item-form">
+                                <input type="text" name="fund_address" placeholder="Фактический адрес фонда">
+                                <div class="item-form__icons">
+                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__fieldset">
+                            <h6>Логотип фонда</h6>
+                            <div class="item-form file-form">
+                                <div class="file-form__ava">
+                                    <input type="hidden" name="avatar" value="">
+                                    <label class="file-form__top">
+                                        <input type="file" accept=".png, .jpg, .jpeg, .gif" name="reg_file"  class="reg_file">
+                                        <div class="media-contain"><img src="img/icons/file-bg.svg" alt="выберете файл"></div>     
+                                        <p>Перетащите фото в это поле или <span>выберете файл</span> с вашего компьютера</p>
+                                    </label>
+                                    <div class="file-form__img"></div>
+                                </div>                
+                                <div class="file-form__body">
+                                    <p>Желательный размер не более 200x200 px, не более 2 Мб</p>
+                                    <p>Допустимые форматы: JPG, GIF, PNG</p>
+                                    <p>Важно! На фото не должно быть надписей и водяных знаков</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__filedset">
+                            <h4>Категория помощи</h4>
+                            <div class="form-tabs">
+                                <label>
+                                    <input name="col_filter" type="checkbox">
+                                    <span>Дети</span>
+                                </label>
+                                <label>
+                                    <input name="col_filter" type="checkbox">
+                                    <span>Животные</span>
+                                </label>
+                                <label>
+                                    <input name="col_filter" type="checkbox">
+                                    <span>Помощь животным</span>
+                                </label>
+                                <label>
+                                    <input name="col_filter" type="checkbox">
+                                    <span>Культурно-историческое наследие</span>
+                                </label>
+                                <label>
+                                    <input name="col_filter" type="checkbox">
+                                    <span>Подростки</span>
+                                </label>
+                                <label>
+                                    <input name="col_filter" type="checkbox">
+                                    <span>Пожилые</span></label>
+                                <label>
+                                    <input name="col_filter" type="checkbox">
+                                    <span>Люди в трудной жизненной ситуации</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__fieldset">
+                            <h4>Контактное лицо</h4>
+                            <div class="item-form">
+                                <input type="text" name="fund_FIO" placeholder="Имя Фамилия ">
+                                <div class="item-form__icons">
+                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                </div>
+                            </div>
+                            <div class="form__grid">
+                                <div class="item-form">
+                                    <input type="tel" name="fund_tel" placeholder="Телефон">
+                                </div>
+                                <div class="item-form">
+                                    <input type="email" name="fund_org" placeholder="E-mail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__fieldset">
+                            <h4>Ссылки на соцсети</h4>
+                            <div class="form__grid">
+                                <div class="item-form">
+                                    <input type="text" name="fund_vk" placeholder="VK">
+                                </div>
+                                <div class="item-form">
+                                    <input type="text" name="fund_classmates" placeholder="Одноклассники">
+                                </div>
+                            </div>
+                            <div class="item-form">
+                                <input type="text" name="fund_site" placeholder="Сайт организации">
+                            </div>
+                        </div>
+                        <div class="form__fieldset">
+                            <h4>Реквизиты</h4>
+                            <div class="item-form">
+                                <input type="text" name="fund_INN" placeholder="ИНН">
+                                <div class="item-form__icons">
+                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                </div>
+                            </div>
+                            <div class="item-form">
+                                <input type="text" name="fund_ur_address" placeholder="Юридический адрес">
+                                <div class="item-form__icons">
+                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                </div>
+                            </div>
+                            <div class="item-form">
+                                <label class="item-checkbox">
+                                    <input type="checkbox" name="enter_checkbox1">
+                                    <span>Я согласен на <a href="#" target="_blank">обработку персональных данных в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ</a></span>
+                                </label>
+                            </div>
+                            <div class="item-form">
+                                <label class="item-checkbox">
+                                    <input type="checkbox" name="enter_checkbox2">
+                                    <span>Я согласен с <a href="#" target="_blank">условиями размещения информации, изображений, объектов авторского права и иных результатов интеллектуальной деятельности</a></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__footer">
+                            <button type="submit" class="btn main-btn">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</modal>
+<!--cropp-ava-->
+<div class="modal cropp-ava"  id="cropp-ava">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <div class="modal__scroll">
+                <button class="modal__close"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                <div class="modal__top"><h3>Выберите миниатюру</h3></div>
+                <div class="modal__body">
+                    <div id="croppieContainer"></div>
+                    <div class="cropp-ava__btns">
+                        <button class="btn stroke-btn" id="crop-destroy">Отменить</button>
+                        <button type="button" id="cropBtn" class="btn main-btn">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

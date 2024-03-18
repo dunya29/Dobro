@@ -190,13 +190,14 @@
     display: flex;
     align-items: center;
     a {
+        flex: 0 0 32px;
         width: 32px;
         height: 32px;
         border-radius: 50%;
-        img {
+        svg {
+            fill: $light-blue;
             width: 100%;
             height: 100%;
-            object-fit: contain;
             transition: all .3s linear;
         }
         margin: 0 16px 0 0;
@@ -204,7 +205,7 @@
             margin: 0
         }
         &:hover {
-            img {
+            svg {
                 transform: scale(1.1);
             }
         }
@@ -212,6 +213,25 @@
     @media (max-width: $bp4) {
         a {
             margin: 0 24px 0 0;
+        }
+    }
+}
+.social.share-list {
+    a {
+      margin-right: 24px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    svg {
+        fill: $carmine;
+    }
+    @media (min-width: $bp2) and (max-width: $bp1) {
+        a {
+            flex: 0 0 24px;
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
         }
     }
 }

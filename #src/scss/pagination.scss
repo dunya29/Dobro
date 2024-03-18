@@ -1,0 +1,53 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    margin: 32px 0 0;
+    &:before {
+        content: "Номер страницы";
+        color: $pol-blue;
+        margin-right: 100px;
+    }
+    &__link, &__item {
+        font-weight: 500;
+        color: $pol-blue;
+        margin: 0 8px;
+        transition: all .4s linear;
+        white-space: nowrap;
+        &.current, &:active {
+            color: $carmine;
+            pointer-events: none;
+        }
+    }
+    span {
+        pointer-events: none;
+    }
+    .nav-btn {
+        flex: 0 0 16px;
+        svg {
+            fill: $pol-blue;
+            width: 16px;
+            height: 16px;
+        }
+    }
+    .nav-btn:first-child {
+        margin-right: 24px;
+    }
+    .nav-btn:last-child {
+        margin-left: 24px;
+    }
+    @media (max-width: $bp1) {
+        justify-content: center;
+        &:before {
+            content: none;
+        }
+        .nav-btn:first-child {
+            margin-right: 16px;
+        }
+        .nav-btn:last-child {
+            margin-left: 16px;
+        }
+    }
+    @media (max-width: $bp6) {
+        justify-content: space-between;
+    }
+}

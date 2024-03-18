@@ -4,6 +4,7 @@
 @import "general";
 @import "header";
 @import "breadcrumbs";
+@import "pagination";
 @import "intro";
 @import "404";
 @import "about";
@@ -12,4 +13,13 @@
 @import "help";
 @import "ambassadors";
 @import "faq";
+@import "funds";
 @import "footer";
+@import "modal";
+.fancybox__button--fullscreen,
+.fancybox__button--slideshow,
+.fancybox__button--thumbs,
+.fancybox__button--zoom,
+.fancybox__thumbs {
+  display: none;
+}
