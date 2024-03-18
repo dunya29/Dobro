@@ -16,13 +16,13 @@
     <link href="css/fancybox.min.css" type="text/css" rel="stylesheet">
     <link href="css/croppie.min.css" type="text/css" rel="stylesheet">
     <link href="css/style.min.css" type="text/css" rel="stylesheet">
-    <title>Фонды-партнёры - Добрые дела</title>
+    <title>Главная - Добрые дела</title>
 </head>
 
-<body>
+<body class="no-scroll">
     <div class="wrap">
         <!--header-->
-        <header class="header fixed-block">
+        <header class="header header--main fixed-block">
     <div class="container">
         <div class="header__inner">
             <a href="main.html" class="header__logo">
@@ -60,6 +60,10 @@
                             <svg class="menu-open" viewBox="0 0 17 9" xmlns="http://www.w3.org/2000/svg">
                                 <ellipse cx="3.49262" cy="4.50023" rx="2.21825" ry="3.29812" transform="rotate(15.2459 3.49262 4.50023)"/>
                                 <ellipse cx="13.5073" cy="4.50023" rx="2.21825" ry="3.29812" transform="rotate(15.2459 13.5073 4.50023)" />
+                            </svg>
+                            <svg class="menu-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 13.1036L0.999999 1.60359L1.70711 0.896484L13.2071 12.3965L12.5 13.1036Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.792969 12.3965L12.293 0.896484L13.0001 1.60359L1.50008 13.1036L0.792969 12.3965Z"/>
                             </svg>
                             <svg class="menu-close"><use xlink:href="img/icons/sprite.svg#icon-close"></use></svg>
                             Меню
@@ -140,268 +144,713 @@
 </header>
         <!--main-->  
         <main class="main">
-            <!--breadcrumbs-->
-<div class="breadcrumbs">
-    <div class="container">
-        <ul>
-            <li><a href="#">Главная</a></li>
-            <li>Фонды</li>
-        </ul>
-    </div>
-</div>
-            <!--funds-->
-            <section class="section funds">
+            <!--intro-->
+            <section class="intro">
                 <div class="intro-bg">
-                    <div class="intro-bg__img"><picture><source srcset="img/funds-bg.webp" type="image/webp"><img src="img/funds-bg.jpg" alt=""></picture></div>   
+                    <div class="intro-bg__img"><picture><source srcset="img/main-intro-1.webp" type="image/webp"><img src="img/main-intro-1.jpg" alt=""></picture></div>     
+                    <div class="intro-bg__img"><picture><source srcset="img/main-intro-2.webp" type="image/webp"><img src="img/main-intro-2.jpg" alt=""></picture></div>
+                    <div class="intro-bg__img"><picture><source srcset="img/main-intro-3.webp" type="image/webp"><img src="img/main-intro-3.jpg" alt=""></picture></div>
                 </div>
-                <svg class="intro-path fixed-block" width="417" height="210" viewBox="0 0 417 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="intro-path" width="417" height="210" viewBox="0 0 417 210" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.726562 -23.0244C24.9545 -8.7079 54.2877 7.60832 70.387 31.3336C86.2749 54.7473 100.417 81.094 105.331 109.216C110.329 137.812 114.364 156.384 108.492 183.008C106.717 191.053 103.722 199.329 96.9533 204.024C85.1494 212.213 68.6357 210.324 58.5586 202.321C54.7177 199.271 52.1653 194.857 50.932 190.11C47.9393 178.59 49.1797 160.33 71.4148 140.278C101.035 116.582 134.789 115.611 172.137 115.611C207.74 115.611 243.041 122.743 278.683 118.466C312.304 114.432 353.464 100.473 376.55 74.5002C392.84 56.1744 403.343 23.4975 407.384 -0.0707016C410.23 -16.6728 415.72 -31.879 415.72 -48.833" stroke="#B71351" stroke-linecap="round" />
                 </svg>
                 <div class="container">
-                    <div class="funds__content">
-                        <h1>Фонды-партнёры</h1>
-                        <h4>Все фонды — партнёры проекта «800 добрых дел». Присоединяйтесь!</h4>
-                        <a href="#" class="btn main-btn modal-show-btn" data-modal="fund-modal">Стать партнёром</a>
-                    </div>
-                    <div class="funds__tabs">
-                        <div class="tabs">
-                            <span data-tag="all" class="active">Все</span>
-                            <span data-tag="2">Дети</span>
-                            <span data-tag="3">Животные</span>
-                            <span data-tag="4">Культурно-историческое наследие</span>
-                            <span data-tag="5">Люди в трудной жизненной ситуации</span>
-                            <span data-tag="6">Подростки</span>
-                            <span data-tag="7">Помощь животным</span>
-                            <span data-tag="8">Пожилые</span>
+                    <div class="intro__inner">
+                        <div class="intro__left">
+                            <div class="intro__content">
+                                <div class="intro__items">
+                                    <div class="media-cover">
+                                       <picture><source srcset="img/intro-1.webp" type="image/webp"><img src="img/intro-1.jpg" alt=""></picture>
+                                    </div>
+                                    <div class="media-cover">
+                                        <picture><source srcset="img/intro-2.webp" type="image/webp"><img src="img/intro-2.jpg" alt=""></picture>
+                                     </div>
+                                     <div class="media-cover">
+                                        <picture><source srcset="img/intro-3.webp" type="image/webp"><img src="img/intro-3.jpg" alt=""></picture>
+                                     </div>
+                                </div>
+                                <h1 class="text-l">Объединяем людей, готовых помочь</h1>
+                                <a href="#" class="btn main-link">О проекте</a>
+                            </div>
+                            <div class="intro-stat">
+                                <div class="intro-stat__item">
+                                    <span class="h2">2 385 677</span>
+                                    <span class="h4">рублей собрано<br>за все время</span>
+                                </div>
+                                <div class="intro-stat__item">
+                                    <span class="h2">11</span>
+                                    <span class="h4">фондов-<br>партнеров</span>
+                                </div>
+                                <div class="intro-stat__item">
+                                    <span class="h2">17</span>
+                                    <span class="h4">амбассадоров<br>приняли участие</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="intro__right">
+                            <a href="#" class="intro__card">
+                                <h3>Создать акцию</h3>
+                                <h5>А также представители современных социальных резервов, инициированные исключительно синтетически</h5>
+                                <div class="btn main-btn"><svg><use xlink:href="img/icons/sprite.svg#heart"></use></svg>Создать</div>
+                            </a>
+                            <a href="#" class="intro__card">
+                                <h3>Поддержать инициативу</h3>
+                                <h5>А также представители современных социальных резервов, инициированные исключительно синтетически</h5>
+                                <div class="btn main-btn"><svg><use xlink:href="img/icons/sprite.svg#heart"></use></svg>Поддержать</div>
+                            </a>
                         </div>
                     </div>
-                    <div class="funds__items">
-                        <div class="item-fund" data-tag="2,4,6">
-    <div class="media-contain">
-        <img src="img/fund-1.svg" alt="Нижегородский региональный благотворительный фонд «Земля нижегородская»">
-    </div>
-    <div class="item-fund__content">
-        <h3>Нижегородский региональный благотворительный фонд «Земля нижегородская»</h3>
-        <h5>Сохранение и популяризация культурного и исторического наследия Нижегородского края</h5>
-        <div class="item-fund__details">
-            <div class="item-fund__det">
-                <span>Акций:</span>
-                <span class="h4">4</span>
-            </div>
-            <div class="item-fund__det">
-                <span>Всего собрано:</span>
-                <span class="h4 rub">126000</span>
-            </div>
+                </div>
+            </section>
+            <!--main-about-->
+            <section class="main-about main-about--sticky">
+                <svg class="svg-path" width="505" height="900" preserveAspectRatio="none" viewBox="0 0 505 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M504.205 -14.3809C504.205 7.80783 498.541 30.4859 487.147 49.768C477.935 65.3582 467.555 77.0287 454.288 89.3247C437.637 104.758 423.339 120.796 404.162 133.486C336.017 178.582 258.844 214.454 178.734 232.23C173.738 233.339 168.624 234.008 163.507 234.146C125.851 235.166 112.584 228.313 94.5039 221.758C86.4694 218.845 78.4367 215.699 71.6048 210.564C62.6557 203.839 53.0428 194.855 50.9998 187.5C43.9737 162.206 81.2725 146.981 107.102 159.907C118.286 165.504 128.618 174.798 133.152 186.453C136.725 195.64 136.474 206.503 136.474 216.715C136.474 227.852 135.511 247.5 124.544 275.702C118.467 291.329 108.651 305.925 99.4287 319.758C87.4286 337.759 73.4408 353.637 58.407 369.257C33.1923 395.454 17.5652 434.623 7.75761 469.09C-0.565396 498.34 -1.22902 541.981 8.90873 570.494C26.7413 620.648 65.332 660.195 88.4408 708C106.943 746.276 112.405 780.523 112.405 821.752C112.405 859.63 100.351 891.354 89.8012 927.446C83.6846 948.371 76.6636 968.79 67.1973 987.723" stroke="#B71351" stroke-linecap="round" />
+                </svg>
+                <svg class="main-about__path" xmlns="http://www.w3.org/2000/svg" width="1654" height="484" viewBox="0 0 1654 484" fill="none">
+                    <path d="M1 483.209C40.9036 483.209 79.6333 465.134 116.041 450.181C147.452 437.279 180.564 428.097 210.021 410.77C256.082 383.675 299.147 350.602 335.752 311.684C353.895 292.395 404.891 221.499 385.534 193.293C379.5 184.5 362.877 182.838 362.877 196.005C362.877 206.395 364.671 210.316 369.259 218.981C433.792 340.876 597.529 361.538 720.924 370.721C866.143 381.528 1013.25 364.652 1153.49 325.885C1301.86 284.867 1453.49 215.498 1573.92 118.779C1608.59 90.9354 1633.27 63.9469 1647.95 22.5659C1649.95 16.9468 1656.25 4.0563 1649.55 0.706543" stroke="#B71351" stroke-linecap="round"/>
+                    </svg>
+                <div class="container">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="logo-nn">
+                                    <img src="img/logo-nn.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="main-about__content">
+                                    <h2>«800 добрых дел» — это наследие 800-летия Нижнего Новгорода</h2>
+                                    <p class="h4">Платформа, на которой собраны нижегородские благотворительные организации, занимающиеся разными социальными проблемами</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="main-about__content">
+                                    <h2>Проект «800 добрых дел» объединяет людей, готовых помочь</h2>
+                                    <p class="h4">Платформа, на которой собраны нижегородские благотворительные организации, занимающиеся разными социальными проблемами</p>
+                                    <a href="#" class="btn main-link">О проекте</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            <!--main-info-->
+            <section class="section main-info">
+                <div class="container">
+                    <div class="main-info__inner">
+                        <div class="main-info__content">
+                            <h3>Создать собственный сбор</h3>
+                            <p>Вы можете запустить сбор в пользу одного из фондов-партнёров проекта и собрать средства для тех, кто нуждается. Можно приурочить акцию к вашему дню рождения, любому другому событию или организовать сбор без повода.</p>
+                            <a href="#" class="btn main-btn"><svg><use xlink:href="img/icons/sprite.svg#heart"></use></svg>Создать</a>
+                        </div>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item-info">
+    <h3>Социальный проект Бюст-мост: против рака груди</h3>
+    <p class="h6">Вы можете запустить сбор в пользу одного из фондов-партнёров проекта и собрать средства для тех, кто нуждается. Можно приурочить акцию к вашему дню рождения.</p>
+</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item-info">
+    <h3>Социальный проект Бюст-мост: против рака груди</h3>
+    <p class="h6">Вы можете запустить сбор в пользу одного из фондов-партнёров проекта и собрать средства для тех, кто нуждается. Можно приурочить акцию к вашему дню рождения.</p>
+</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item-info">
+    <h3>Социальный проект Бюст-мост: против рака груди</h3>
+    <p class="h6">Вы можете запустить сбор в пользу одного из фондов-партнёров проекта и собрать средства для тех, кто нуждается. Можно приурочить акцию к вашему дню рождения.</p>
+</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item-info">
+    <h3>Социальный проект Бюст-мост: против рака груди</h3>
+    <p class="h6">Вы можете запустить сбор в пользу одного из фондов-партнёров проекта и собрать средства для тех, кто нуждается. Можно приурочить акцию к вашему дню рождения.</p>
+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <!--help-->
+            <section class="section help main-help">
+                <div class="container">
+                    <div class="page-top help__top">
+                        <h2>Вы можете помочь</h2>
+                        <div class="help__selects">
+                            <div class="custom-select">
+                                <div class="custom-select__selected"><span>Фонд</span>
+                                    <svg><use xlink:href="img/icons/sprite.svg#dropdown"></use></svg>
+                                </div>
+                                <div class="custom-select__options">
+                                    <label class="hover-bg item-checkbox">
+                                        <input type="checkbox">
+                                        <span>Во Благо — Дар</span>
+                                    </label>
+                                    <label class="hover-bg item-checkbox">
+                                        <input type="checkbox">
+                                        <span>Жизнь без границ</span>
+                                    </label>
+                                    <label class="hover-bg item-checkbox">
+                                        <input type="checkbox">
+                                        <span>Нижег. онко-научный центр</span>
+                                    </label>
+                                    <label class="hover-bg item-checkbox">
+                                        <input type="checkbox">
+                                        <span>Благотворительный фонд «Время РАСсвета»</span>
+                                    </label>
+                                    <label class="hover-bg item-checkbox">
+                                        <input type="checkbox">
+                                        <span>НРООИ «Инватур»</span>
+                                    </label>
+                                    <label class="hover-bg item-checkbox">
+                                        <input type="checkbox">
+                                        <span>Волонтерское движение</span>
+                                    </label>
+                                    <label class="hover-bg item-checkbox">
+                                        <input type="checkbox">
+                                        <span>«Милосердие»</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="custom-select">
+                                <div class="custom-select__selected"><span>Кому помочь</span>
+                                    <svg><use xlink:href="img/icons/sprite.svg#dropdown"></use></svg>
+                                </div>
+                                <div class="custom-select__options">
+                                    <label class="hover-bg item-checkbox">
+                                        <input type="checkbox">
+                                        <span>Во Благо — Дар</span>
+                                    </label>
+                                    <label class="hover-bg item-checkbox">
+                                        <input type="checkbox">
+                                        <span>Жизнь без границ</span>
+                                    </label>
+                                    <label class="hover-bg item-checkbox">
+                                        <input type="checkbox">
+                                        <span>Нижег. онко-научный центр</span>
+                                    </label>
+                                    <label class="hover-bg item-checkbox">
+                                        <input type="checkbox">
+                                        <span>Благотворительный фонд «Время РАСсвета»</span>
+                                    </label>
+                                    <label class="hover-bg item-checkbox">
+                                        <input type="checkbox">
+                                        <span>НРООИ «Инватур»</span>
+                                    </label>
+                                    <label class="hover-bg item-checkbox">
+                                        <input type="checkbox">
+                                        <span>Волонтерское движение</span>
+                                    </label>
+                                    <label class="hover-bg item-checkbox">
+                                        <input type="checkbox">
+                                        <span>«Милосердие»</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="help__items">
+                        <div class="item-help">
+    <div class="item-help__status"></div>
+    <div class="item-help__body">
+        <div class="media-cover">
+            <picture><source srcset="img/help-1.webp" type="image/webp"><img src="img/help-1.jpg" alt="Работа мечты для Хулиганодома"></picture>
         </div>
-        <a href="#" class="btn stroke-btn">Подробнее</a>
+        <div class="item-help__content">
+            <div class="item-help__info">
+                <div class="item-help__auth">
+                    <picture><source srcset="img/help-auth-1.webp" type="image/webp"><img src="img/help-auth-1.jpg" alt="Горская Антонина"></picture>
+                    <span>Горская Антонина</span>
+                </div>
+                <div class="item-help__fund">Фонд «Нижегородский онкологический научный центр»</div>
+            </div>
+            <h3>Работа мечты для Хулиганодома</h3>
+            <div class="progress-bar" data-coll="126000" data-aim="159000"><span></span></div>
+            <div class="item-help__details">
+                <div class="item-help__det">
+                    <span>Собрано:</span>
+                    <span class="h4 rub">126000</span>
+                </div>
+                <div class="item-help__det">
+                    <span>Осталось:</span>
+                    <span class="h4 rub">33000</span>
+                </div>
+            </div>
+            <a href="#" class="btn main-btn">
+                <svg><use xlink:href="img/icons/sprite.svg#heart"></use></svg>Поддержать
+            </a>
+        </div>
     </div>
 </div>
-                        <div class="item-fund" data-tag="3,5">
-    <div class="media-contain">
-        <img src="img/fund-2.svg" alt="Нижегородский региональный благотворительный фонд «Земля нижегородская»">
-    </div>
-    <div class="item-fund__content">
-        <h3>Нижегородский региональный благотворительный фонд «Земля нижегородская»</h3>
-        <h5>Сохранение и популяризация культурного и исторического наследия Нижегородского края</h5>
-        <div class="item-fund__details">
-            <div class="item-fund__det">
-                <span>Акций:</span>
-                <span class="h4">4</span>
-            </div>
-            <div class="item-fund__det">
-                <span>Всего собрано:</span>
-                <span class="h4 rub">126000</span>
-            </div>
+                        <div class="item-help">
+    <div class="item-help__status"></div>
+    <div class="item-help__body">
+        <div class="media-cover">
+            <picture><source srcset="img/help-2.webp" type="image/webp"><img src="img/help-2.jpg" alt="Работа мечты для Хулиганодома"></picture>
         </div>
-        <a href="#" class="btn stroke-btn">Подробнее</a>
+        <div class="item-help__content">
+            <div class="item-help__info">
+                <div class="item-help__auth">
+                    <picture><source srcset="img/help-auth-2.webp" type="image/webp"><img src="img/help-auth-2.jpg" alt="Филиппов Алексей"></picture>
+                    <span>Филиппов Алексей</span>
+                </div>
+                <div class="item-help__fund">Фонд «Нижегородский онкологический научный центр»</div>
+            </div>
+            <h3>Работа мечты для Хулиганодома</h3>
+            <div class="progress-bar" data-coll="126000" data-aim="159000"><span></span></div>
+            <div class="item-help__details">
+                <div class="item-help__det">
+                    <span>Собрано:</span>
+                    <span class="h4 rub">126000</span>
+                </div>
+                <div class="item-help__det">
+                    <span>Осталось:</span>
+                    <span class="h4 rub">33000</span>
+                </div>
+            </div>
+            <a href="#" class="btn main-btn">
+                <svg><use xlink:href="img/icons/sprite.svg#heart"></use></svg>Поддержать
+            </a>
+        </div>
     </div>
 </div>
-                        <div class="item-fund" data-tag="4,8">
-    <div class="media-contain">
-        <img src="img/fund-3.svg" alt="Нижегородский региональный благотворительный фонд «Земля нижегородская»">
-    </div>
-    <div class="item-fund__content">
-        <h3>Нижегородский региональный благотворительный фонд «Земля нижегородская»</h3>
-        <h5>Сохранение и популяризация культурного и исторического наследия Нижегородского края</h5>
-        <div class="item-fund__details">
-            <div class="item-fund__det">
-                <span>Акций:</span>
-                <span class="h4">4</span>
-            </div>
-            <div class="item-fund__det">
-                <span>Всего собрано:</span>
-                <span class="h4 rub">126000</span>
-            </div>
+                        <div class="item-help">
+    <div class="item-help__status"></div>
+    <div class="item-help__body">
+        <div class="media-cover">
+            <picture><source srcset="img/help-3.webp" type="image/webp"><img src="img/help-3.jpg" alt="Работа мечты для Хулиганодома"></picture>
         </div>
-        <a href="#" class="btn stroke-btn">Подробнее</a>
+        <div class="item-help__content">
+            <div class="item-help__info">
+                <div class="item-help__auth">
+                    <picture><source srcset="img/help-auth-3.webp" type="image/webp"><img src="img/help-auth-3.jpg" alt="Калинина Александра"></picture>
+                    <span>Калинина Александра</span>
+                </div>
+                <div class="item-help__fund">Фонд «Нижегородский онкологический научный центр»</div>
+            </div>
+            <h3>Работа мечты для Хулиганодома</h3>
+            <div class="progress-bar" data-coll="126000" data-aim="159000"><span></span></div>
+            <div class="item-help__details">
+                <div class="item-help__det">
+                    <span>Собрано:</span>
+                    <span class="h4 rub">126000</span>
+                </div>
+                <div class="item-help__det">
+                    <span>Осталось:</span>
+                    <span class="h4 rub">33000</span>
+                </div>
+            </div>
+            <a href="#" class="btn main-btn">
+                <svg><use xlink:href="img/icons/sprite.svg#heart"></use></svg>Поддержать
+            </a>
+        </div>
+    </div>
+</div>                 
+                        <div class="item-help">
+    <div class="item-help__status"></div>
+    <div class="item-help__body">
+        <div class="media-cover">
+            <picture><source srcset="img/help-2.webp" type="image/webp"><img src="img/help-2.jpg" alt="Работа мечты для Хулиганодома"></picture>
+        </div>
+        <div class="item-help__content">
+            <div class="item-help__info">
+                <div class="item-help__auth">
+                    <picture><source srcset="img/help-auth-2.webp" type="image/webp"><img src="img/help-auth-2.jpg" alt="Филиппов Алексей"></picture>
+                    <span>Филиппов Алексей</span>
+                </div>
+                <div class="item-help__fund">Фонд «Нижегородский онкологический научный центр»</div>
+            </div>
+            <h3>Работа мечты для Хулиганодома</h3>
+            <div class="progress-bar" data-coll="126000" data-aim="159000"><span></span></div>
+            <div class="item-help__details">
+                <div class="item-help__det">
+                    <span>Собрано:</span>
+                    <span class="h4 rub">126000</span>
+                </div>
+                <div class="item-help__det">
+                    <span>Осталось:</span>
+                    <span class="h4 rub">33000</span>
+                </div>
+            </div>
+            <a href="#" class="btn main-btn">
+                <svg><use xlink:href="img/icons/sprite.svg#heart"></use></svg>Поддержать
+            </a>
+        </div>
     </div>
 </div>
-                        <div class="item-fund" data-tag="5,6,7,8">
-    <div class="media-contain">
-        <img src="img/fund-2.svg" alt="Нижегородский региональный благотворительный фонд «Земля нижегородская»">
-    </div>
-    <div class="item-fund__content">
-        <h3>Нижегородский региональный благотворительный фонд «Земля нижегородская»</h3>
-        <h5>Сохранение и популяризация культурного и исторического наследия Нижегородского края</h5>
-        <div class="item-fund__details">
-            <div class="item-fund__det">
-                <span>Акций:</span>
-                <span class="h4">4</span>
-            </div>
-            <div class="item-fund__det">
-                <span>Всего собрано:</span>
-                <span class="h4 rub">126000</span>
-            </div>
+                        <div class="item-help">
+    <div class="item-help__status"></div>
+    <div class="item-help__body">
+        <div class="media-cover">
+            <picture><source srcset="img/help-1.webp" type="image/webp"><img src="img/help-1.jpg" alt="Работа мечты для Хулиганодома"></picture>
         </div>
-        <a href="#" class="btn stroke-btn">Подробнее</a>
+        <div class="item-help__content">
+            <div class="item-help__info">
+                <div class="item-help__auth">
+                    <picture><source srcset="img/help-auth-1.webp" type="image/webp"><img src="img/help-auth-1.jpg" alt="Горская Антонина"></picture>
+                    <span>Горская Антонина</span>
+                </div>
+                <div class="item-help__fund">Фонд «Нижегородский онкологический научный центр»</div>
+            </div>
+            <h3>Работа мечты для Хулиганодома</h3>
+            <div class="progress-bar" data-coll="126000" data-aim="159000"><span></span></div>
+            <div class="item-help__details">
+                <div class="item-help__det">
+                    <span>Собрано:</span>
+                    <span class="h4 rub">126000</span>
+                </div>
+                <div class="item-help__det">
+                    <span>Осталось:</span>
+                    <span class="h4 rub">33000</span>
+                </div>
+            </div>
+            <a href="#" class="btn main-btn">
+                <svg><use xlink:href="img/icons/sprite.svg#heart"></use></svg>Поддержать
+            </a>
+        </div>
     </div>
 </div>
-                        <div class="item-fund" data-tag="1,2,6">
-    <div class="media-contain">
-        <img src="img/fund-3.svg" alt="Нижегородский региональный благотворительный фонд «Земля нижегородская»">
-    </div>
-    <div class="item-fund__content">
-        <h3>Нижегородский региональный благотворительный фонд «Земля нижегородская»</h3>
-        <h5>Сохранение и популяризация культурного и исторического наследия Нижегородского края</h5>
-        <div class="item-fund__details">
-            <div class="item-fund__det">
-                <span>Акций:</span>
-                <span class="h4">4</span>
-            </div>
-            <div class="item-fund__det">
-                <span>Всего собрано:</span>
-                <span class="h4 rub">126000</span>
-            </div>
+                        <div class="item-help">
+    <div class="item-help__status"></div>
+    <div class="item-help__body">
+        <div class="media-cover">
+            <picture><source srcset="img/help-3.webp" type="image/webp"><img src="img/help-3.jpg" alt="Работа мечты для Хулиганодома"></picture>
         </div>
-        <a href="#" class="btn stroke-btn">Подробнее</a>
-    </div>
-</div>
-                        <div class="item-fund" data-tag="1,5,7">
-    <div class="media-contain">
-        <img src="img/fund-1.svg" alt="Нижегородский региональный благотворительный фонд «Земля нижегородская»">
-    </div>
-    <div class="item-fund__content">
-        <h3>Нижегородский региональный благотворительный фонд «Земля нижегородская»</h3>
-        <h5>Сохранение и популяризация культурного и исторического наследия Нижегородского края</h5>
-        <div class="item-fund__details">
-            <div class="item-fund__det">
-                <span>Акций:</span>
-                <span class="h4">4</span>
+        <div class="item-help__content">
+            <div class="item-help__info">
+                <div class="item-help__auth">
+                    <picture><source srcset="img/help-auth-3.webp" type="image/webp"><img src="img/help-auth-3.jpg" alt="Калинина Александра"></picture>
+                    <span>Калинина Александра</span>
+                </div>
+                <div class="item-help__fund">Фонд «Нижегородский онкологический научный центр»</div>
             </div>
-            <div class="item-fund__det">
-                <span>Всего собрано:</span>
-                <span class="h4 rub">126000</span>
+            <h3>Работа мечты для Хулиганодома</h3>
+            <div class="progress-bar" data-coll="126000" data-aim="159000"><span></span></div>
+            <div class="item-help__details">
+                <div class="item-help__det">
+                    <span>Собрано:</span>
+                    <span class="h4 rub">126000</span>
+                </div>
+                <div class="item-help__det">
+                    <span>Осталось:</span>
+                    <span class="h4 rub">33000</span>
+                </div>
             </div>
+            <a href="#" class="btn main-btn">
+                <svg><use xlink:href="img/icons/sprite.svg#heart"></use></svg>Поддержать
+            </a>
         </div>
-        <a href="#" class="btn stroke-btn">Подробнее</a>
     </div>
-</div>
-                        <div class="item-fund" data-tag="1,5">
-    <div class="media-contain">
-        <img src="img/fund-3.svg" alt="Нижегородский региональный благотворительный фонд «Земля нижегородская»">
+</div> 
+                    </div>
+                    <div class="text-align">
+                        <a href="#" class="btn main-link">Смотреть все акции</a>
+                    </div>
+                </div>
+            </section>
+            <!--ambassadors-->
+            <section class="section ambassadors">
+                <svg class="svg-path" width="341" height="520" viewBox="0 0 341 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M-53.0329 1C-53.0329 25.5454 -21.6793 52.8566 -3.85667 65.9127C61.7942 114.006 137.24 126.462 217.109 124.815C235.086 124.444 289.234 121.08 289.234 93.4514C289.234 81.2144 278.5 76 267.5 75C255.738 75 249.5 75 241 83.5C236.104 88.3964 233.5 97 233.5 108C233.5 122.499 236.639 132.517 242.899 145.906C255.796 173.491 284.862 192.889 304.096 215.518C329.182 245.03 344.005 279.773 338.629 318.788C329.943 381.825 297.906 423.616 237.872 444.461C199.5 457.784 184.018 458.639 157.66 467.628C151.589 469.699 129.922 477.819 125 485C117.422 496.056 119.383 506.305 126.078 513C142.029 528.951 157.442 508.856 157.442 494.621C157.442 463.505 136.187 446.742 107.828 439.652C71.0422 430.456 31.8229 431.362 -5.82372 428.834C-21.9711 427.749 -38.9111 423.916 -55 423.916" stroke="#B71351" stroke-linecap="round" />
+                </svg>
+                <svg class="svg-path" width="229" height="478" viewBox="0 0 229 478" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M258.168 1.24561C258.168 24.5062 259 47.9346 247.895 69.2182C219.853 122.966 158.964 157.109 104.301 177.843C76.3258 188.454 41.764 198.718 12.7236 185.493C-5.14234 177.357 -1.21832 161.467 10.6472 150.851C34.1422 129.829 73.4622 138.608 94.5748 158.61C114.894 177.86 116.279 210.275 112.169 236.199C107.801 263.753 89.2904 287.559 87.253 316.083C83.5573 367.822 139.038 399.837 177.956 422.195C211.923 441.708 247.727 457.818 281.772 477.272" stroke="#B71351" stroke-linecap="round" />
+                </svg>
+                <div class="container">
+                    <div class="ambassadors__top">
+                        <h2 class="icon-heart">Наши амбассадоры</h2>
+                    </div>
+                    <div class="swiper ambassadors__mainswiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <p class="h3">«Всем хочется оставить след в истории. Кто‑то космос покоряет, кто‑то пишет музыку. Такие таланты есть не у всех. А спасти чью‑то жизнь — это достойный след, и в моих, и в ваших силах это сделать. Помогать можно, следуя эмоциональному порыву, оказывать точечную поддержку, но помогать фондам системно гораздо эффективнее. Присоединяйтесь!»</p>
+                                <h5><span>Олег Беркович</span>, заместитель губернатора нижегородской области</h5>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="h3">«Всем хочется оставить след в истории. Кто‑то космос покоряет, кто‑то пишет музыку. Такие таланты есть не у всех. А спасти чью‑то жизнь — это достойный след, и в моих, и в ваших силах это сделать. Помогать можно, следуя эмоциональному порыву, оказывать точечную поддержку, но помогать фондам системно гораздо эффективнее. Присоединяйтесь!»</p>
+                                <h5><span>Мария Игнатьева</span>, заместитель губернатора нижегородской области</h5>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="h3">«Всем хочется оставить след в истории. Кто‑то космос покоряет, кто‑то пишет музыку. Такие таланты есть не у всех. А спасти чью‑то жизнь — это достойный след, и в моих, и в ваших силах это сделать. Помогать можно, следуя эмоциональному порыву, оказывать точечную поддержку, но помогать фондам системно гораздо эффективнее. Присоединяйтесь!»</p>
+                                <h5><span>Олег Беркович</span>, заместитель губернатора нижегородской области</h5>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="h3">«Всем хочется оставить след в истории. Кто‑то космос покоряет, кто‑то пишет музыку. Такие таланты есть не у всех. А спасти чью‑то жизнь — это достойный след, и в моих, и в ваших силах это сделать. Помогать можно, следуя эмоциональному порыву, оказывать точечную поддержку, но помогать фондам системно гораздо эффективнее. Присоединяйтесь!»</p>
+                                <h5><span>Мария Игнатьева</span>, заместитель губернатора нижегородской области</h5>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="h3">«Всем хочется оставить след в истории. Кто‑то космос покоряет, кто‑то пишет музыку. Такие таланты есть не у всех. А спасти чью‑то жизнь — это достойный след, и в моих, и в ваших силах это сделать. Помогать можно, следуя эмоциональному порыву, оказывать точечную поддержку, но помогать фондам системно гораздо эффективнее. Присоединяйтесь!»</p>
+                                <h5><span>Олег Беркович</span>, заместитель губернатора нижегородской области</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper ambassadors__thumbswiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="media-cover"><picture><source srcset="img/ambassador-1.webp" type="image/webp"><img src="img/ambassador-1.jpg" alt="Олег Беркович"></picture></div>
+                                <svg class="ambassadors__svg"  viewBox="0 0 182 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="ambassadors__svg-circle" cx="91" cy="91" r="89" stroke-width="2" stroke="#BFCAEA"></circle>
+                                    <circle class="ambassadors__svg-progress" cx="91" cy="91" r="89" stroke-width="2" stroke-linecap="round" stroke="#B71351"></circle>
+                                </svg>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="media-cover"><picture><source srcset="img/ambassador-2.webp" type="image/webp"><img src="img/ambassador-2.jpg" alt="Олег Беркович"></picture></div>
+                                <svg class="ambassadors__svg"  viewBox="0 0 182 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="ambassadors__svg-circle" cx="91" cy="91" r="89" stroke-width="2" stroke="#BFCAEA"></circle>
+                                    <circle class="ambassadors__svg-progress" cx="91" cy="91" r="89" stroke-width="2" stroke-linecap="round" stroke="#B71351"></circle>
+                                </svg>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="media-cover"><picture><source srcset="img/ambassador-3.webp" type="image/webp"><img src="img/ambassador-3.jpg" alt="Олег Беркович"></picture></div>
+                                <svg class="ambassadors__svg"  viewBox="0 0 182 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="ambassadors__svg-circle" cx="91" cy="91" r="89" stroke-width="2" stroke="#BFCAEA"></circle>
+                                    <circle class="ambassadors__svg-progress" cx="91" cy="91" r="89" stroke-width="2" stroke-linecap="round" stroke="#B71351"></circle>
+                                </svg>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="media-cover"><picture><source srcset="img/ambassador-4.webp" type="image/webp"><img src="img/ambassador-4.jpg" alt="Олег Беркович"></picture></div>
+                                <svg class="ambassadors__svg"  viewBox="0 0 182 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="ambassadors__svg-circle" cx="91" cy="91" r="89" stroke-width="2" stroke="#BFCAEA"></circle>
+                                    <circle class="ambassadors__svg-progress" cx="91" cy="91" r="89" stroke-width="2" stroke-linecap="round" stroke="#B71351"></circle>
+                                </svg>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="media-cover"><picture><source srcset="img/ambassador-5.webp" type="image/webp"><img src="img/ambassador-5.jpg" alt="Олег Беркович"></picture></div>
+                                <svg class="ambassadors__svg"  viewBox="0 0 182 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="ambassadors__svg-circle" cx="91" cy="91" r="89" stroke-width="2" stroke="#BFCAEA"></circle>
+                                    <circle class="ambassadors__svg-progress" cx="91" cy="91" r="89" stroke-width="2" stroke-linecap="round" stroke="#B71351"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--events-->
+            <section class="section events">
+                <div class="container">
+                    <div class="page-top">
+                        <h2>Специальные события</h2>
+                    </div>  
+                    <div class="swiper swiper-4">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="my-cursor item-event">
+    <div class="media-cover">
+        <picture><source srcset="img/events-1.webp" type="image/webp"><img src="img/events-1.jpg" alt="Добромобиль Соболь NN"></picture>
     </div>
-    <div class="item-fund__content">
-        <h3>Нижегородский региональный благотворительный фонд «Земля нижегородская»</h3>
-        <h5>Сохранение и популяризация культурного и исторического наследия Нижегородского края</h5>
-        <div class="item-fund__details">
-            <div class="item-fund__det">
-                <span>Акций:</span>
-                <span class="h4">4</span>
-            </div>
-            <div class="item-fund__det">
-                <span>Всего собрано:</span>
-                <span class="h4 rub">126000</span>
-            </div>
+    <div class="item-event__content">
+        <h3>Добромобиль Соболь NN</h3>
+        <span>24.01.23</span>
+    </div>
+</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="my-cursor item-event">
+    <div class="media-cover">
+        <picture><source srcset="img/events-2.webp" type="image/webp"><img src="img/events-2.jpg" alt="КультPROСвет"></picture>
+    </div>
+    <div class="item-event__content">
+        <h3>КультPROСвет</h3>
+        <span>24.01.23</span>
+    </div>
+</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="my-cursor item-event">
+    <div class="media-cover">
+        <picture><source srcset="img/events-3.webp" type="image/webp"><img src="img/events-3.jpg" alt="Помогаем всем городом!"></picture>
+    </div>
+    <div class="item-event__content">
+        <h3>Помогаем всем городом!</h3>
+        <span>24.01.23</span>
+    </div>
+</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="my-cursor item-event">
+    <div class="media-cover">
+        <picture><source srcset="img/events-4.webp" type="image/webp"><img src="img/events-4.jpg" alt="Благотворительный забег"></picture>
+    </div>
+    <div class="item-event__content">
+        <h3>Благотворительный забег</h3>
+        <span>24.01.23</span>
+    </div>
+</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--main-block-->
+            <section class="section main-block main-block--dark">
+                <div class="container">
+                    <div class="main-block__bg">
+                        <div class="main-block__inner">
+                            <div class="main-block__images">
+                                <div class="media-cover"><picture><source srcset="img/ambass-block-1.webp" type="image/webp"><img src="img/ambass-block-1.jpg" alt=""></picture></div>
+                                <div class="media-cover"><picture><source srcset="img/ambass-block-2.webp" type="image/webp"><img src="img/ambass-block-2.jpg" alt=""></picture></div>
+                            </div>
+                            <div class="main-block__center">
+                                <h2>Проект «800 добрых дел» объединяет людей, готовых помочь</h2>
+                                <div class="h4">Им можешь стать ты</div>
+                                <a href="#" class="btn main-btn">
+                                    <svg><use xlink:href="img/icons/sprite.svg#heart"></use></svg>
+                                    Стать амбассадором
+                                </a>
+                            </div>
+                            <div class="main-block__images">
+                                <div class="media-cover"><picture><source srcset="img/ambass-block-3.webp" type="image/webp"><img src="img/ambass-block-3.jpg" alt=""></picture></div>
+                                <div class="media-cover"><picture><source srcset="img/ambass-block-4.webp" type="image/webp"><img src="img/ambass-block-4.jpg" alt=""></picture></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--news-->
+            <section class="section news">
+                <div class="container">
+                    <div class="page-top">
+                        <h2>Новости</h2>
+                    </div>  
+                    <div class="swiper swiper-4">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="my-cursor item-news">
+    <div class="item-news__preview">
+        <div class="media-cover">
+            <picture><source srcset="img/news-1.webp" type="image/webp"><img src="img/news-1.jpg" alt="Собрание амбассадоров проекта 800 Добрых Дел"></picture>
         </div>
-        <a href="#" class="btn stroke-btn">Подробнее</a>
     </div>
-</div>
-                        <div class="item-fund" data-tag="3,4,8">
-    <div class="media-contain">
-        <img src="img/fund-2.svg" alt="Нижегородский региональный благотворительный фонд «Земля нижегородская»">
+    <div class="item-news__content">
+        <span>24.02.23</span>
+        <h3>Собрание амбассадоров проекта 800 Добрых Дел</h3>
+        <p>Вы можете запустить сбор в пользу одного из фондов-партнёров проекта и собрать средства для тех</p>
     </div>
-    <div class="item-fund__content">
-        <h3>Нижегородский региональный благотворительный фонд «Земля нижегородская»</h3>
-        <h5>Сохранение и популяризация культурного и исторического наследия Нижегородского края</h5>
-        <div class="item-fund__details">
-            <div class="item-fund__det">
-                <span>Акций:</span>
-                <span class="h4">4</span>
-            </div>
-            <div class="item-fund__det">
-                <span>Всего собрано:</span>
-                <span class="h4 rub">126000</span>
-            </div>
+</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="my-cursor item-news">
+    <div class="item-news__preview">
+        <div class="media-cover">
+            <picture><source srcset="img/news-2.webp" type="image/webp"><img src="img/news-2.jpg" alt="Запуск социального проекта Помогаем всем и каждому!"></picture>
         </div>
-        <a href="#" class="btn stroke-btn">Подробнее</a>
     </div>
-</div>
-                        <div class="item-fund" data-tag="1,2,6">
-    <div class="media-contain">
-        <img src="img/fund-3.svg" alt="Нижегородский региональный благотворительный фонд «Земля нижегородская»">
+    <div class="item-news__content">
+        <span>24.02.23</span>
+        <h3>Запуск социального проекта Помогаем всем и каждому!</h3>
+        <p>Вы можете запустить сбор в пользу одного из фондов-партнёров проекта и собрать средства для тех</p>
     </div>
-    <div class="item-fund__content">
-        <h3>Нижегородский региональный благотворительный фонд «Земля нижегородская»</h3>
-        <h5>Сохранение и популяризация культурного и исторического наследия Нижегородского края</h5>
-        <div class="item-fund__details">
-            <div class="item-fund__det">
-                <span>Акций:</span>
-                <span class="h4">4</span>
-            </div>
-            <div class="item-fund__det">
-                <span>Всего собрано:</span>
-                <span class="h4 rub">126000</span>
-            </div>
+</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="my-cursor item-news">
+    <div class="item-news__preview">
+        <div class="media-cover">
+            <picture><source srcset="img/news-3.webp" type="image/webp"><img src="img/news-3.jpg" alt="Отчёт об активности за февраль"></picture>
         </div>
-        <a href="#" class="btn stroke-btn">Подробнее</a>
     </div>
-</div>
-                        <div class="item-fund" data-tag="3,8">
-    <div class="media-contain">
-        <img src="img/fund-1.svg" alt="Нижегородский региональный благотворительный фонд «Земля нижегородская»">
+    <div class="item-news__content">
+        <span>24.02.23</span>
+        <h3>Отчёт об активности за февраль</h3>
+        <p>Вы можете запустить сбор в пользу одного из фондов-партнёров проекта и собрать средства для тех</p>
     </div>
-    <div class="item-fund__content">
-        <h3>Нижегородский региональный благотворительный фонд «Земля нижегородская»</h3>
-        <h5>Сохранение и популяризация культурного и исторического наследия Нижегородского края</h5>
-        <div class="item-fund__details">
-            <div class="item-fund__det">
-                <span>Акций:</span>
-                <span class="h4">4</span>
-            </div>
-            <div class="item-fund__det">
-                <span>Всего собрано:</span>
-                <span class="h4 rub">126000</span>
-            </div>
+</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="my-cursor item-news">
+    <div class="item-news__preview">
+        <div class="media-cover">
+            <picture><source srcset="img/news-4.webp" type="image/webp"><img src="img/news-4.jpg" alt="Социальный проект Бюст-мост: против"></picture>
         </div>
-        <a href="#" class="btn stroke-btn">Подробнее</a>
     </div>
-</div>
-                        <div class="item-fund" data-tag="4,8">
-    <div class="media-contain">
-        <img src="img/fund-2.svg" alt="Нижегородский региональный благотворительный фонд «Земля нижегородская»">
+    <div class="item-news__content">
+        <span>24.02.23</span>
+        <h3>Социальный проект Бюст-мост: против</h3>
+        <p>Вы можете запустить сбор в пользу одного из фондов-партнёров проекта и собрать средства для тех</p>
     </div>
-    <div class="item-fund__content">
-        <h3>Нижегородский региональный благотворительный фонд «Земля нижегородская»</h3>
-        <h5>Сохранение и популяризация культурного и исторического наследия Нижегородского края</h5>
-        <div class="item-fund__details">
-            <div class="item-fund__det">
-                <span>Акций:</span>
-                <span class="h4">4</span>
-            </div>
-            <div class="item-fund__det">
-                <span>Всего собрано:</span>
-                <span class="h4 rub">126000</span>
-            </div>
-        </div>
-        <a href="#" class="btn stroke-btn">Подробнее</a>
-    </div>
-</div>
+</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--faq-->
+            <section class="section faq">
+                <svg class="svg-path" xmlns="http://www.w3.org/2000/svg" width="192" height="402" viewBox="0 0 192 402" fill="none">
+                    <path d="M-14.6626 400.987C-7.10456 373.879 1.06369 341.323 19.8137 319.632C38.3176 298.225 60.1063 277.746 85.9983 265.72C112.327 253.492 129.222 244.787 156.458 243.569C164.688 243.201 173.457 243.952 179.744 249.275C190.709 258.557 193.159 274.997 188.037 286.802C186.084 291.302 182.482 294.909 178.215 297.329C167.863 303.202 149.903 306.73 124.78 290.442C94.2252 267.964 84.5512 235.611 74.8849 199.536C65.6702 165.146 63.4226 129.202 50.0664 95.8814C37.4677 64.4503 13.3315 28.3061 -17.7314 12.7282C-39.6489 1.73664 -73.9308 0.0485376 -97.7416 2.24584C-114.515 3.79369 -130.624 2.42606 -147 6.81409" stroke="#B71351" stroke-linecap="round"/>
+                </svg>
+                <div class="container">
+                    <div class="page-top">
+                        <h2>Часто задаваемые вопросы</h2>
+                    </div>
+                    <div class="faq__items">
+                        <div class="accordion">
+                            <div class="accordion__header">
+                                <h3>Кто может создать сбор для фонда?</h3>
+                                <svg><use xlink:href="img/icons/sprite.svg#dropdown"></use></svg>
+                            </div>
+                            <div class="accordion__body">
+                                <div class="accordion__content">
+                                    <p>Имеется спорная точка зрения, гласящая примерно следующее: тщательные исследования конкурентов неоднозначны и будут указаны как претенденты на роль ключевых факторов. Вот вам яркий пример современных тенденций — высокое качество позиционных исследований позволяет выполнить важные задания по разработке новых принципов формирования материально-технической и кадровой базы.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <div class="accordion__header">
+                                <h3>Как создать акцию для фонда?</h3>
+                                <svg><use xlink:href="img/icons/sprite.svg#dropdown"></use></svg>
+                            </div>
+                            <div class="accordion__body">
+                                <div class="accordion__content">
+                                    <p>Имеется спорная точка зрения, гласящая примерно следующее: тщательные исследования конкурентов неоднозначны и будут указаны как претенденты на роль ключевых факторов. Вот вам яркий пример современных тенденций — высокое качество позиционных исследований позволяет выполнить важные задания по разработке новых принципов формирования материально-технической и кадровой базы.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <div class="accordion__header">
+                                <h3>Как я могу помочь?</h3>
+                                <svg><use xlink:href="img/icons/sprite.svg#dropdown"></use></svg>
+                            </div>
+                            <div class="accordion__body">
+                                <div class="accordion__content">
+                                    <p>Имеется спорная точка зрения, гласящая примерно следующее: тщательные исследования конкурентов неоднозначны и будут указаны как претенденты на роль ключевых факторов. Вот вам яркий пример современных тенденций — высокое качество позиционных исследований позволяет выполнить важные задания по разработке новых принципов формирования материально-технической и кадровой базы.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <div class="accordion__header">
+                                <h3>Как я могу помочь?</h3>
+                                <svg><use xlink:href="img/icons/sprite.svg#dropdown"></use></svg>
+                            </div>
+                            <div class="accordion__body">
+                                <div class="accordion__content">
+                                    <p>Имеется спорная точка зрения, гласящая примерно следующее: тщательные исследования конкурентов неоднозначны и будут указаны как претенденты на роль ключевых факторов. Вот вам яркий пример современных тенденций — высокое качество позиционных исследований позволяет выполнить важные задания по разработке новых принципов формирования материально-технической и кадровой базы.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <div class="accordion__header">
+                                <h3>Как мне пригласить друзей?</h3>
+                                <svg><use xlink:href="img/icons/sprite.svg#dropdown"></use></svg>
+                            </div>
+                            <div class="accordion__body">
+                                <div class="accordion__content">
+                                    <p>Имеется спорная точка зрения, гласящая примерно следующее: тщательные исследования конкурентов неоднозначны и будут указаны как претенденты на роль ключевых факторов. Вот вам яркий пример современных тенденций — высокое качество позиционных исследований позволяет выполнить важные задания по разработке новых принципов формирования материально-технической и кадровой базы.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
          <!--footer-->
-        <footer class="footer">
+        <footer class="footer footer--main">
     <div class="container">
         <div class="footer__inner">
             <a href="main.html" class="footer__logo">
@@ -483,7 +932,7 @@
     <img src="img/icons/cursor.svg" alt="">
 </div>
 <!--overlay-->
-<div class="overlay">
+<div class="overlay show">
     <svg class="overlay__path" width="260" height="371" viewBox="0 0 260 371" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M108.213 -39.924C97.2981 -19.3831 85.57 0.915489 85.3892 24.921C84.9325 85.5432 122.681 144.264 161.224 188.224C180.949 210.721 206.654 236.002 238.504 237.95C258.099 239.149 262.089 223.276 256.593 208.333C245.709 178.744 206.867 168.047 178.838 175.803C151.861 183.268 135.429 211.243 126.893 236.065C117.822 262.447 122.997 292.154 111.412 318.3C90.3982 365.723 26.3821 367.962 -18.4762 369.444C-57.6278 370.737 -96.8051 368.163 -135.998 369.367" stroke="#E6ECFF" stroke-linecap="round" />
     </svg>
@@ -905,6 +1354,9 @@
 <script src="js/libs/fancybox.min.js"></script>
 <script src="js/libs/croppie.min.js"></script>
 <script src="js/main.js"></script>
+    <script>
+        formError("")
+    </script>
 </body>
 
 </html>

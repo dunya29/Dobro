@@ -73,10 +73,10 @@ h1, .h1, h2, .h2 {
   }
 }
 h3, .h3 {
-  font-size: 32px;
+  font-size: 30px;
   line-height: 1.12;
   @media (max-width: $bp1) {
-    font-size: 26px;
+    font-size: 24px;
   }
   @media (max-width: $bp2) {
     font-size: 22px;
@@ -772,6 +772,9 @@ h5, .h5, p {
 }
 .my-cursor {
  cursor: none;
+ @media (max-width: $bp2) {
+  cursor: auto;
+}
 }
 .cursor-img {
   position: fixed;
@@ -783,6 +786,9 @@ h5, .h5, p {
   transform: translate(-50%, -50%);  
   transition: opacity 0.3s ease; 
   overflow: show; 
+  @media (max-width: $bp2) {
+    opacity: 0!important;
+  }
 }
 .item-contact {
   display: flex;
@@ -877,7 +883,7 @@ h5, .h5, p {
     color: $red;
     margin-top: 4px;
   }
-  &__icons {
+  &__btns {
     display: flex;
     align-items: center;
     position: absolute;
@@ -939,7 +945,7 @@ h5, .h5, p {
     input {
       padding-right: 85px;
     }
-   &__icons {
+   &__btns {
     top: 16px;
     button {
       width: 30px;

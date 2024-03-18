@@ -29,6 +29,11 @@
     @media (max-width: $bp1) {
         border-radius: 40px;
     }
+    @media (max-width: $bp3) {
+        h3 {
+            font-size: 20px;
+        }
+    }
 }
 .item-event {
     display: block;

@@ -68,8 +68,20 @@ function tabSwitch(nav, block) {
     })
   });
 }
+//formError
+function formError(introTxt = false, text = false) {
+  let modal = document.querySelector(".modal.open")
+  errorModal.querySelector("h3").textContent = introTxt ? introTxt : "Что-то пошло не так"
+  errorModal.querySelector(".modal__body p").textContent = text ? text : "Попробуйте снова"
+  if (modal) {
+    modal.classList.remove("open")
+    errorModal.classList.add("open")
+  } else {
+    openModal(errorModal)
+  }
+}
 // formSuccess
-function formSuccess(form, txt = false) {
+function formSuccess(form, introTxt = false, text = false) {
   form.querySelectorAll("input").forEach(inp => {
     if (!["hidden", "checkbox", "radio"].includes(inp.type)) {
       inp.value = ""
@@ -81,14 +93,17 @@ function formSuccess(form, txt = false) {
   if (form.querySelector("textarea")) {
     form.querySelector("textarea").value = ""
   }
-/*   if (form.querySelector(".file-form__items")) {
-    form.querySelector(".file-form__items").innerHTML = ""
-  } */
   let modal = document.querySelector(".modal.open")
+  successModal.querySelector("h3").textContent = introTxt ? introTxt : "Заявка успешно оформлена"
+  successModal.querySelector(".modal__body p").textContent = text ? text : "Заявка успешно оформлена"
   if (modal) {
     modal.classList.remove("open")
     if (modal.classList.contains(("recovery-modal"))) {
       document.querySelector(".recovery-success-modal").classList.add("open")
+    } else if (modal.classList.contains(("password-modal"))) {
+      document.querySelector(".password-success-modal").classList.add("open")
+    } else if (modal.classList.contains(("reg-modal"))) {
+      document.querySelector(".log-modal").classList.add("open")
     } else {
       successModal.classList.add("open")
     }
@@ -166,7 +181,7 @@ if (swiper4) {
           spaceBetween: 16
         },
         767.98: {
-          slidesPerView: 2.9,
+          slidesPerView: 2.8,
           spaceBetween: 16
         },
         575.98: {
@@ -174,7 +189,7 @@ if (swiper4) {
           spaceBetween: 8
         },
         369.98: {
-          slidesPerView: 1.54,
+          slidesPerView: 1.44,
           spaceBetween: 8
         }
       }
@@ -249,7 +264,11 @@ if (myCursor) {
       mousePos(e)
       cursorImg.style.opacity = 1
       item.addEventListener("mousemove", e => mousePos(e))
-      item.addEventListener("pointermove", e => mousePos(e))
+      item.addEventListener("pointermove", e => {
+        if (window.innerWidth > 991.98) {
+          mousePos(e)
+        }
+      })
       item.addEventListener("mouseleave", () => {
         cursorImg.style.opacity = 0
       })
@@ -722,19 +741,19 @@ if (team) {
   window.addEventListener("resize", teamAction)
 }
 // help fixed btn
-const helpBtn = document.querySelector(".help-fixed-btn")
+const introFixedBtn = document.querySelector(".fixed-btn")
 const descBlock = document.querySelectorAll(".desc-block")[0]
-if (helpBtn) {
+if (introFixedBtn) {
   window.addEventListener("scroll", () => {
     let pos = descBlock ? descBlock.getBoundingClientRect().top : window.innerHeight
     if (pos < 120 || scrollPos() > window.innerHeight) {
       if (window.innerHeight - document.querySelector(".footer").getBoundingClientRect().top + 30 >= 0) {
-        helpBtn.classList.remove("show")
+        introFixedBtn.classList.remove("show")
       } else {
-        helpBtn.classList.add("show")
+        introFixedBtn.classList.add("show")
       }
     } else {
-      helpBtn.classList.remove("show")
+      introFixedBtn.classList.remove("show")
     }
   })
 }
@@ -923,8 +942,7 @@ $("#login-form").validate({
       showMessages("error","Неверное имя пользователя или пароль")
     }
   },
-  submitHandler: function(event,form) {
-    event.preventDefault()
+  submitHandler: function(form) {
     formSuccess(form)
   }
 });
@@ -964,7 +982,7 @@ $("#password-form").validate({
     },
   },
   submitHandler: function(form) {
-    openModal(document.querySelector("#password-success-modal"))
+    formSuccess(form)
   }
 });
 // reg-form
@@ -1015,7 +1033,7 @@ $("#reg-form").validate({
     }
   },
   submitHandler: function(form) {
-    openModal(document.querySelector("#log-modal"))
+    formSuccess(form)
   }
 });
 //fund form
@@ -1090,7 +1108,7 @@ $("#fund-form").validate({
     }
   },
   submitHandler: function (form) {
-    closeModal(document.querySelector("#fund-modal"))
+    formSuccess(form)
   }
 });
 //mask input

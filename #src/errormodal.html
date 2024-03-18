@@ -444,7 +444,7 @@
         </main>
          <!--footer-->
         @@include('_footer-main.html')
-       <!--cursor-img-->
+        <!--cursor-img-->
 <div class="cursor-img">
     <img src="img/icons/cursor.svg" alt="">
 </div>
@@ -652,7 +652,7 @@
     </div>
 </modal>
 <!--fund-modal-->
-<modal class="modal fund-modal open" id="fund-modal">
+<modal class="modal fund-modal" id="fund-modal">
     <div class="modal__overlay">
         <div class="modal__content">
             <div class="modal__scroll">
@@ -860,9 +860,11 @@
     </div>
 </div>
 
-
-
+    </div>
     @@include('_js.html')
+    <script>
+        formError("")
+    </script>
 </body>
 
 </html>
