@@ -1010,6 +1010,7 @@
     bottom: 0;
     transform: translateY(101%);
     transition: all .5s linear;
+    z-index: 2;
     .btn {
         width: 100%;
     }
