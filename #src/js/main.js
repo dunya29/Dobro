@@ -989,8 +989,6 @@ $("#reg-form").validate({
     },
     reg_file: {
       required: true,
-      extension: "jpg|jpeg|png|gif",
-      filesize: 2,
     },
     agree: {
       required: true
@@ -1001,6 +999,7 @@ $("#reg-form").validate({
     password: {
       minlength: "Пароли должны быть длиннее 6 символов"
     },
+    reg_file: "Выберите файл",
     agree: "Требуется согласие",
     fullname: {
       maxlength: "Имя и фамилия должны быть не более 50-и символов"
@@ -1082,6 +1081,7 @@ $("#fund-form").validate({
   },
   messages: {
     email: "Пожалуйста, введите корректный почтовый адрес.",
+    reg_file: "Выберите файл",
     enter_checkbox1: {
       required: "Вы должны подтвердить"
     },
