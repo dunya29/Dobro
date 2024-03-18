@@ -328,12 +328,15 @@ if (transCards) {
   window.addEventListener("resize", cardAnim)
 }
 // progress bar
-const progressBar = document.querySelectorAll(".progress-bar")
-if (progressBar) {
-  progressBar.forEach(item => {
-    item.querySelector("span").style.width = +item.getAttribute("data-coll") / +item.getAttribute("data-aim") * 100 + "%"
-  })
+function initProgress() {
+  const progressBar = document.querySelectorAll(".progress-bar")
+  if (progressBar) {
+    progressBar.forEach(item => {
+      item.querySelector("span").style.width = +item.getAttribute("data-coll") / +item.getAttribute("data-aim") * 100 + "%"
+    })
+  }
 }
+initProgress()
 // help tab
 const helpTab = document.querySelectorAll(".help__tab")
 const helpBlock = document.querySelectorAll(".help__block")
@@ -747,7 +750,6 @@ function histBeautify() {
 if (histTable) {
   setTimeout(histBeautify, 500)
 }
-//input tel
 // Cropp file ava
 
 const cropAvaPopup = document.querySelector('#cropp-ava');
@@ -755,6 +757,50 @@ const croppieContainer = document.querySelector('#croppieContainer');
 const cropBtn = document.querySelector('#cropBtn');
 const cropDestroy = document.querySelector('#crop-destroy');
 let croppieInstance
+//addfile (validate)
+function addFile(inputPhoto, imgWrap, avatarInput, file) {
+  if(!/image*/.test(file.type)) {
+    showMessages('error', 'Неверный формат файла');
+    inputPhoto.value='';
+    return;
+  }
+  if(file.size > 2 * 1024 * 1024) {
+    inputPhoto.value='';
+    showMessages('error', 'Неверный размер файла');
+    return;
+  }
+  const reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onload = () => {
+    const imgUrl = reader.result;
+    const img = new Image;
+    img.src = imgUrl;
+    img.onload = function(){
+      if(img.width > 2056 || img.height > 2056) {
+        inputPhoto.value='';
+        showMessages('error', 'Размеры изображения больше разрешенных');
+      } else {
+        if (croppieInstance) {
+          croppieInstance.destroy();
+        }
+        cropAvaPopup.classList.add("open")
+        croppieInstance = new Croppie(croppieContainer, {
+          url: imgUrl,
+          enableExif: true,
+          viewport: {
+            width: 200,
+            height: 200,
+            type: 'square'
+          },
+          boundary: {
+            width: 400,
+            height: 400
+          }
+        });
+      }
+    }
+  };
+}
 if (cropAvaPopup) {
   const uploadInput = document.querySelectorAll('.file-form__ava');
   uploadInput.forEach(item => {
@@ -763,47 +809,23 @@ if (cropAvaPopup) {
     const avatarInput = item.querySelector('input[name="avatar"]');
     inputPhoto.addEventListener('change', event => {
       const file = event.target.files[0];
-      if(!/image*/.test(file.type)) {
-        showMessages('error', 'Неверный формат файла');
-        inputPhoto.value='';
-        return;
-      }
-      if(file.size > 2 * 1024 * 1024) {
-        inputPhoto.value='';
-        showMessages('error', 'Неверный размер файла');
-        return;
-      }
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = () => {
-        const imgUrl = reader.result;
-        const img = new Image;
-        img.src = imgUrl;
-        img.onload = function(){
-          if(img.width > 2056 || img.height > 2056) {
-            inputPhoto.value='';
-            showMessages('error', 'Размеры изображения больше разрешенных');
-          } else {
-            if (croppieInstance) {
-              croppieInstance.destroy();
-            }
-            cropAvaPopup.classList.add("open")
-            croppieInstance = new Croppie(croppieContainer, {
-              url: imgUrl,
-              enableExif: true,
-              viewport: {
-                width: 200,
-                height: 200,
-                type: 'square'
-              },
-              boundary: {
-                width: 400,
-                height: 400
-              }
-            });
-          }
-        }
-      };
+      addFile(inputPhoto, imgWrap, avatarInput, file)
+    });
+    item.addEventListener("dragenter", e => {
+      e.preventDefault();
+    })
+    item.addEventListener("dragover", e => {
+      e.preventDefault();
+    })
+    item.addEventListener("dragleave", e => {
+      e.preventDefault();
+    })
+    item.addEventListener("drop", function(e) {
+      e.preventDefault();
+      let files = Array.from(e.dataTransfer.files);
+      console.log(files)
+      item.querySelector("input[type=file]").files = e.dataTransfer.files
+      addFile(inputPhoto, imgWrap, avatarInput, files[0])
     });
     cropBtn.addEventListener('click', () => {
       croppieInstance.result({

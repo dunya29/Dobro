@@ -834,6 +834,11 @@ h5, .h5, p {
       opacity: 1;
     }
   }
+  &.show-password {
+    .item-form__eye {
+      background-image: url(../img/icons/eye-unshow.svg);
+    }
+  }
   input,
   textarea {
     font-size: 18px;
@@ -879,32 +884,31 @@ h5, .h5, p {
     top: 14px;
     right: 23px;
     button {
-      padding-right: 16px;
-      margin-right: 16px;
+      width: 40px;
+      height: 24px;
       border-right: 1px solid $carmine;
+      background-position: center left;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 16px;
       &:last-child {
+        width: 24px;
         border-right: 0;
         padding-right: 0;
         margin-right: 0;
+        &::after {
+          content: none;
+        }
       }
-    }
-    svg {
-      width: 24px;
-      height: 24px;
-      pointer-events: none;
     }
   }
   &__reset {
     visibility: hidden;
     opacity: 0;
-    svg {
-      fill: $carmine;
-    }
+    background-image: url(../img/icons/close.svg);
   }
   &__eye {
-    svg {
-      fill: #D2628C;
-    }
+    background-image: url(../img/icons/eye-show.svg);
   }
   @media  (max-width: $bp1) {
     margin-bottom: 12px;
@@ -933,20 +937,27 @@ h5, .h5, p {
   }
   @media  (max-width: $bp3) {
     input {
-      padding-right: 75px;
+      padding-right: 85px;
     }
    &__icons {
+    top: 16px;
     button {
-      width: 20px;
+      width: 30px;
       height: 20px;
-      padding-right: 6px;
-      margin-right: 6px;
-      &:first-child {
-        width: 22px;
-        height: 22px;
+      margin-right: 10px;
+      &:last-child {
+        width: 20px;
       }
     }
    }
+  }
+  @media  (max-width: $bp7) {
+    input, textarea {
+      padding: 14px 16px;
+    }
+    input {
+      padding-right: 83px;
+    }
   }
 }
 .file-form {

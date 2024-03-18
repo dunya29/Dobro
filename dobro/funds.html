@@ -154,14 +154,14 @@
                 <div class="intro-bg">
                     <div class="intro-bg__img"><picture><source srcset="img/funds-bg.webp" type="image/webp"><img src="img/funds-bg.jpg" alt=""></picture></div>   
                 </div>
-                <svg class="intro-path" width="417" height="210" viewBox="0 0 417 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="intro-path fixed-block" width="417" height="210" viewBox="0 0 417 210" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.726562 -23.0244C24.9545 -8.7079 54.2877 7.60832 70.387 31.3336C86.2749 54.7473 100.417 81.094 105.331 109.216C110.329 137.812 114.364 156.384 108.492 183.008C106.717 191.053 103.722 199.329 96.9533 204.024C85.1494 212.213 68.6357 210.324 58.5586 202.321C54.7177 199.271 52.1653 194.857 50.932 190.11C47.9393 178.59 49.1797 160.33 71.4148 140.278C101.035 116.582 134.789 115.611 172.137 115.611C207.74 115.611 243.041 122.743 278.683 118.466C312.304 114.432 353.464 100.473 376.55 74.5002C392.84 56.1744 403.343 23.4975 407.384 -0.0707016C410.23 -16.6728 415.72 -31.879 415.72 -48.833" stroke="#B71351" stroke-linecap="round" />
                 </svg>
                 <div class="container">
                     <div class="funds__content">
                         <h1>Фонды-партнёры</h1>
                         <h4>Все фонды — партнёры проекта «800 добрых дел». Присоединяйтесь!</h4>
-                        <a href="#" class="btn main-btn">Стать партнёром</a>
+                        <a href="#" class="btn main-btn modal-show-btn" data-modal="fund-modal">Стать партнёром</a>
                     </div>
                     <div class="funds__tabs">
                         <div class="tabs">
@@ -506,14 +506,14 @@
                         <div class="item-form">
                             <input type="email" name="email" placeholder="E-mail">
                             <div class="item-form__icons">
-                                <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                <button type="button" class="item-form__reset"></button>
                             </div>
                         </div>
                         <div class="item-form">
                             <input type="password" name="password" placeholder="Пароль">
                             <div class="item-form__icons">
-                                <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
-                                <button type="button" class="item-form__eye"><svg><use xlink:href="img/icons/sprite.svg#password-eye"></use></svg></button>
+                                <button type="button" class="item-form__reset"></button>
+                                <button type="button" class="item-form__eye"></button>
                             </div>
                         </div>
                         <div class="log-modal__forget-password modal-show-btn" data-modal="recovery-modal"><span>Забыли пароль?</span></div>
@@ -581,15 +581,15 @@
                         <div class="item-form">
                             <input type="password" name="password" placeholder="Новый пароль" id="enter-pass">
                             <div class="item-form__icons">
-                                <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
-                                <button type="button" class="item-form__eye"><svg><use xlink:href="img/icons/sprite.svg#password-eye"></use></svg></button>
+                                <button type="button" class="item-form__reset"></button>
+                                <button type="button" class="item-form__eye"></button>
                             </div>
                         </div>
                         <div class="item-form">
                             <input type="password" name="repeat_password" placeholder="Еще раз новый пароль">
                             <div class="item-form__icons">
-                                <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
-                                <button type="button" class="item-form__eye"><svg><use xlink:href="img/icons/sprite.svg#password-eye"></use></svg></button>
+                                <button type="button" class="item-form__reset"></button>
+                                <button type="button" class="item-form__eye"></button>
                             </div>
                         </div>
                         <div class="form__footer">
@@ -626,21 +626,21 @@
                             <div class="item-form">
                                 <input type="email" name="email" placeholder="E-mail">
                                 <div class="item-form__icons">
-                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                    <button type="button" class="item-form__reset"></button>
                                 </div>
                             </div>
                             <div class="item-form">
                                 <input type="password" name="password" placeholder="Пароль" id="confirm-pass">
                                 <div class="item-form__icons">
-                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
-                                    <button type="button" class="item-form__eye"><svg><use xlink:href="img/icons/sprite.svg#password-eye"></use></svg></button>
+                                    <button type="button" class="item-form__reset"></button>
+                                    <button type="button" class="item-form__eye"></button>
                                 </div>
                             </div>
                             <div class="item-form">
                                 <input type="password" name="repeat_password" placeholder="Пароль">
                                 <div class="item-form__icons">
-                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
-                                    <button type="button" class="item-form__eye"><svg><use xlink:href="img/icons/sprite.svg#password-eye"></use></svg></button>
+                                    <button type="button" class="item-form__reset"></button>
+                                    <button type="button" class="item-form__eye"></button>
                                 </div>
                             </div>
                         </div>
@@ -649,7 +649,7 @@
                             <div class="item-form">
                                 <input type="text" name="fullname" placeholder=" Имя Фамилия Отчество">
                                 <div class="item-form__icons">
-                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                    <button type="button" class="item-form__reset"></button>
                                 </div>
                             </div>
                         </div>
@@ -698,13 +698,13 @@
                             <div class="item-form">
                                 <input type="text" name="pagetitle" placeholder="Название организации">
                                 <div class="item-form__icons">
-                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                    <button type="button" class="item-form__reset"></button>
                                 </div>
                             </div>
                             <div class="item-form">
                                 <input type="text" name="introtext" placeholder="Краткое описание фонда">
                                 <div class="item-form__icons">
-                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                    <button type="button" class="item-form__reset"></button>
                                 </div>
                             </div>
                             <div class="item-form">
@@ -713,19 +713,19 @@
                             <div class="item-form">
                                 <input type="text" name="fund_aim" placeholder="Цель фонда">
                                 <div class="item-form__icons">
-                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                    <button type="button" class="item-form__reset"></button>
                                 </div>
                             </div>
                             <div class="item-form">
                                 <input type="text" name="fund_city" placeholder="Город">
                                 <div class="item-form__icons">
-                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                    <button type="button" class="item-form__reset"></button>
                                 </div>
                             </div>
                             <div class="item-form">
                                 <input type="text" name="fund_address" placeholder="Фактический адрес фонда">
                                 <div class="item-form__icons">
-                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                    <button type="button" class="item-form__reset"></button>
                                 </div>
                             </div>
                         </div>
@@ -785,7 +785,7 @@
                             <div class="item-form">
                                 <input type="text" name="fund_FIO" placeholder="Имя Фамилия ">
                                 <div class="item-form__icons">
-                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                    <button type="button" class="item-form__reset"></button>
                                 </div>
                             </div>
                             <div class="form__grid">
@@ -816,13 +816,13 @@
                             <div class="item-form">
                                 <input type="text" name="fund_INN" placeholder="ИНН">
                                 <div class="item-form__icons">
-                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                    <button type="button" class="item-form__reset"></button>
                                 </div>
                             </div>
                             <div class="item-form">
                                 <input type="text" name="fund_ur_address" placeholder="Юридический адрес">
                                 <div class="item-form__icons">
-                                    <button type="button" class="item-form__reset"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
+                                    <button type="button" class="item-form__reset"></button>
                                 </div>
                             </div>
                             <div class="item-form">
