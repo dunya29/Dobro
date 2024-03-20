@@ -1819,7 +1819,6 @@ h6,
 .paginate_button.current,
 .paginate_button:active {
   color: #B71351;
-  pointer-events: none;
 }
 
 .dataTables_info {

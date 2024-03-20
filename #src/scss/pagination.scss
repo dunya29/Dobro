@@ -53,7 +53,6 @@
     white-space: nowrap;
     &.current, &:active {
         color: $carmine;
-        pointer-events: none;
     }
 }
 .dataTables_info {
