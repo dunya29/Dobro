@@ -225,8 +225,13 @@ h5, .h5, p {
       margin-bottom: 0;
     }
   }
+  ul {
+    padding-left: 24px;
+  }
   ul li {
     padding-left: 32px;
+  }
+  ul li {
     position: relative;
     &::before {
       content: "";
@@ -242,7 +247,7 @@ h5, .h5, p {
   }
   ol li {
     list-style: decimal;
-    margin-left: 24px;
+    margin-left: 48px;
     padding-left: 8px;
     &::marker {
       font-weight: 500;
@@ -287,12 +292,28 @@ h5, .h5, p {
     p, li {
       font-size: 18px;
     }
+    ul {
+      padding-left: 11px;
+    }
+    ol li {
+      margin-left: 35px;
+    }
   }
   @media (max-width: $bp2) {
     p, li {
       font-size: 16px; 
       margin-bottom: 16px;
-    }    
+    } 
+    ul {
+      padding-left: 6px;
+    }
+    ul li {
+      padding-left: 28px;
+    }
+    ol li {
+      margin-left: 30px;
+      padding-left: 4px;
+    }   
   }
 }
 .rub {

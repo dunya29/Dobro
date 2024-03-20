@@ -178,7 +178,7 @@ i {
 }
 
 table {
-  width: 100%;
+  width: 100% !important;
 }
 
 table td {
@@ -532,8 +532,15 @@ h6,
   margin-bottom: 0;
 }
 
+.page-content ul {
+  padding-left: 24px;
+}
+
 .page-content ul li {
   padding-left: 32px;
+}
+
+.page-content ul li {
   position: relative;
 }
 
@@ -553,7 +560,7 @@ h6,
 
 .page-content ol li {
   list-style: decimal;
-  margin-left: 24px;
+  margin-left: 48px;
   padding-left: 8px;
 }
 
@@ -1752,40 +1759,6 @@ h6,
   color: inherit;
 }
 
-.pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 32px 0 0;
-}
-
-.pagination:before {
-  content: "Номер страницы";
-  color: #41536D;
-  margin-right: 100px;
-}
-
-.pagination__link,
-.pagination__item {
-  font-weight: 500;
-  color: #41536D;
-  margin: 0 8px;
-  -webkit-transition: all 0.4s linear;
-  transition: all 0.4s linear;
-  white-space: nowrap;
-}
-
-.pagination__link.current,
-.pagination__link:active,
-.pagination__item.current,
-.pagination__item:active {
-  color: #B71351;
-  pointer-events: none;
-}
-
 .pagination span {
   pointer-events: none;
 }
@@ -1803,10 +1776,76 @@ h6,
 }
 
 .pagination .nav-btn:first-child {
-  margin-right: 24px;
+  margin-right: 22px;
 }
 
 .pagination .nav-btn:last-child {
+  margin-left: 22px;
+}
+
+.pagination,
+.dataTables_paginate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 32px 0 0;
+}
+
+.pagination:before,
+.dataTables_paginate:before {
+  content: "Номер страницы";
+  color: #41536D;
+  margin-right: 100px;
+}
+
+.pagination__link,
+.pagination__item,
+.paginate_button {
+  font-weight: 500;
+  color: #41536D;
+  margin: 0 6px;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  white-space: nowrap;
+}
+
+.pagination__link.current,
+.pagination__link:active,
+.pagination__item.current,
+.pagination__item:active,
+.paginate_button.current,
+.paginate_button:active {
+  color: #B71351;
+  pointer-events: none;
+}
+
+.dataTables_info {
+  display: none;
+}
+
+.paginate_button.previous,
+.paginate_button.next {
+  display: block;
+  width: 16px;
+  height: 16px;
+  font-size: 0;
+}
+
+.paginate_button.previous.disabled,
+.paginate_button.next.disabled {
+  opacity: 0.5;
+}
+
+.paginate_button.previous {
+  background: url(../img/icons/prev.svg) center/contain no-repeat;
+  margin-right: 24px;
+}
+
+.paginate_button.next {
+  background: url(../img/icons/next.svg) center/contain no-repeat;
   margin-left: 24px;
 }
 
@@ -2743,6 +2782,13 @@ h6,
   padding-bottom: 40px;
 }
 
+.events__items,
+.news__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 64px 24px;
+}
+
 .events {
   margin-bottom: 80px;
 }
@@ -2932,6 +2978,7 @@ h6,
   z-index: 1;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+  max-width: 100%;
 }
 
 .help__items,
@@ -3060,6 +3107,10 @@ h6,
 .help__selects .custom-select:last-child .custom-select__options {
   left: auto;
   right: 0;
+}
+
+.help__items {
+  min-height: 500px;
 }
 
 .item-help,
@@ -3313,42 +3364,35 @@ h6,
   display: block;
 }
 
-.transactions table tr {
-  display: grid;
-  grid-template-columns: 3fr 4fr 3fr;
-  gap: 24px;
-}
-
-.transactions table tr td:first-child span {
-  display: block;
-}
-
-.transactions table tr td:first-child span:first-child {
-  margin-bottom: 8px;
-}
-
 .transactions table td {
   width: auto;
+  padding: 16px 12px;
+  text-align: center;
 }
 
-.transactions table thead tr {
-  padding-bottom: 24px;
+.transactions table td:first-child {
+  text-align: left;
+}
+
+.transactions table td:first-child span {
+  display: block;
+  white-space: nowrap;
+}
+
+.transactions table td:first-child span:first-child {
+  margin-bottom: 8px;
 }
 
 .transactions table thead td {
   font-size: 24px;
   font-weight: 500;
   color: #B71351;
+  padding-top: 0;
+  padding-bottom: 24px;
 }
 
 .transactions table tbody tr {
-  padding: 16px 0;
   border-bottom: 1px solid #ff9bbf;
-  margin-bottom: 8px;
-}
-
-.transactions table tbody tr:last-child {
-  margin-bottom: 0;
 }
 
 .transactions .item-report {
@@ -4494,6 +4538,14 @@ h6,
     font-size: 18px;
   }
 
+  .page-content ul {
+    padding-left: 11px;
+  }
+
+  .page-content ol li {
+    margin-left: 35px;
+  }
+
   .main-btn {
     padding: 16px 32px;
   }
@@ -4693,21 +4745,31 @@ h6,
     padding-top: 120px;
   }
 
-  .pagination {
+  .pagination .nav-btn:first-child {
+    margin-right: 14px;
+  }
+
+  .pagination .nav-btn:last-child {
+    margin-left: 14px;
+  }
+
+  .pagination,
+  .dataTables_paginate {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
   }
 
-  .pagination:before {
+  .pagination:before,
+  .dataTables_paginate:before {
     content: none;
   }
 
-  .pagination .nav-btn:first-child {
+  .paginate_button.previous {
     margin-right: 16px;
   }
 
-  .pagination .nav-btn:last-child {
+  .paginate_button.next {
     margin-left: 16px;
   }
 
@@ -5004,6 +5066,11 @@ h6,
     margin-bottom: 16px;
   }
 
+  .events__items,
+  .news__items {
+    gap: 48px 24px;
+  }
+
   .item-event,
   .item-news {
     border-radius: 40px;
@@ -5156,21 +5223,13 @@ h6,
     margin-right: 8px;
   }
 
-  .transactions table tr {
-    grid-template-columns: 2.5fr 4fr 3.5fr;
-  }
-
-  .transactions table thead tr {
-    padding-bottom: 20px;
+  .transactions table td {
+    padding: 12px;
   }
 
   .transactions table thead td {
     font-size: 18px;
-  }
-
-  .transactions table tbody tr {
-    padding: 12px 0;
-    margin-bottom: 0;
+    padding-bottom: 20px;
   }
 
   .transactions .item-report {
@@ -5502,6 +5561,19 @@ h6,
     margin-bottom: 16px;
   }
 
+  .page-content ul {
+    padding-left: 6px;
+  }
+
+  .page-content ul li {
+    padding-left: 28px;
+  }
+
+  .page-content ol li {
+    margin-left: 30px;
+    padding-left: 4px;
+  }
+
   .accordion {
     padding: 24px;
   }
@@ -5676,6 +5748,12 @@ h6,
   .events .swiper,
   .news .swiper {
     max-width: 100%;
+  }
+
+  .events__items,
+  .news__items {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
 
   .events {
@@ -6393,17 +6471,13 @@ h6,
     margin-bottom: 24px;
   }
 
+  .transactions table td {
+    padding: 16px 8px 12px;
+  }
+
   .transactions table thead td {
     font-size: 16px;
-  }
-
-  .transactions table tbody tr {
-    padding: 16px 0 12px;
-  }
-
-  .transactions table tr {
-    grid-template-columns: 3fr 4fr 4fr;
-    gap: 16px;
+    padding-bottom: 20px;
   }
 
   .transactions__inner {
@@ -6639,6 +6713,11 @@ h6,
     width: 100%;
     opacity: 1;
     margin-bottom: 50px;
+  }
+
+  .events__items,
+  .news__items {
+    grid-template-columns: 1fr 1fr;
   }
 
   .events {
@@ -6896,6 +6975,11 @@ h6,
     max-width: 384px;
   }
 
+  .events__items,
+  .news__items {
+    gap: 16px 8px;
+  }
+
   .help__items,
   .funds__items {
     grid-template-columns: 1fr;
@@ -6954,10 +7038,16 @@ h6,
 }
 
 @media (max-width: 479.98px) {
-  .pagination {
+  .pagination,
+  .dataTables_paginate {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+  }
+
+  .events__items,
+  .news__items {
+    grid-template-columns: 1fr;
   }
 
   .help__tabs {
@@ -6969,13 +7059,12 @@ h6,
     margin-right: 0;
   }
 
-  .transactions .item-report {
-    max-width: 100%;
+  .transactions table td {
+    font-size: 14px;
   }
 
-  .transactions table td:nth-child(2),
-  .transactions table td:nth-child(3) {
-    text-align: center;
+  .transactions .item-report {
+    max-width: 100%;
   }
 
   .faq .accordion__header {
@@ -7029,12 +7118,9 @@ h6,
     grid-template-columns: 1fr;
   }
 
-  .transactions table tr {
-    gap: 10px;
-  }
-
   .transactions table td {
-    font-size: 14px;
+    font-size: 13px;
+    padding: 16px 5px 12px;
   }
 
   .footer__dev a {

@@ -19,6 +19,7 @@
         position: relative;
         z-index: 1;
         transition: all 1s ease;
+        max-width: 100%;
     }
 }
 .help, .funds {
@@ -132,6 +133,9 @@
                 right: 0;
             }
         }
+    }
+    &__items {
+        min-height: 500px;
     }
     @media (min-width: $bp1) {
         &__top {
@@ -547,40 +551,33 @@
         }
     }
     table {
-        tr {
-            display: grid;
-            grid-template-columns: 3fr 4fr 3fr;
-            gap: 24px;         
-            td:first-child {
+        td {
+            width: auto;
+            padding: 16px 12px;
+            text-align: center;
+            &:first-child {
+                text-align: left;       
                 span {
                     display: block;
+                    white-space: nowrap;
                     &:first-child {
                         margin-bottom: 8px;
                     }
                 }
             }
         }
-        td {
-            width: auto;
-        }
         thead {
-            tr {
-                padding-bottom: 24px;
-            }
             td {
                 font-size: 24px;
                 font-weight: 500;
                 color: $carmine;
+                padding-top: 0;
+                padding-bottom: 24px;
             }
         }
         tbody{
             tr {
-                padding: 16px 0;
                 border-bottom: 1px solid $light-carmine;
-                margin-bottom: 8px;
-                &:last-child {
-                    margin-bottom: 0;
-                }
             }
         }
     }
@@ -644,21 +641,13 @@
     }
     @media (max-width: $bp1) {
         table {
-            tr {
-                grid-template-columns: 2.5fr 4fr 3.5fr;     
+            td {
+                padding: 12px;
             }
             thead {
-                tr {
-                    padding-bottom: 20px;
-                }
                 td {
                     font-size: 18px;
-                }
-            }
-            tbody{
-                tr {
-                    padding: 12px 0;
-                    margin-bottom: 0;
+                    padding-bottom: 20px;
                 }
             }
         }
@@ -692,17 +681,14 @@
     }
     @media (max-width: $bp3) {
         table {
+            td {
+                padding: 16px 8px 12px;
+            }
             thead {
                 td {
                     font-size: 16px;
+                    padding-bottom: 20px;
                 }
-            }
-            tbody tr {
-                padding: 16px 0 12px;
-            }
-            tr {
-                grid-template-columns: 3fr 4fr 4fr;
-                gap: 16px;
             }
         }
         &__inner {
@@ -737,21 +723,17 @@
         }  
     }
     @media (max-width: $bp6) {
+        table td {
+            font-size: 14px;
+        }
         .item-report {
             max-width: 100%;
         }
-        table {
-            td:nth-child(2), td:nth-child(3) {
-                text-align: center;
-            }
-        }
     }
     @media (max-width: $bp7) {
-        table tr {
-            gap: 10px;
-        }
         table td {
-            font-size: 14px;
+            font-size: 13px;
+            padding: 16px 5px 12px;
         }
     }
 }

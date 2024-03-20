@@ -5,12 +5,42 @@
         overflow: visible;
         padding-bottom: 40px;
     }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 64px 24px;
+    }
+    @media (max-width: $bp1) {
+        &__items {
+            gap: 48px 24px;
+        }
+    }
     @media (max-width: $bp2) {
         .swiper {
             max-width: 100%;
         }
+        &__items {
+            grid-template-columns:  repeat(3, 1fr);
+            gap: 16px;
+        }
+    }
+    @media (max-width: $bp4) {
+        &__items {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media (max-width: $bp5) {
+        &__items {
+            gap: 16px 8px;
+        }
+    }
+    @media (max-width: $bp6) {
+        &__items {
+            grid-template-columns: 1fr;
+        }
     }
 }
+
 .events {
     margin-bottom: 80px;
     @media (max-width: $bp2) {

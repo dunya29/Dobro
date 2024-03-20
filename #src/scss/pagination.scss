@@ -1,23 +1,4 @@
 .pagination {
-    display: flex;
-    align-items: center;
-    margin: 32px 0 0;
-    &:before {
-        content: "Номер страницы";
-        color: $pol-blue;
-        margin-right: 100px;
-    }
-    &__link, &__item {
-        font-weight: 500;
-        color: $pol-blue;
-        margin: 0 8px;
-        transition: all .4s linear;
-        white-space: nowrap;
-        &.current, &:active {
-            color: $carmine;
-            pointer-events: none;
-        }
-    }
     span {
         pointer-events: none;
     }
@@ -30,24 +11,74 @@
         }
     }
     .nav-btn:first-child {
-        margin-right: 24px;
+        margin-right: 22px;
     }
     .nav-btn:last-child {
-        margin-left: 24px;
+        margin-left: 22px;
+    }
+    @media (max-width: $bp1) {
+        .nav-btn:first-child {
+            margin-right: 14px;
+        }
+        .nav-btn:last-child {
+            margin-left: 14px;
+        }
+    }
+}
+
+.pagination, .dataTables_paginate {
+    display: flex;
+    align-items: center;
+    margin: 32px 0 0;
+    &:before {
+        content: "Номер страницы";
+        color: $pol-blue;
+        margin-right: 100px;
     }
     @media (max-width: $bp1) {
         justify-content: center;
         &:before {
             content: none;
         }
-        .nav-btn:first-child {
-            margin-right: 16px;
-        }
-        .nav-btn:last-child {
-            margin-left: 16px;
-        }
     }
     @media (max-width: $bp6) {
         justify-content: space-between;
+    }
+}
+.pagination__link, .pagination__item, .paginate_button {
+    font-weight: 500;
+    color: $pol-blue;
+    margin: 0 6px;
+    transition: all .4s linear;
+    white-space: nowrap;
+    &.current, &:active {
+        color: $carmine;
+        pointer-events: none;
+    }
+}
+.dataTables_info {
+    display: none;
+}
+.paginate_button.previous, .paginate_button.next {
+    display: block;
+    width: 16px;
+    height: 16px;
+    font-size: 0;
+    &.disabled {
+        opacity: 0.5;
+    }
+}
+.paginate_button.previous {
+    background: url(../img/icons/prev.svg) center / contain no-repeat;
+    margin-right: 24px;
+    @media (max-width: $bp1) {
+        margin-right: 16px;
+    }
+}
+.paginate_button.next {
+    background: url(../img/icons/next.svg) center / contain no-repeat;
+    margin-left: 24px;
+    @media (max-width: $bp1) {
+        margin-left: 16px;
     }
 }
