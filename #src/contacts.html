@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {   
+    "title": "Контакты"
+})
+
+<body>
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->  
+        <main class="main">
+            @@include('_breadcrumbs.html', {
+                "page": "Контакты"
+            })
+            <!--contacts-->
+            <section class="section contacts">
+                <div class="intro-bg">
+                    <div class="intro-bg__img"><img src="img/funds-bg.jpg" alt=""></div>   
+                </div>
+                <svg class="intro-path fixed-block" width="417" height="210" viewBox="0 0 417 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.726562 -23.0244C24.9545 -8.7079 54.2877 7.60832 70.387 31.3336C86.2749 54.7473 100.417 81.094 105.331 109.216C110.329 137.812 114.364 156.384 108.492 183.008C106.717 191.053 103.722 199.329 96.9533 204.024C85.1494 212.213 68.6357 210.324 58.5586 202.321C54.7177 199.271 52.1653 194.857 50.932 190.11C47.9393 178.59 49.1797 160.33 71.4148 140.278C101.035 116.582 134.789 115.611 172.137 115.611C207.74 115.611 243.041 122.743 278.683 118.466C312.304 114.432 353.464 100.473 376.55 74.5002C392.84 56.1744 403.343 23.4975 407.384 -0.0707016C410.23 -16.6728 415.72 -31.879 415.72 -48.833" stroke="#B71351" stroke-linecap="round" />
+                </svg>
+                <div class="container">
+                    <div class="page-top">
+                        <h1>Контакты</h1>
+                    </div>
+                    <div class="page-content">
+                        <h3>Контактная информация фонда:</h3>
+                        <div class="contacts__items">
+                            <div class="item-contact">
+                                <span>Сайт:</span>
+                                <a href="#">voblagodar.ru</a>
+                            </div>
+                            <div class="item-contact">
+                                <span>Почта:</span>
+                                <a href="mailto:dar_info@istoknn.ru">dar_info@istoknn.ru</a>
+                            </div>
+                            <div class="item-contact">
+                                <span>Вконтакте:</span>
+                                <a href="vk.com/voblago_dar">vk.com/voblago_dar</a>
+                            </div>
+                            <div class="item-contact">
+                                <span>Телефон:</span>
+                                <a href="tel:88312124021">+7 (831) 21-240-21</a>
+                            </div>
+                            <div class="item-contact">
+                                <span>Соцсети:</span>
+                                <a href="#">YouTube</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+         <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

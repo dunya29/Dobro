@@ -3949,6 +3949,16 @@ h6,
   margin: 0 4.1666666667% 60px;
 }
 
+.contacts .page-content {
+  margin-left: 4.1666666667%;
+}
+
+.contacts__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
 .footer {
   padding-bottom: 20px;
 }
@@ -5878,6 +5888,10 @@ h6,
     margin-left: 0;
   }
 
+  .contacts .page-content {
+    margin-left: 0;
+  }
+
   .footer .logo-nn {
     grid-column: 22/25;
   }
@@ -7034,6 +7048,10 @@ h6,
   .funds__content .main-btn {
     width: 100%;
     max-width: 384px;
+  }
+
+  .contacts__items {
+    grid-template-columns: 1fr;
   }
 }
 

@@ -1,0 +1,20 @@
+.contacts {
+    .page-content {
+        margin-left: calc(100% / 24);
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;       
+    }
+    @media (max-width: $bp2) {
+        .page-content {
+            margin-left: 0;
+        }
+    }
+    @media (max-width: $bp5) {
+        &__items {
+            grid-template-columns: 1fr;
+        }
+    }
+}
