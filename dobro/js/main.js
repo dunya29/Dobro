@@ -144,8 +144,13 @@ modal.forEach(mod => {
 // modal button on click
 modalShowBtn.forEach(btn => {
   btn.addEventListener("click", e => {
-    e.preventDefault()
+    e.preventDefault() 
     let href = btn.getAttribute("data-modal")
+    if (href == "donate-unsub-modal") {
+      var currentURL = window.location.href;
+      var newURL = currentURL + '#unsub';
+      window.location.href = newURL;
+    }
     openModal(document.getElementById(href))
   })
 })
@@ -864,7 +869,7 @@ if (cropAvaPopup) {
         const imgUrl = URL.createObjectURL(croppedFile);
         imgWrap.style.backgroundImage = `url(${imgUrl})`;
         cropAvaPopup.classList.remove("open")
-        /* const formData = new FormData();
+        const formData = new FormData();
         formData.append('cropped', croppedFile);
         formData.append('original', inputPhoto.files[0]);
         avatarInput.value = '';
@@ -896,7 +901,7 @@ if (cropAvaPopup) {
               showMessages('error', 'Не удалось загрузить файл');
               cropAvaPopup.classList.remove("open")
           }
-        }); */
+        });
       });
     });
     cropDestroy.addEventListener("click",() => cropAvaPopup.classList.remove("open"))
@@ -922,7 +927,7 @@ function showMessages(status=false, text) {
   }, 6000);
 }
 // login-form
-$("#login-form").validate({
+/*$("#login-form").validate({
   errorElement: "div",
   ignore: ":hidden",
   rules: {
@@ -946,8 +951,9 @@ $("#login-form").validate({
     formSuccess(form)
   }
 });
+*/
 // recovery-form
-$("#recovery-form").validate({
+/*$("#recovery-form").validate({
   errorElement: "div",
   ignore: ":hidden",
   rules: {
@@ -961,7 +967,7 @@ $("#recovery-form").validate({
   submitHandler: function(form) {
     formSuccess(form)
   }
-});
+});*/
 // password-form
 $("#password-form").validate({
   errorElement: "div",
@@ -986,6 +992,7 @@ $("#password-form").validate({
   }
 });
 // reg-form
+/*
 $("#reg-form").validate({
   errorElement: "div",
   ignore: ":hidden",
@@ -1036,7 +1043,9 @@ $("#reg-form").validate({
     formSuccess(form)
   }
 });
+*/
 //fund form
+/*
 $("#fund-form").validate({
   errorElement: "div",
   rules: {
@@ -1111,6 +1120,7 @@ $("#fund-form").validate({
     formSuccess(form)
   }
 });
+*/
 $("#donate-form").validate({
   errorElement: "div",
   ignore: ":hidden",
@@ -1237,7 +1247,6 @@ if (itemForm) {
 const donateCheckboxMonth = document.querySelector('#donate-2');
 if (donateCheckboxMonth) {
   const donateCheckboxes = document.querySelectorAll('.form-tabs--donate input[type=radio]');
-  console.log(donateCheckboxes)
   donateCheckboxes.forEach(donateCheckbox => {
     donateCheckbox.addEventListener('change', () => {
       if (donateCheckboxMonth.checked) {
@@ -1260,4 +1269,7 @@ if (donateAmountCustom) {
       }
     });
   });
+}
+if(window.location.href.indexOf('#unsub') != -1) {
+  openModal(document.querySelector(".donate-unsub-modal"))
 }

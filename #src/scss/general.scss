@@ -628,7 +628,7 @@ h5, .h5, p {
       bottom: -8px;
       left: -16px;
       right: -16px;
-      border-radius: 80px;
+      border-radius: 40px;
       z-index: -1;
       opacity: 0;
       transition: all .3s linear;
@@ -638,7 +638,8 @@ h5, .h5, p {
       top: -6px;
       bottom: -6px;
       left: -12px;
-      right: -12px
+      right: -12px;
+      border-radius: 20px;
     }
   }
 }

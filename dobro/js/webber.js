@@ -144,13 +144,8 @@ modal.forEach(mod => {
 // modal button on click
 modalShowBtn.forEach(btn => {
   btn.addEventListener("click", e => {
-    e.preventDefault() 
+    e.preventDefault()
     let href = btn.getAttribute("data-modal")
-    if (href == "donate-unsub-modal") {
-      var currentURL = window.location.href;
-      var newURL = currentURL + '#unsub';
-      window.location.href = newURL;
-    }
     openModal(document.getElementById(href))
   })
 })
@@ -927,7 +922,8 @@ function showMessages(status=false, text) {
   }, 6000);
 }
 // login-form
-/*$("#login-form").validate({
+/*
+$("#login-form").validate({
   errorElement: "div",
   ignore: ":hidden",
   rules: {
@@ -948,12 +944,15 @@ function showMessages(status=false, text) {
     }
   },
   submitHandler: function(form) {
-    formSuccess(form)
+    //formSuccess(form)
   }
 });
 */
+
+
 // recovery-form
-/*$("#recovery-form").validate({
+/*
+$("#recovery-form").validate({
   errorElement: "div",
   ignore: ":hidden",
   rules: {
@@ -967,7 +966,11 @@ function showMessages(status=false, text) {
   submitHandler: function(form) {
     formSuccess(form)
   }
-});*/
+});
+*/
+
+
+
 // password-form
 $("#password-form").validate({
   errorElement: "div",
@@ -991,8 +994,8 @@ $("#password-form").validate({
     formSuccess(form)
   }
 });
-// reg-form
 /*
+// reg-form
 $("#reg-form").validate({
   errorElement: "div",
   ignore: ":hidden",
@@ -1044,8 +1047,10 @@ $("#reg-form").validate({
   }
 });
 */
-//fund form
+
+
 /*
+//fund form
 $("#fund-form").validate({
   errorElement: "div",
   rules: {
@@ -1121,85 +1126,7 @@ $("#fund-form").validate({
   }
 });
 */
-$("#donate-form").validate({
-  errorElement: "div",
-  ignore: ":hidden",
-  rules: {
-    donate_filter: {
-      required: true
-    },
-    email: {
-      required: true,
-    },
-    name: {
-      required: true
-    },
-    amount: {
-      required: true
-    },
-    amount_other: {
-      required: true
-    },
-    donate_agree1: {
-      required: true
-    },
-    donate_agree2: {
-      required: true
-    },
-  },
-  errorPlacement: function(error, element) {
-    if (element.attr("name") == "donate_agree1" || element.attr("name") == "donate_agree2") {
-        error.insertAfter( element.parent(".item-checkbox") );
-    } else {
-      error.insertAfter(element);
-    }
-  },
-  messages: {
-    email: "Пожалуйста, введите корректный почтовый адрес.",
-    donate_agree1: {
-      required: "Вы должны подтвердить"
-    },
-    donate_agree1: {
-      required: "Вы должны подтвердить"
-    }
-  },
-  submitHandler: function (form) {
-    formSuccess(form)
-  }
-});
-//donate unsub form
-$("#donate-unsub-form").validate({
-  errorElement: "div",
-  ignore: ":hidden",
-  rules: {
-    name: {
-      required: true
-    },
-    email: {
-      required: true,
-      email: true
-    },
-    agree1: {
-      required: true
-    },
-  },
-  messages: {
-    email: "Пожалуйста, введите корректный почтовый адрес.",
-    agree1: {
-      required: "Вы должны подтвердить"
-    }
-  },
-  errorPlacement: function(error, element) {
-    if (element.attr("name") == "agree1"){
-        error.insertAfter( element.parent(".item-checkbox") );
-    } else {
-      error.insertAfter(element);
-    }
-  },
-  submitHandler: function (form) {
-    formSuccess(form)
-  }
-});
+
 //mask input
 const inp = document.querySelectorAll('input[type=tel]')
 if (inp) {
@@ -1247,6 +1174,7 @@ if (itemForm) {
 const donateCheckboxMonth = document.querySelector('#donate-2');
 if (donateCheckboxMonth) {
   const donateCheckboxes = document.querySelectorAll('.form-tabs--donate input[type=radio]');
+  console.log(donateCheckboxes)
   donateCheckboxes.forEach(donateCheckbox => {
     donateCheckbox.addEventListener('change', () => {
       if (donateCheckboxMonth.checked) {
@@ -1269,7 +1197,4 @@ if (donateAmountCustom) {
       }
     });
   });
-}
-if(window.location.href.indexOf('#unsub') != -1) {
-  openModal(document.querySelector(".donate-unsub-modal"))
 }
