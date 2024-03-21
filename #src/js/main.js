@@ -1111,6 +1111,85 @@ $("#fund-form").validate({
     formSuccess(form)
   }
 });
+$("#donate-form").validate({
+  errorElement: "div",
+  ignore: ":hidden",
+  rules: {
+    donate_filter: {
+      required: true
+    },
+    email: {
+      required: true,
+    },
+    name: {
+      required: true
+    },
+    amount: {
+      required: true
+    },
+    amount_other: {
+      required: true
+    },
+    donate_agree1: {
+      required: true
+    },
+    donate_agree2: {
+      required: true
+    },
+  },
+  errorPlacement: function(error, element) {
+    if (element.attr("name") == "donate_agree1" || element.attr("name") == "donate_agree2") {
+        error.insertAfter( element.parent(".item-checkbox") );
+    } else {
+      error.insertAfter(element);
+    }
+  },
+  messages: {
+    email: "Пожалуйста, введите корректный почтовый адрес.",
+    donate_agree1: {
+      required: "Вы должны подтвердить"
+    },
+    donate_agree1: {
+      required: "Вы должны подтвердить"
+    }
+  },
+  submitHandler: function (form) {
+    formSuccess(form)
+  }
+});
+//donate unsub form
+$("#donate-unsub-form").validate({
+  errorElement: "div",
+  ignore: ":hidden",
+  rules: {
+    name: {
+      required: true
+    },
+    email: {
+      required: true,
+      email: true
+    },
+    agree1: {
+      required: true
+    },
+  },
+  messages: {
+    email: "Пожалуйста, введите корректный почтовый адрес.",
+    agree1: {
+      required: "Вы должны подтвердить"
+    }
+  },
+  errorPlacement: function(error, element) {
+    if (element.attr("name") == "agree1"){
+        error.insertAfter( element.parent(".item-checkbox") );
+    } else {
+      error.insertAfter(element);
+    }
+  },
+  submitHandler: function (form) {
+    formSuccess(form)
+  }
+});
 //mask input
 const inp = document.querySelectorAll('input[type=tel]')
 if (inp) {
@@ -1153,4 +1232,32 @@ if (itemForm) {
       })
     }
   })
+}
+
+const donateCheckboxMonth = document.querySelector('#donate-2');
+if (donateCheckboxMonth) {
+  const donateCheckboxes = document.querySelectorAll('.form-tabs--donate input[type=radio]');
+  console.log(donateCheckboxes)
+  donateCheckboxes.forEach(donateCheckbox => {
+    donateCheckbox.addEventListener('change', () => {
+      if (donateCheckboxMonth.checked) {
+        $('.donate-form__month').slideDown(300);
+      } else {
+        $('.donate-form__month').slideUp(300);
+      }
+    });
+  });
+}
+const donateAmountCustom = document.querySelector('#other-amount');
+if (donateAmountCustom) {
+  const donateAmountCheckboxes = document.querySelectorAll('.form-tabs--amount input[type=radio]');
+  donateAmountCheckboxes.forEach(donateAmountCheckbox => {
+    donateAmountCheckbox.addEventListener('change', () => {
+      if (donateAmountCustom.checked) {
+        $('.other-amount').slideDown(300);
+      } else {
+        $('.other-amount').slideUp(300);
+      }
+    });
+  });
 }

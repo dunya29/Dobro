@@ -235,6 +235,9 @@
         }
     }
 }
+.cropp-ava {
+    z-index: 1001;
+}
 .log-modal {
     &__forget-password {
         text-align: right;
@@ -252,6 +255,82 @@
             color: $carmine;
             cursor: pointer;
         }
+    }
+}
+.donate-modal {
+    .modal-show-btn {
+        cursor: pointer;
+        text-decoration: underline;        
+        text-decoration-skip-ink: none;
+    }
+    &__unsub {
+        min-height: 53px;
+        font-weight: 500;
+        color: $pol-blue;
+        padding-left: 80px;
+        position: relative;
+        margin-top: 32px;
+        background: url(../img/icons/notify.svg) top left/contain no-repeat;
+        background-size: 53px;
+        span {
+            color: $carmine;
+        }
+    }
+    @media (max-width: $bp4) {
+        &__unsub {
+            padding-left: 48px;
+            background-size: 32px;
+        }
+    }
+}
+.donate-form {
+    .form-tabs--donate, .form-tabs--amount {
+      margin-bottom: 0;
+      label {
+        flex-grow: 1;
+        max-width: 50%;
+        text-align: center;
+      }
+      @media (max-width: $bp5) {
+        label {
+            width: 100%;
+            max-width: 100%;
+        }
+      }
+    }
+    .attention {
+      color: $carmine;
+      text-align: center;
+    }
+    .other-amount {
+      margin-top: 16px
+    }
+    &__way {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      span {
+        color: $pol-blue;
+      }
+      @media (max-width: $bp4) {
+        display: block;
+        span {
+            display: block;
+            margin-bottom: 16px;
+        }
+      }
+    }
+    &__month {
+      p {
+        color: $pol-blue;
+        margin-top: 16px;
+      }
+    }
+    &__credits {
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
 }
 .form-error {

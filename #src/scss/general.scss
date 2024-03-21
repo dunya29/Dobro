@@ -1076,7 +1076,7 @@ h5, .h5, p {
     font-size: 18px;
   }
   .form-tabs {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }
   .item-checkbox {
     display: inline-block;
@@ -1115,6 +1115,7 @@ h5, .h5, p {
       color: $carmine;
     }
     .item-checkbox {
+      max-width: 600px;
       margin: 16px 0;
       &:last-child {
         margin-bottom: 0;

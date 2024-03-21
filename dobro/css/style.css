@@ -1360,7 +1360,7 @@ h6,
 }
 
 .form .form-tabs {
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .form .item-checkbox {
@@ -1411,6 +1411,7 @@ h6,
 }
 
 .form__fieldset .item-checkbox {
+  max-width: 600px;
   margin: 16px 0;
 }
 
@@ -4304,6 +4305,10 @@ h6,
   height: 100%;
 }
 
+.cropp-ava {
+  z-index: 1001;
+}
+
 .log-modal__forget-password {
   text-align: right;
   margin: 24px 0;
@@ -4323,6 +4328,83 @@ h6,
 .log-modal__reg span {
   color: #B71351;
   cursor: pointer;
+}
+
+.donate-modal .modal-show-btn {
+  cursor: pointer;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+}
+
+.donate-modal__unsub {
+  min-height: 53px;
+  font-weight: 500;
+  color: #41536D;
+  padding-left: 80px;
+  position: relative;
+  margin-top: 32px;
+  background: url(../img/icons/notify.svg) top left/contain no-repeat;
+  background-size: 53px;
+}
+
+.donate-modal__unsub span {
+  color: #B71351;
+}
+
+.donate-form .form-tabs--donate,
+.donate-form .form-tabs--amount {
+  margin-bottom: 0;
+}
+
+.donate-form .form-tabs--donate label,
+.donate-form .form-tabs--amount label {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.donate-form .attention {
+  color: #B71351;
+  text-align: center;
+}
+
+.donate-form .other-amount {
+  margin-top: 16px;
+}
+
+.donate-form__way {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.donate-form__way span {
+  color: #41536D;
+}
+
+.donate-form__month p {
+  color: #41536D;
+  margin-top: 16px;
+}
+
+.donate-form__credits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .form-error {
@@ -6935,6 +7017,20 @@ h6,
     top: 15px;
     right: 15px;
   }
+
+  .donate-modal__unsub {
+    padding-left: 48px;
+    background-size: 32px;
+  }
+
+  .donate-form__way {
+    display: block;
+  }
+
+  .donate-form__way span {
+    display: block;
+    margin-bottom: 16px;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -7051,6 +7147,12 @@ h6,
 
   .contacts__items {
     grid-template-columns: 1fr;
+  }
+
+  .donate-form .form-tabs--donate label,
+  .donate-form .form-tabs--amount label {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
