@@ -1,0 +1,195 @@
+::placeholder {
+    color: $light-carmine !important;
+}
+input, textarea{
+    &::placeholder {
+        color: $carmine !important;
+    }
+}
+input, textarea{
+    &:focus,&:hover, &:active {
+        border: 1px solid $carmine !important;
+        box-shadow: none !important;
+    }
+}
+input.error, textarea.error {
+    border: 1px solid #ec1744 !important;
+}
+input, textarea {
+    border: 1px solid $carmine !important
+}
+.input-disabled:hover {
+    border: 1px solid $carmine !important;
+}
+.textarea_resize::before {
+    background: $carmine;
+}
+.styled-checkbox ~ label:before {
+    border: 1px solid $carmine;
+}
+.styled-checkbox:checked ~ label:after {
+    background: url(../img/icons/checked-red.svg) no-repeat center bottom;
+}
+button,.content-block-more {
+    background: $carmine;
+    color: $carmine;
+    span {
+        color: #e6ecff;
+    }
+    svg {
+        fill: #e6ecff;
+    }
+    &:hover {
+        box-shadow: 0 12px 34px 0 rgba(188,37,91,.26);
+    }
+}
+a {
+    color: $carmine;
+    span {
+        color: #e6ecff;
+    }
+}
+body {
+    background: $carmine;
+    background-image: none;
+}
+.main {
+    background-color: #f2f5ff
+}
+.enter__title {
+    color: $carmine;
+    span {
+        color: $carmine;
+    }
+}
+.pp__check label {
+    color: $pol-blue;
+    a {
+        font-weight: 500;
+        color: $pol-blue;
+    }
+}
+.upload__area_text {
+    color: $pol-blue;
+}
+.color_green {
+    color: $carmine !important;
+}
+.forget-password {
+    color: $maincolor!important;
+}
+.require-box__item {
+    color: $pol-blue;
+}
+.info__subtitle {
+    color: $maincolor;
+}
+.enter__register a {
+    color: $carmine !important;
+}
+.profile__btn-back svg {
+   fill: $light-blue !important;
+}
+.pp-content__form h5 {
+    color: $maincolor;
+}
+.categories-box__item label {
+    border: 1px solid $carmine;
+    color: $carmine;
+}
+.pp-fund__reasons-label {
+    background: $carmine;
+    color: $light-blue;
+}
+.pp-fund__label {
+    border: 1px solid $carmine;
+    background: $white-blue;
+}
+.pp-fund__item input:checked ~ .pp-fund__label {
+    background-color: $light-carmine;
+    color: $carmine;
+}
+.pp-fund__item input:checked ~ .pp-fund__label .pp-fund__reasons-label {
+    background: $carmine !important;
+}
+.pp-fund__item input:checked ~ .pp-fund__label .pp-fund__title {
+    color: $carmine;
+}
+.pp-fund__item input:checked ~ .pp-fund__label:active {
+    background: $light-carmine!important;
+}
+.content-block-more:hover {
+    background: $carmine;
+    color: $white-blue;
+}
+.admin-filter__item select {
+    border: 1px solid $carmine !important;
+    color: $carmine;
+}
+.profile-form-item__field input {
+    border: 1px solid $carmine !important;
+}
+.profile-form-item__field input::placeholder {
+  color: $light-carmine !important;
+}
+.profile-form-item__field input:hover {
+  box-shadow: none;
+  border: 1px solid $carmine !important;
+}
+.profile-form-item__field input:focus {
+  box-shadow: none;
+  border: 1px solid $light-carmine !important;
+}
+.admin__subtitle {
+    color: $carmine;
+}
+.dataTables_filter input::placeholder {
+    color: $carmine !important;
+}
+.tabs__nav-item button, .tabs__nav-item a {
+    border: 1px solid $light-carmine
+}
+.tabs__nav-item .tabs__nav-btn--active {
+    background: $carmine !important;
+}
+.tabs__nav-item button:hover, .tabs__nav-item a:hover {
+    background: $carmine !important;
+}
+.profile__earns > :last-child {
+    margin-left: 0;
+}
+.admin__stat > :last-child {
+    color: $carmine;
+}
+.admin-search input::placeholder {
+    color: $light-carmine!important;
+}
+.admin__export-inner {
+    background: $light-blue
+}
+.categories-box__item input:checked ~ label {
+    background: $carmine;
+}
+.textarea_resize {
+    display: none!important;
+}
+.tox-tinymce {
+    width: 100%;
+  }
+.stock__avatars {
+    display: none!important;
+}
+.stock__authors {
+    margin-top: 42px;
+  }
+@media (any-hover: hover) {
+    .pp-fund__item input:checked ~ .pp-fund__label:hover {
+      background-color: $light-carmine;
+    }
+    .pp-fund__label:hover {
+        background-color: $light-carmine;
+    }
+    .categories-box__item label:hover {
+        background: $carmine;
+      }
+  }

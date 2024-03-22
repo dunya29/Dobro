@@ -43,9 +43,11 @@ function fixedHeader() {
     header.classList.remove("fixed")
   }
 }
-fixedHeader()
-window.addEventListener("scroll", fixedHeader)
-window.addEventListener("resize", fixedHeader)
+if (header) {
+  fixedHeader()
+  window.addEventListener("scroll", fixedHeader)
+  window.addEventListener("resize", fixedHeader)
+}
 // tabSwitch
 function tabSwitch(nav, block) {
   nav.forEach((item, idx) => {
@@ -136,8 +138,10 @@ function closeModal(modal) {
 // modal click outside
 modal.forEach(mod => {
   mod.addEventListener("click", e => {
-    if (!mod.querySelector(".modal__content").contains(e.target) || mod.querySelector(".modal__close").contains(e.target)) {
-      closeModal(mod)
+    if (!mod.classList.contains("mod-page")) {
+      if (!mod.querySelector(".modal__content").contains(e.target) || mod.querySelector(".modal__close").contains(e.target)) {
+        closeModal(mod)
+      }
     }
   })
 })
@@ -230,15 +234,17 @@ if (customSelect) {
   })
 }
 //menu
-iconMenu.addEventListener("click", () => {
-  if (window.innerWidth <= 991.98 && !header.classList.contains("show-menu")) {
-    disableScroll()
-    header.classList.add("show-menu")
-  } else if (window.innerWidth <= 991.98 && header.classList.contains("show-menu")) {
-    enableScroll()
-    header.classList.remove("show-menu")
-  }
-})
+if (iconMenu) {
+  iconMenu.addEventListener("click", () => {
+    if (window.innerWidth <= 991.98 && !header.classList.contains("show-menu")) {
+      disableScroll()
+      header.classList.add("show-menu")
+    } else if (window.innerWidth <= 991.98 && header.classList.contains("show-menu")) {
+      enableScroll()
+      header.classList.remove("show-menu")
+    }
+  })
+}
 window.addEventListener("resize", () => {
   if (window.innerWidth > 991.98 && header.classList.contains("show-menu")) {
     enableScroll()
@@ -1121,6 +1127,7 @@ $("#fund-form").validate({
   }
 });
 */
+/*
 $("#donate-form").validate({
   errorElement: "div",
   ignore: ":hidden",
@@ -1167,6 +1174,9 @@ $("#donate-form").validate({
     formSuccess(form)
   }
 });
+*/
+
+/*
 //donate unsub form
 $("#donate-unsub-form").validate({
   errorElement: "div",
@@ -1200,6 +1210,8 @@ $("#donate-unsub-form").validate({
     formSuccess(form)
   }
 });
+*/
+
 //mask input
 const inp = document.querySelectorAll('input[type=tel]')
 if (inp) {
@@ -1273,3 +1285,20 @@ if (donateAmountCustom) {
 if(window.location.href.indexOf('#unsub') != -1) {
   openModal(document.querySelector(".donate-unsub-modal"))
 }
+/* tinymce.init({
+  selector: 'textarea',
+  menubar: "",
+  plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak searchreplace wordcount visualblocks visualchars code fullscreen spellchecker insertdatetime media nonbreaking save table contextmenu directionality emoticons template paste textcolor codesample colorpicker textpattern imagetools paste',
+  toolbar: 'copy paste | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | formastselect',
+  tinycomments_mode: 'embedded',
+  tinycomments_author: 'Author name',
+  mergetags_list: [
+    { value: 'First.Name', title: 'First Name' },
+    { value: 'Email', title: 'Email' },
+  ],
+  block_formats: 'Paragraph=p;Header 1=h1;Header 2=h2;Header 3=h3',
+  statusbar: false,
+  ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
+  language_url: '/html/js/libs/tiny5-ru.js',
+  language: 'ru'
+}); */

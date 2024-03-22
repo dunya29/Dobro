@@ -240,9 +240,10 @@
 }
 .log-modal {
     &__forget-password {
+        display: block;
         text-align: right;
         margin: 24px 0;
-        span {
+        a, span {
             font-weight: 500;
             cursor: pointer;
         }
@@ -251,7 +252,7 @@
         font-weight: 500;
         color: $pol-blue;
         margin-top: 12px;
-        span {
+        a, span {
             color: $carmine;
             cursor: pointer;
         }

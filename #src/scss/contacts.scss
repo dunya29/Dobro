@@ -1,19 +1,34 @@
 .contacts {
-    .page-content {
+    h1,h2 {
+        margin-bottom: 40px;
+    }
+    .form {
+        max-width: 600px;
+    }
+    &__inner {
         margin-left: calc(100% / 24);
     }
-    &__items {
+    &__cols {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 13fr 9fr;
+        gap: 40px 24px;
+    }
+    &__items {
+        max-width: 600px;
+        display: grid;
+        grid-template-columns: 1fr;
         gap: 24px;       
     }
     @media (max-width: $bp2) {
-        .page-content {
+        &__inner {
             margin-left: 0;
         }
     }
-    @media (max-width: $bp5) {
-        &__items {
+    @media (max-width: $bp3) {
+        h1,h2 {
+            margin-bottom: 24px;
+        }
+        &__cols {
             grid-template-columns: 1fr;
         }
     }

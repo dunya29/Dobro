@@ -1,0 +1,799 @@
+<html lang="ru" class="page"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <link rel="shortcut icon" href="/app/favicon/favicon.ico" type="image/x-icon">
+      <link rel="apple-touch-icon" sizes="180x180" href="/app/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/app/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/app/favicon/favicon-16x16.png">
+    <title>Добрые дела</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/vendor.css">
+        <link rel="stylesheet" href="css/daniel.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script defer="" src="js/libs/jquery.min.js"></script>
+        <script defer="" src="js/libs/bootstrap.min.js"></script>
+        <script defer="" src="js/libs/inputmask.min.js"></script>
+        <script defer="" src="js/libs/jquery.validate.min.js"></script>
+        <script defer="" src="js/libs/datepicker.min.js"></script>
+        <script defer="" src="js/libs/croppie.min.js"></script>
+        <script defer="" src="js/daniel.js"></script>
+  <style type="text/css"></style><style type="text/css">.pixelParallel-panel[data-v-dedc8274]{position:fixed;right:10px;bottom:10px;z-index:2147483647;width:375px;height:265px;transform:translate(0);background:#fff;transition:width .2s ease-out,height .2s ease-out;will-change:top,left,width,height,transform;opacity:0}.pixelParallel-panel-inner[data-v-dedc8274]{position:relative;overflow:hidden;height:100%;border:1px solid #dddedf;box-shadow:0 2px 10px rgba(0,0,0,.1);box-sizing:border-box}.pixelParallel-panel-handle[data-v-dedc8274]{position:absolute;top:-10px;right:-10px;z-index:3;width:20px;height:20px;background:red;transform:rotate(45deg);background:linear-gradient(0deg,transparent,transparent 50%,#ccc 0,#ccc);background-size:100% 2px;cursor:move}.pixelParallel-panel-isolator[data-v-dedc8274]{border:0;width:100%;height:100%;overflow:hidden;position:relative}.pixelParallel-panel-dragging .pixelParallel-panel-inner[data-v-dedc8274]{pointer-events:none}.pixelParallel-panel-minimized[data-v-dedc8274]{width:112px;height:50px;transition:width .2s ease-out .15s,height .2s ease-out .15s}@media (max-width:395px){.pixelParallel-panel[data-v-dedc8274]{right:0;bottom:0;width:320px}.pixelParallel-panel-minimized[data-v-dedc8274]{width:112px}}</style><style type="text/css">.pixelParallel-overlay{position:absolute;left:0;top:0;width:100%;text-align:center;white-space:nowrap;display:none}.pixelParallel-overlay-enabled{display:block}</style><style type="text/css">.pixelParallel-image-outer{visibility:hidden;position:absolute;top:0;left:0;width:100%;overflow:hidden;max-width:100vw;min-height:100vh}.pixelParallel-image-inner{position:absolute;z-index:2147483646;left:50%;top:0;cursor:move;transform:translateX(-50%);transition:opacity .15s}.pixelParallel-image-inner img{width:auto;height:auto;max-width:none;max-height:none;vertical-align:top;margin:0;padding:0;position:relative;transform-origin:50% 0;top:-1px;border:1px dashed #333}.pixelParallel-image-inner img:not([src]),.pixelParallel-image-inner img[src=""]{visibility:hidden}.pixelParallel-image-enabled{visibility:visible}.pixelParallel-image-difference{mix-blend-mode:difference}.pixelParallel-image-difference img{opacity:1!important}.pixelParallel-image-locked,.pixelParallel-image-no-image{pointer-events:none}.pixelParallel-image-locked .pixelParallel-image-inner img{top:0;border:0 none}</style><style type="text/css">.pixelParallel-grids{position:relative;z-index:2147483646;pointer-events:none}.pixelParallel-grid-horizontal,.pixelParallel-grid-vertical{position:fixed;z-index:1;pointer-events:none;visibility:hidden}.pixelParallel-grid-horizontal{top:50%;left:50%;display:table;width:100vw;height:200vh;opacity:.5;table-layout:fixed;border-spacing:30px;transform:translate(-50%,-50%)}.pixelParallel-grid-horizontal span{display:table-cell;background:red;height:200vh}.pixelParallel-grid-vertical{top:0;left:0;width:100%;height:100%;background:linear-gradient(180deg,transparent,transparent 90%,blue 0,blue);background-size:100% 10px;opacity:.5}.pixelParallel-grid-horizontal-enabled,.pixelParallel-grid-vertical-enabled{visibility:visible}</style><style type="text/css">.pixelParallel-rulers{position:relative;z-index:2147483646}.pixelParallel-ruler-x,.pixelParallel-ruler-y{display:none;position:fixed;top:0;left:0;z-index:2;background:cyan}.pixelParallel-ruler-x:after,.pixelParallel-ruler-y:after{content:"";position:absolute;top:-8px;left:-8px;right:0;bottom:0;padding:10px}.pixelParallel-ruler-x{right:0;height:1px;cursor:row-resize}.pixelParallel-ruler-y{bottom:0;width:1px;cursor:col-resize}.pixelParallel-rulers-enabled .pixelParallel-ruler-x,.pixelParallel-rulers-enabled .pixelParallel-ruler-y{display:block}</style></head>
+  
+    <body class="page__body">
+      <div class="site-container">
+        <main class="main">
+            <div class="container">
+                <div class="info__item border-bottom">
+                    <div class="content-block__more profile__btn-back profile__btn-exit">
+                        <a href="javascript:history.go(-1)" type="submit" class="content-block-more">
+                            <svg class="">
+                                <use xlink:href="/charity/img/sprite.svg#arrow-left"></use>
+                            </svg>
+                            <span>Назад</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="pp__content pp__content_questionnaire">
+                                                    <h4 class="coll__title">Анкета для создания частного
+                        сбора</h4>
+                    <div class="form-wrapper">
+                        <form method="" id="collecting" class="pp-content__form js-city-action-add" enctype="multipart/form-data" novalidate="novalidate">
+                            <input type="hidden" name="formid" value="private">
+                                                    <div class="fieldset border-bottom-bold">
+                                <h5>Информация о себе</h5>
+                                <div class="coll__user">
+                                    <div class="info__item">
+                                        <div class="info__subtitle">
+                                            <p>
+                                                <b> Аватар пользователя </b>
+                                            </p>
+                                        </div>
+                                        <div class="upload__ava"></div>
+                                        <div class="info__cover_upload info__cover_upload_ava">
+                                            <div class="upload__area upload-disabled js-upload-widget" data-size="5">
+                                                <div class="image-box image-preview js-upload-widget-preview" style="background-image: url('/assets/uploads/avatars//2023-07-11/1689064540_1673510384_3-143.jpg')"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="coll__user-info">
+                                        <div class="info__item">
+                                            <div class="input_box">
+                                                <div class="info__subtitle">
+                                                    <span>Имя, фамилия</span>
+                                                </div>
+                                                <input type="text" name="name" placeholder="Имя, фамилия" value="Мария Иванова Ивановна" readonly="" class="input-disabled">
+                                            </div>
+                                        </div>
+                                        <div class="info__item">
+                                            <div class="input_box">
+                                                <div class="info__subtitle">
+                                                    <span>Почта</span>
+                                                </div>
+                                                <input type="email" name="email" placeholder="Email" value="ivanovmare@yandex.ru" readonly="" class="input-disabled">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="fieldset">
+                                <h5>Информация о сборе</h5>
+                                <div class="info__item">
+                                    <div class="input_box">
+                                        <div class="info__subtitle">
+                                            <span class="field-req">Название сбора</span>
+                                        </div>
+                                        <input type="text" name="pagetitle" id="nameAction">
+                                    </div>
+                                </div>
+                                <div class="info__item">
+                                    <div class="input_box">
+                                        <div class="info__subtitle">
+                                            <span class="field-req">Цель сбора</span>
+                                        </div>
+                                        <input type="text" name="aim" id="purpose">
+                                    </div>
+                                </div>
+    
+                                <div class="input-group__row info__item border-bottom">
+                                    <div class="input-date_box">
+                                        <div class="input-date__wrap" id="input-date-wrap">
+                                            <div class="info__subtitle">
+                                                <span class="field-req">Дата окончания сбора</span>
+                                            </div>
+                                            <div class="input_box data-input">
+                                                <div class="sn-img">
+                                                    <img src="/charity/img/icons/calendar.svg" alt="calendar">
+                                                </div>
+                                                <input name="finish" id="date-end" class="input-date" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="input-date__checkbox">
+                                            <div class="pp__check">
+                                                <div class="pp-check pp-check_c">
+                                                    <div class="pp-check__checkbox">
+                                                        <div class="check">
+                                                            <input class="styled-checkbox" id="input-date-checkbox" value="1" name="input_date_checkbox" type="checkbox">
+                                                            <label for="input-date-checkbox"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pp-check__text">
+                                <span>
+                                  <label for="input-date-checkbox">
+    Бессрочный сбор
+    </label>
+                                </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="input_box input_box-goal">
+                                        <div class="info__subtitle">
+                                            <span class="field-req">Финансовая цель, руб</span>
+                                        </div>
+                                        <input id="goal" type="text" name="goal">
+                                    </div>
+                                </div>
+    
+                                <div class="input_box input_box_textarea info__item border-bottom">
+                                    <div class="info__subtitle">
+                                        <p class="field-req">
+                                            <b>Описание сбора</b>
+                                        </p>
+                                    </div>
+                                    <div class="info__item__input textarea_box">
+                                        <textarea placeholder="" id="col_desc" name="content" rows="6"></textarea>
+                                        <div class="textarea_resize"></div>
+                                        <div class="textarea_resize"></div>
+                                        <div class="textarea_resize"></div>
+                                    </div>
+                                </div>
+    
+                                <div class="info__subtitle">
+                                    <p class="field-req">
+                                        <b> Обложка сбора </b>
+                                    </p>
+                                </div>
+                                <div class="d-cover">
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-27" value="27">
+                                        <label for="cover-27">
+                                            <img src="/assets/galleries/8/abstrakciya-2.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-28" value="28">
+                                        <label for="cover-28">
+                                            <img src="/assets/galleries/8/abstrakciya-3.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-29" value="29">
+                                        <label for="cover-29">
+                                            <img src="/assets/galleries/8/abstrakciya-5.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-30" value="30">
+                                        <label for="cover-30">
+                                            <img src="/assets/galleries/8/abstrakciya-koty1.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-31" value="31">
+                                        <label for="cover-31">
+                                            <img src="/assets/galleries/8/abstrakciya-prazdnik1.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-32" value="32">
+                                        <label for="cover-32">
+                                            <img src="/assets/galleries/8/abstrakciya1.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-33" value="33">
+                                        <label for="cover-33">
+                                            <img src="/assets/galleries/8/begushhie-zhenshhiny1.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-34" value="34">
+                                        <label for="cover-34">
+                                            <img src="/assets/galleries/8/deti1.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-35" value="35">
+                                        <label for="cover-35">
+                                            <img src="/assets/galleries/8/invalidy1.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-36" value="36">
+                                        <label for="cover-36">
+                                            <img src="/assets/galleries/8/koshechki1.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-37" value="37">
+                                        <label for="cover-37">
+                                            <img src="/assets/galleries/8/logo-rozovyj1.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-38" value="38">
+                                        <label for="cover-38">
+                                            <img src="/assets/galleries/8/logo-sinij1.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-39" value="39">
+                                        <label for="cover-39">
+                                            <img src="/assets/galleries/8/malenkie-deti1.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-40" value="40">
+                                        <label for="cover-40">
+                                            <img src="/assets/galleries/8/pozhilye-lyudi1.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-41" value="41">
+                                        <label for="cover-41">
+                                            <img src="/assets/galleries/8/prazdnik1.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-42" value="42">
+                                        <label for="cover-42">
+                                            <img src="/assets/galleries/8/semya1.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-43" value="43">
+                                        <label for="cover-43">
+                                            <img src="/assets/galleries/8/sobachki1.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-44" value="44">
+                                        <label for="cover-44">
+                                            <img src="/assets/galleries/8/hokkej1.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                    <div class="d-cover__item">
+                                        <input type="radio" name="cover" id="cover-45" value="45">
+                                        <label for="cover-45">
+                                            <img src="/assets/galleries/8/horoshaya-pogoda1.png" alt="обложка сбора">
+                                            <div class="d-cover__check">
+                                                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27" cy="27" r="27" fill="#3744DD"></circle>
+                                                    <path d="M12.6999 25.4366C14.4464 27.8137 16.1897 30.1927 17.9297 32.5735C20.0012 35.3977 22.0822 38.2113 24.1392 41.0463C24.3073 41.322 24.5473 41.5467 24.8333 41.6965C25.1193 41.8462 25.4406 41.9153 25.7626 41.8963C25.8786 41.8935 25.9947 41.8971 26.1103 41.9071C26.4688 41.9571 26.8336 41.8878 27.1483 41.7098C27.4631 41.5318 27.7103 41.255 27.8518 40.9223C29.9033 37.0231 31.9755 33.1329 34.0373 29.2383C36.038 25.4602 38.0385 21.6804 40.039 17.899C40.1545 17.6759 40.2087 17.4261 40.1959 17.1751C40.1832 16.924 40.1041 16.6807 39.9667 16.47C39.8292 16.2593 39.6384 16.0887 39.4136 15.9757C39.1888 15.8627 38.9382 15.8113 38.6873 15.8268C38.4482 15.8449 38.2177 15.9232 38.0173 16.0544C37.8168 16.1856 37.653 16.3655 37.5409 16.5773L26.7688 36.9213C26.4829 37.4604 26.1971 37.9994 25.8838 38.5852C25.7619 38.4336 25.6676 38.3256 25.5828 38.2071L21.7201 32.9279L16.0934 25.275C15.7001 24.7337 15.3118 24.192 14.9087 23.6562C14.7569 23.4392 14.5475 23.2687 14.3042 23.1641C14.0609 23.0595 13.7933 23.0248 13.5316 23.0641C13.2873 23.0917 13.0557 23.1865 12.8623 23.3381C12.669 23.4896 12.5217 23.6919 12.4367 23.9224C12.3402 24.1748 12.3137 24.4488 12.36 24.7153C12.4064 24.9819 12.5238 25.2311 12.6999 25.4366Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                                                </div>
+                            </div>
+                            <div class="fieldset">
+                                <div class="input-group__categgories info__item border-bottom">
+                                    <div class="info__subtitle">
+                                        <p>
+                                            <b> Фильтры для поиска</b>
+                                        </p>
+                                    </div>
+                                    <div class="info__descript">
+                                        <span>Выберите один или несколько. Фильтр поможет найти эту акцию для целевого пожертвования</span>
+                                    </div>
+                                    <div class="categories-box" id="col_filter">
+                                                                                <div class="categories-box__item">
+                                                <input type="checkbox" name="tags[]" id="filter1" value="1">
+                                                <label for="filter1">дети</label>
+                                            </div>
+                                                                                <div class="categories-box__item">
+                                                <input type="checkbox" name="tags[]" id="filter23" value="23">
+                                                <label for="filter23">животные</label>
+                                            </div>
+                                                                                <div class="categories-box__item">
+                                                <input type="checkbox" name="tags[]" id="filter13" value="13">
+                                                <label for="filter13">культурно-историческое наследие</label>
+                                            </div>
+                                                                                <div class="categories-box__item">
+                                                <input type="checkbox" name="tags[]" id="filter3" value="3">
+                                                <label for="filter3">люди в трудной жизненной ситуации</label>
+                                            </div>
+                                                                                <div class="categories-box__item">
+                                                <input type="checkbox" name="tags[]" id="filter2" value="2">
+                                                <label for="filter2">подростки</label>
+                                            </div>
+                                                                                <div class="categories-box__item">
+                                                <input type="checkbox" name="tags[]" id="filter16" value="16">
+                                                <label for="filter16">пожилые</label>
+                                            </div>
+                                                                                <div class="categories-box__item">
+                                                <input type="checkbox" name="tags[]" id="filter34" value="34">
+                                                <label for="filter34">помощь животным</label>
+                                            </div>
+                                                                        </div>
+                                </div>
+                            </div>
+    
+                            <div class="info__item border-bottom">
+                                <div class="info__subtitle">
+                                    <p>
+                                        <b> Фото-галерея акции </b>
+                                    </p>
+                                </div>
+                                                                <div class="info__item__gallery" name="gallery">
+                                        <div class="gallery__item">
+                                            <div class="input-file-gallery" id="gallery-wrap">
+                                                                                        </div>
+                                            <div class="info__cover_upload gallery__upload  js-upload-widget" data-multiple="1" data-size="5" data-template="#js-showcase-gallery-item" id="input-gallery">
+                                                <div class="upload__area upload__area-small multiple">
+                                                    <img class="upload__area_img" src="/charity/img/icons/upload_small.svg" alt="upload_small">
+                                                    <span class="upload__area_text">
+                              <div class="user-file">Загрузить изображение</div>
+                            </span>
+                                                    <div class="inner-div js-upload-widget-button" style="
+                                position: relative;
+                                overflow: hidden;
+                                direction: ltr;
+                              ">
+                                                        <input qq-button-id="1ee2334e-e121-44ef-8bf8-a255a41e88df" title="Выберите файл" multiple="" type="file" name="col_gallery" id="col_gallery" style="
+                                  position: absolute;
+                                  right: 0px;
+                                  top: 0px;
+                                  font-family: Arial;
+                                  font-size: 118px;
+                                  margin: 0px;
+                                  padding: 0px;
+                                  cursor: pointer;
+                                  opacity: 0;
+                                  height: 100%;
+                                " accept=".png, .jpg, .jpeg">
+                                                    </div>
+                                                    <div class="image-box image-preview js-upload-widget-preview"></div>
+                                                </div>
+                                                <div class="upload__require-box upload__require-box-small">
+                                                    <div class="require-box__item">
+                                                        <p class="small_bold">
+                                                            Допустимые форматы изображения: JPG, JPEG, PNG.
+                                                        </p>
+                                                    </div>
+                                                    <div class="require-box__item">
+                                                        <p class="small_bold">
+                                                            Желательное разрешение не более 1120×530, размер не более 2 Мб.
+                                                        </p>
+                                                    </div>
+                                                    <div class="require-box__item">
+                                                        <p class="small_bold">
+                                                            Для красоты вашей галереи рекомендуем вам <br> использовать
+                                                            изображения одной ориентации.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            
+                            <div class="fieldset">
+                                <div class="input-group__categgories info__item">
+                                    <div class="info__subtitle">
+                                        <p class="field-req">
+                                            <b> Выбор фонда </b>
+                                        </p>
+                                    </div>
+                                    <div class="pp-funds__list" id="funds-list">
+                                                                                <div class="pp-fund__item">
+        <input type="radio" value="27" name="fund" id="fund27" checked="">
+        <label for="fund27" class="pp-fund__label">
+            <div class="pp-fund__title">
+                Сострадание НН
+            </div>
+    
+            <div class="pp-fund__reasons-labels">
+                                <span class="pp-fund__reasons-label">животные</span>
+                        </div>
+        </label>
+    </div>
+                                                                                <div class="pp-fund__item">
+        <input type="radio" value="20" name="fund" id="fund20">
+        <label for="fund20" class="pp-fund__label">
+            <div class="pp-fund__title">
+                Нижегородский региональный благотворительный фонд «Земля нижегородская»
+            </div>
+    
+            <div class="pp-fund__reasons-labels">
+                                <span class="pp-fund__reasons-label">культурно-историческое наследие</span>
+                        </div>
+        </label>
+    </div>
+                                                                                <div class="pp-fund__item">
+        <input type="radio" value="25" name="fund" id="fund25">
+        <label for="fund25" class="pp-fund__label">
+            <div class="pp-fund__title">
+                Фонд «Дети без мам»
+            </div>
+    
+            <div class="pp-fund__reasons-labels">
+                                <span class="pp-fund__reasons-label">дети</span>
+                        </div>
+        </label>
+    </div>
+                                                                                <div class="pp-fund__item">
+        <input type="radio" value="24" name="fund" id="fund24">
+        <label for="fund24" class="pp-fund__label">
+            <div class="pp-fund__title">
+                Благотворительный фонд «Жизнь без границ»
+            </div>
+    
+            <div class="pp-fund__reasons-labels">
+                                <span class="pp-fund__reasons-label">дети</span>
+                                <span class="pp-fund__reasons-label">подростки</span>
+                                <span class="pp-fund__reasons-label">люди в трудной жизненной ситуации</span>
+                        </div>
+        </label>
+    </div>
+                                                                                <div class="pp-fund__item">
+        <input type="radio" value="17" name="fund" id="fund17">
+        <label for="fund17" class="pp-fund__label">
+            <div class="pp-fund__title">
+                Благотворительный фонд «Доброе дело»
+            </div>
+    
+            <div class="pp-fund__reasons-labels">
+                                <span class="pp-fund__reasons-label">дети</span>
+                                <span class="pp-fund__reasons-label">подростки</span>
+                                <span class="pp-fund__reasons-label">люди в трудной жизненной ситуации</span>
+                        </div>
+        </label>
+    </div>
+                                                                                <div class="pp-fund__item">
+        <input type="radio" value="18" name="fund" id="fund18">
+        <label for="fund18" class="pp-fund__label">
+            <div class="pp-fund__title">
+                Благотворительный фонд «Нижегородский»
+            </div>
+    
+            <div class="pp-fund__reasons-labels">
+                                <span class="pp-fund__reasons-label">дети</span>
+                                <span class="pp-fund__reasons-label">подростки</span>
+                        </div>
+        </label>
+    </div>
+                                                                                <div class="pp-fund__item">
+        <input type="radio" value="23" name="fund" id="fund23">
+        <label for="fund23" class="pp-fund__label">
+            <div class="pp-fund__title">
+                «Территория добра»
+            </div>
+    
+            <div class="pp-fund__reasons-labels">
+                                <span class="pp-fund__reasons-label">пожилые</span>
+                        </div>
+        </label>
+    </div>
+                                                                                <div class="pp-fund__item">
+        <input type="radio" value="22" name="fund" id="fund22">
+        <label for="fund22" class="pp-fund__label">
+            <div class="pp-fund__title">
+                Благотворительный фонд «Время РАСсвета»
+            </div>
+    
+            <div class="pp-fund__reasons-labels">
+                                <span class="pp-fund__reasons-label">дети</span>
+                                <span class="pp-fund__reasons-label">подростки</span>
+                        </div>
+        </label>
+    </div>
+                                                                                <div class="pp-fund__item">
+        <input type="radio" value="26" name="fund" id="fund26">
+        <label for="fund26" class="pp-fund__label">
+            <div class="pp-fund__title">
+                Хоккей для всех
+            </div>
+    
+            <div class="pp-fund__reasons-labels">
+                                <span class="pp-fund__reasons-label">дети</span>
+                                <span class="pp-fund__reasons-label">подростки</span>
+                        </div>
+        </label>
+    </div>
+                                                                                <div class="pp-fund__item">
+        <input type="radio" value="19" name="fund" id="fund19">
+        <label for="fund19" class="pp-fund__label">
+            <div class="pp-fund__title">
+                Фонд «Нижегородский онкологический научный центр»
+            </div>
+    
+            <div class="pp-fund__reasons-labels">
+                                <span class="pp-fund__reasons-label">дети</span>
+                        </div>
+        </label>
+    </div>
+                                                                                <div class="pp-fund__item">
+        <input type="radio" value="29" name="fund" id="fund29">
+        <label for="fund29" class="pp-fund__label">
+            <div class="pp-fund__title">
+                НООО «Сияние»
+            </div>
+    
+            <div class="pp-fund__reasons-labels">
+                                <span class="pp-fund__reasons-label">дети</span>
+                                <span class="pp-fund__reasons-label">подростки</span>
+                        </div>
+        </label>
+    </div>
+                                                                                <div class="pp-fund__item">
+        <input type="radio" value="31" name="fund" id="fund31">
+        <label for="fund31" class="pp-fund__label">
+            <div class="pp-fund__title">
+                МБОО «Сообщество семей слепоглухих»
+            </div>
+    
+            <div class="pp-fund__reasons-labels">
+                                <span class="pp-fund__reasons-label">дети</span>
+                                <span class="pp-fund__reasons-label">пожилые</span>
+                                <span class="pp-fund__reasons-label">люди в трудной жизненной ситуации</span>
+                        </div>
+        </label>
+    </div>
+                                                                                <div class="pp-fund__item">
+        <input type="radio" value="30" name="fund" id="fund30">
+        <label for="fund30" class="pp-fund__label">
+            <div class="pp-fund__title">
+                НРООИ «Инватур»
+            </div>
+    
+            <div class="pp-fund__reasons-labels">
+                                <span class="pp-fund__reasons-label">люди в трудной жизненной ситуации</span>
+                        </div>
+        </label>
+    </div>
+                                                                                <div class="pp-fund__item">
+        <input type="radio" value="32" name="fund" id="fund32">
+        <label for="fund32" class="pp-fund__label">
+            <div class="pp-fund__title">
+                Благотворительный фонд «Во Благо — Дар»
+            </div>
+    
+            <div class="pp-fund__reasons-labels">
+                                <span class="pp-fund__reasons-label">помощь животным</span>
+                        </div>
+        </label>
+    </div>
+                                                                                <div class="pp-fund__item">
+        <input type="radio" value="35" name="fund" id="fund35">
+        <label for="fund35" class="pp-fund__label">
+            <div class="pp-fund__title">
+                Благотворительный фонд «Больше чем можешь»
+            </div>
+    
+            <div class="pp-fund__reasons-labels">
+                        </div>
+        </label>
+    </div>
+                                                                                <div class="pp-fund__item">
+        <input type="radio" value="89" name="fund" id="fund89">
+        <label for="fund89" class="pp-fund__label">
+            <div class="pp-fund__title">
+                Нижегородская региональная благотворительная общественная организация инвалидов «Забота»
+            </div>
+    
+            <div class="pp-fund__reasons-labels">
+                                <span class="pp-fund__reasons-label">люди в трудной жизненной ситуации</span>
+                                <span class="pp-fund__reasons-label">подростки</span>
+                                <span class="pp-fund__reasons-label">пожилые</span>
+                                <span class="pp-fund__reasons-label">дети</span>
+                        </div>
+        </label>
+    </div>
+                                                                                <div class="pp-fund__item">
+        <input type="radio" value="91" name="fund" id="fund91">
+        <label for="fund91" class="pp-fund__label">
+            <div class="pp-fund__title">
+                Благотворительный фонд «Планета кошек»
+            </div>
+    
+            <div class="pp-fund__reasons-labels">
+                                <span class="pp-fund__reasons-label">помощь животным</span>
+                                <span class="pp-fund__reasons-label">животные</span>
+                        </div>
+        </label>
+    </div>
+                                                                        </div>
+                                </div>
+                            </div>
+                            <div class="fieldset">
+                                <div class="pp__check">
+                                    <div class="pp-check pp-check_c">
+                                        <div class="pp-check__checkbox">
+                                            <div class="check">
+                                                <input class="styled-checkbox" id="agree1" value="1" name="agree1" type="checkbox">
+                                                <label for="agree1"></label>
+                                            </div>
+                                        </div>
+                                        <div class="pp-check__text">
+                          <span>
+                            <label for="agree1">
+    Я согласен на <a href="/assets/files/politika_obrabotki_personalnyh_dannykh_nn_young_ru.pdf">обработку персональных данных в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ</a>
+                            </label>
+                          </span>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="pp__check">
+                                    <div class="pp-check pp-check_c">
+                                        <div class="pp-check__checkbox">
+                                            <div class="check">
+                                                <input class="styled-checkbox" id="agree2" value="1" name="agree2" type="checkbox">
+                                                <label for="agree2"></label>
+                                            </div>
+                                        </div>
+                                        <div class="pp-check__text">
+                          <span>
+                            <label for="agree2">
+    Я согласен с
+    <a href="/assets/files/soglashenie_ob_usloviyah_razmeshheniya_informaczii.pdf" target="_blank">условиями размещения информации, изображений, объектов
+                              авторского права и иных результатов интеллектуальной
+                              деятельности</a>
+    </label>
+                          </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                <div class="content-block__more content-block__more_darkred">
+                                        <button type="submit" class="content-block-more next-step-proj" data-next="end" id="publish">
+                                            <span>Опубликовать</span>
+                                        </button>
+                                    </div>
+                                                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+      </div>
+      <div class="graph-modal popup-cropp cropp">
+              <div class="graph-modal__container cropp-gallery" role="dialog" aria-modal="true" data-graph-target="cropp-gallery">
+          <div class="graph-modal__content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="imageModal">Выберите миниатюру</h5>
+            </div>
+            <div class="modal-body modal-body1 border-bottom">
+              <div id="croppieContainer"></div>
+            </div>
+            <div class="modal-footer">
+              <div class="content-block__more">
+                <button class="content-block-more btn btn-secondary crop-destroy js-modal-close" data-dismiss="modal">
+                  <span>Отменить</span>
+                </button>
+              </div>
+              <div class="content-block__more">
+                <button type="button" id="cropBtn" class="content-block-more btn btn-primary save-modal js-modal-close">
+                  <span>Сохранить</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+                      </div>
+    
+  
+  </body></html>

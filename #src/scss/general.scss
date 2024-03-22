@@ -52,7 +52,7 @@ body {
 .text-l, h1, .h1, h2, .h2 {
   color: $carmine;
 }
-.text-l {
+.text-l,.page-content h1 {
   font-size: 84px;
   line-height: 1.04;
   @media (max-width: $bp1) {
@@ -316,13 +316,29 @@ h5, .h5, p {
     }   
   }
 }
+.page-content-gallery {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+  img {
+    margin: 0 !important;
+  }
+  @media (max-width: $bp1) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: $bp5) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
 .rub {
   &:after {
     content: "₽";
     margin-left: 3px;
   }
 }
-.btn {
+.btn, .btn-main {
   font-weight: 500;
   display: inline-flex;
   align-items: center;
@@ -330,7 +346,7 @@ h5, .h5, p {
   cursor: pointer;
   transition: all .3s linear;
 }
-.main-btn {
+.main-btn, .btn-main {
   color: $light-blue;
   padding: 18px 40px;
   border-radius: 66px;
@@ -350,6 +366,12 @@ h5, .h5, p {
   }
   @media (max-width: $bp7) {
     padding: 16px 20px;
+  }
+}
+.success__btn {
+  margin-top: 32px;
+  svg {
+    display: none;
   }
 }
 .stroke-btn {
@@ -436,6 +458,7 @@ h5, .h5, p {
     p {
       color: $pol-blue;
       max-width: 630px;
+      margin-bottom: 12px;
     }
   }
   @media (max-width: $bp1) {
@@ -514,7 +537,7 @@ h5, .h5, p {
   height: 56px;
   position: relative;
   &.open {
-    .custom-select__options {
+    .custom-select__body {
       visibility: visible;
       opacity: 1;
       pointer-events: auto;
@@ -552,8 +575,8 @@ h5, .h5, p {
       margin-right: 16px;
     }
   }
-  &__options {
-    padding: 32px 40px;
+  &__body {
+    padding: 25px 12px;
     background-color: $light-blue;
     border-radius: 40px;
     border:  1px solid $carmine;
@@ -574,6 +597,21 @@ h5, .h5, p {
       }
     }
   }
+  &__options {
+    padding: 7px 20px;
+    max-height: 450px;
+    overflow: auto;
+    &::-webkit-scrollbar-thumb {
+        background-color: $light-carmine;
+        border-radius: 80px;
+    } 
+    &::-webkit-scrollbar {
+        width: 8px;
+        border: 1px solid $light-carmine;
+        border-radius: 80px;
+        background-color: transparent;
+    }
+  }
   @media (max-width: $bp1) {
     width: 194px;
     &.open {
@@ -589,10 +627,24 @@ h5, .h5, p {
         transform: scale(0.7);
       }
     }
-    &__options {
+    &__body {
       width: 250px;
-      padding: 16px;
+      padding: 16px 6px;
       border-radius: 24px;
+    }
+    &__options {
+      padding: 8px 12px;
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+    }
+  }
+  @media (max-width: $bp2) {
+    &__body {
+      padding: 16px 8px;
+    }
+    &__options {
+      padding: 0 8px;
     }
   }
   @media (max-width: $bp3) {
@@ -601,10 +653,13 @@ h5, .h5, p {
     &__selected {
       padding: 16px 24px;
     }
-    &__options {
+    &__body {
       top: calc(100% + 8px);
       right: 0;
       width: 100%;
+    }
+    &__options {
+      max-height: 430px;
     }
   }
   @media (max-width: $bp5) {
@@ -624,10 +679,10 @@ h5, .h5, p {
       display: block;
       background: rgba($light-carmine, 20%);
       position: absolute;
-      top: -8px;
-      bottom: -8px;
-      left: -16px;
-      right: -16px;
+      top: -6px;
+      bottom: -6px;
+      left: -12px;
+      right: -12px;
       border-radius: 40px;
       z-index: -1;
       opacity: 0;
@@ -635,11 +690,14 @@ h5, .h5, p {
   }
   @media (max-width: $bp1) {
     &:before {
-      top: -6px;
-      bottom: -6px;
-      left: -12px;
-      right: -12px;
       border-radius: 20px;
+      left: -6px;
+      right: -6px;
+    }
+  }
+  @media (max-width: $bp2) {
+    &:before {
+      content: none;
     }
   }
 }
@@ -816,9 +874,12 @@ h5, .h5, p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  span {
-    font-weight: 500;
+  span, a {
     line-height: 1.2;
+    font-weight: 500;
+    color: $carmine;
+  }
+  span {
     margin-bottom: 4px;
     &:first-child {
       color: $pol-blue;
@@ -826,7 +887,6 @@ h5, .h5, p {
     }
   }
   a {
-    font-weight: 500;
     color: $carmine;
     &:hover {
       color: $light-carmine;

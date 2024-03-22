@@ -1,5 +1,7 @@
 .item-fund {
     margin-bottom: -40px;
+    display: flex;
+    flex-direction: column;
     &:hover {
         .item-fund__content {
             top: -60px;
@@ -22,6 +24,14 @@
     }
     &.unshow {
         display: none;
+    }
+    &__content {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    &__details {
+        margin-top: auto;
     }
     @media (max-width: $bp1) {
         margin-bottom: -24px;
