@@ -63,6 +63,14 @@
             }
         }
     }
+    &__contact {
+        padding: 15px 23px;
+        border-color: $light-blue;
+        margin-bottom: 16px!important;
+        &:hover {
+            border-color: $light-carmine;
+        }
+    }
     &__info {
         grid-column: 2/8;
         display: flex;

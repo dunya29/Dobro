@@ -299,7 +299,7 @@ if (isFirefox && customScroll) {
 function viewScroll() {
   customScroll.forEach((item => {
     item.scrollHeight - item.clientHeight - item.scrollTop > 30 ? item.parentNode.classList.add("extra") : item.parentNode.classList.remove("extra")
-    item.addEventListener("scrollend", () => {
+    item.addEventListener("scroll", () => {
       item.scrollHeight - item.clientHeight - item.scrollTop > 30 ? item.parentNode.classList.add("extra") : item.parentNode.classList.remove("extra")
     })
   }
@@ -313,39 +313,41 @@ if (customScroll) {
 const transCards = document.querySelector(".trans-cards")
 function cardAnim() {
   const cardItems = transCards.querySelectorAll(".trans-cards__item")
-  cardItems.forEach(item => {
-    item.style.opacity = 0
-    item.style.minWidth = null
-    item.style.maxWidth = null
-  })
-  let cardCount = cardItems.length
-  let offsetW = []
-  cardItems.forEach((item, idx) => offsetW.push(item.offsetWidth))
-  let maxW = offsetW.reduce((a, b) => a > b ? a : b);
-  transCards.style.minWidth = maxW/* cardItems[cardCount - 1].offsetWidth  + 2*/ + "px"
-  transCards.style.maxWidth = +transCards.getAttribute("data-coll") / +transCards.getAttribute("data-aim") * 100 + "%"
-  let space = Math.floor((transCards.querySelector(".trans-cards__items").offsetWidth - maxW/* cardItems[cardCount - 1].offsetWidth */) / cardCount)
-  if (space < 0) {
-    space = 0
-  } else if (space > 30) {
-    space = 30
-  }
-  cardItems.forEach((item, idx) => {
-    let minW = transCards.offsetWidth - space * (cardCount - 1) - 2 > maxW ? transCards.offsetWidth - space * (cardCount - 1) - 2 : maxW//transCards.offsetWidth - space * (cardCount - 1) - 2
-    //maxW = cardItems[cardCount - 1].offsetWidth
-    if (idx == cardCount - 1) {
-      item.style.minWidth = minW + "px"
-      item.style.maxWidth = maxW + "px"
-      //item.style.transform = `translate3d(${space * idx}px, 0, 0)` 
-      item.style.transform = `translate3d(-${space * (cardCount - 1 - idx)}px, 0, 0)`
-    } else {
-      item.style.minWidth = minW - 2 + "px"
-      item.style.maxWidth = maxW - 2 + "px"
-      //item.style.transform = `translate3d(${space * idx + 1}px, 0, 0)`
-      item.style.transform = `translate3d(-${space * (cardCount - 1 - idx) + 1}px, 0, 0)`
+  if (cardItems.length > 0) {
+    cardItems.forEach(item => {
+      item.style.opacity = 0
+      item.style.minWidth = null
+      item.style.maxWidth = null
+    })
+    let cardCount = cardItems.length
+    let offsetW = []
+    cardItems.forEach((item, idx) => offsetW.push(item.offsetWidth))
+    let maxW = offsetW.reduce((a, b) => a > b ? a : b);
+    transCards.style.minWidth = maxW/* cardItems[cardCount - 1].offsetWidth  + 2*/ + "px"
+    transCards.style.maxWidth = +transCards.getAttribute("data-coll") / +transCards.getAttribute("data-aim") * 100 + "%"
+    let space = Math.floor((transCards.querySelector(".trans-cards__items").offsetWidth - maxW/* cardItems[cardCount - 1].offsetWidth */) / cardCount)
+    if (space < 0) {
+      space = 0
+    } else if (space > 30) {
+      space = 30
     }
-    item.style.opacity = 1
-  })
+    cardItems.forEach((item, idx) => {
+      let minW = transCards.offsetWidth - space * (cardCount - 1) - 2 > maxW ? transCards.offsetWidth - space * (cardCount - 1) - 2 : maxW//transCards.offsetWidth - space * (cardCount - 1) - 2
+      //maxW = cardItems[cardCount - 1].offsetWidth
+      if (idx == cardCount - 1) {
+        item.style.minWidth = minW + "px"
+        item.style.maxWidth = maxW + "px"
+        //item.style.transform = `translate3d(${space * idx}px, 0, 0)` 
+        item.style.transform = `translate3d(-${space * (cardCount - 1 - idx)}px, 0, 0)`
+      } else {
+        item.style.minWidth = minW - 2 + "px"
+        item.style.maxWidth = maxW - 2 + "px"
+        //item.style.transform = `translate3d(${space * idx + 1}px, 0, 0)`
+        item.style.transform = `translate3d(-${space * (cardCount - 1 - idx) + 1}px, 0, 0)`
+      }
+      item.style.opacity = 1
+    })
+  }
 }
 if (transCards) {
   if (transCards.querySelectorAll(".trans-cards__item").length > 10) {
@@ -1285,20 +1287,3 @@ if (donateAmountCustom) {
 if(window.location.href.indexOf('#unsub') != -1) {
   openModal(document.querySelector(".donate-unsub-modal"))
 }
-/* tinymce.init({
-  selector: 'textarea',
-  menubar: "",
-  plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak searchreplace wordcount visualblocks visualchars code fullscreen spellchecker insertdatetime media nonbreaking save table contextmenu directionality emoticons template paste textcolor codesample colorpicker textpattern imagetools paste',
-  toolbar: 'copy paste | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | formastselect',
-  tinycomments_mode: 'embedded',
-  tinycomments_author: 'Author name',
-  mergetags_list: [
-    { value: 'First.Name', title: 'First Name' },
-    { value: 'Email', title: 'Email' },
-  ],
-  block_formats: 'Paragraph=p;Header 1=h1;Header 2=h2;Header 3=h3',
-  statusbar: false,
-  ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
-  language_url: '/html/js/libs/tiny5-ru.js',
-  language: 'ru'
-}); */

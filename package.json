@@ -38,6 +38,7 @@
     "webp-converter": "^2.2.3"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-decoupled-document": "^41.2.1",
     "@fancyapps/ui": "^5.0.16"
   }
 }

@@ -28,7 +28,7 @@
       width: 194px;
       height: 194px;
       border-radius: 50%;
-      margin-right: -107px;
+      margin-right: -57px;
       &:first-child {
         margin-right: 0;
       }
@@ -89,7 +89,7 @@
         flex: 0 0 124px;
         width: 124px;
         height: 124px;
-        margin-right: -72px;
+        margin-right: -37px;
       }
     }
     &__card {
@@ -149,7 +149,7 @@
       flex: 0 0 86px;
       width: 86px;
       height: 86px;
-      margin-right: -48px;
+      margin-right: -25px;
     }
     &__right {
       grid-template-columns: 1fr;
@@ -193,24 +193,18 @@
   background: rgba(233, 238, 255, 0.3);
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
 	&__item {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     margin: 16px 10px;
     .h2 {
       font-weight: 400;
-      margin-right: 24px;
       white-space: nowrap;
     }
     span {
         display: block;
         color: $carmine;
-    }
-    &:nth-child(2) {
-      flex: 1 1 auto;
-      justify-content: center;
     }
   }
   @media (max-width: $bp1) {
@@ -224,7 +218,6 @@
   @media (max-width: $bp2) {
     padding: 8px 0;
     &__item {
-      flex-direction: column;
       text-align: center;
       flex: 1 1 auto;
       margin: 14px;
@@ -281,6 +274,11 @@
     display: flex;
     flex-direction: column;
   }
+  .main-btn + .intro-pg__date {
+    span {
+      display: block;
+    }
+  }
   &__row {
     flex: 1;
     display: grid;
@@ -319,11 +317,6 @@
           font-weight: 400;
       }
   }
-  &__date {
-    span {
-      display: block;
-    }
-  }
   &__auth, &__logo {
       margin-right: calc(100% / 7 + 12px);
   }
@@ -341,13 +334,16 @@
           align-self: center;
       }
   }
-  &__logo {       
+  &__logo {     
       &.media-contain {
           padding-top: 29.73%;
           //background: #D4DEFE;
           img {
               margin: auto 0;
           }
+      }
+      img {
+        max-height: 160px;
       }
   }
   &__tags {
@@ -383,7 +379,10 @@
       margin-bottom: 32px;
       margin-right: 0;
     }
-    &__logo {       
+    &__logo {  
+      img {
+        max-height: 120px;
+      }     
       &.media-contain {
           padding-top: 37.71%;
       }
@@ -441,8 +440,12 @@
     }
   }
   @media (max-width: $bp4) {
+    min-height: 100vh;
     &__logo {
       max-width: 254px;
+      img {
+        max-height: 80px;
+      }
     }
     &__auth {
       grid-template-columns: 72px 1fr;
@@ -501,5 +504,10 @@
 @keyframes path-anim {
   100% {
     stroke-dashoffset: 0;
+  }
+}
+.help-pg, .fund {
+  @media (max-width: $bp4) {
+    min-height: 0;
   }
 }

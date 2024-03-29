@@ -1,0 +1,135 @@
+.ck-content h1,
+.ck-content h2 {
+  color: #243245;
+}
+
+.ck-content h1,
+.ck-content h2,
+.ck-content ul,
+.ck-content ol,
+.ck-content p {
+  margin-bottom: 24px;
+}
+
+.ck-content h3,
+.ck-content h4,
+.ck-content h5,
+.ck-content h6,
+.ck-content hr {
+  margin-bottom: 16px;
+}
+
+.ck-content li {
+  margin-bottom: 12px;
+}
+
+.ck-content p,
+.ck-content li {
+  font-size: 18px !important;
+  line-height: 1.25;
+}
+
+.ck-content p:last-child,
+.ck-content li:last-child {
+  margin-bottom: 0;
+}
+
+.ck-content ul {
+  padding-left: 24px;
+}
+
+.ck-content ul li {
+  padding-left: 32px;
+}
+
+.ck-content ul li {
+  position: relative;
+}
+
+.ck-content ul li::before {
+  content: "";
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 12px;
+  flex: 0 0 12px;
+  width: 12px;
+  height: 12px;
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  background: url(../img/icons/bullet.svg) center/contain no-repeat;
+}
+.ck-content ol {
+  padding-left: 0;
+}
+.ck-content ol li {
+  list-style: decimal;
+  margin-left: 48px;
+  padding-left: 8px;
+}
+
+.ck-content ol li::marker {
+  font-weight: 500;
+  color: #B71351;
+}
+
+.ck-content a {
+  color: #243245;
+  background: none;
+  text-decoration: underline;
+}
+
+.ck-content a:hover {
+  color: #ff9bbf;
+}
+
+.ck-content img,
+.ck-content figure,
+.ck-content iframe,
+.ck-content video,
+.ck-content table {
+  margin: 0 auto 40px;
+}
+
+.ck-button {
+  background: #fff;
+  z-index: 2;
+}
+
+@media (max-width: 1700.98px) {
+  .ck-content img,
+  .ck-content figure,
+  .ck-content iframe,
+  .ck-content video,
+  .ck-content table {
+    margin-bottom: 32px;
+  }
+
+  .ck-content p,
+  .ck-content li {
+    font-size: 16px !important;
+  }
+
+  .ck-content ul {
+    padding-left: 11px;
+  }
+
+  .ck-content ol li {
+    margin-left: 35px;
+  }
+}
+
+@media (max-width: 1200.98px) {
+  .ck-content ul {
+    padding-left: 6px;
+  }
+
+  .ck-content ul li {
+    padding-left: 28px;
+  }
+
+  .ck-content ol li {
+    margin-left: 30px;
+    padding-left: 4px;
+  }
+}

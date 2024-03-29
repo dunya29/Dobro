@@ -1,0 +1,94 @@
+.ck-content {
+    h1, h2 {
+      color: $maincolor;
+    }
+    h1, h2, ul, ol, p {
+      margin-bottom: 24px;
+    }
+    h3, h4, h5, h6, hr {
+      margin-bottom: 16px;
+    }
+    li {
+      margin-bottom: 12px;
+    }
+    p, li {
+      font-size: 18px!important;
+      line-height: 1.25;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    ul {
+      padding-left: 24px;
+    }
+    ul li {
+      padding-left: 32px;
+    }
+    ul li {
+      position: relative;
+      &::before {
+        content: "";
+        flex: 0 0 12px;
+        width: 12px;
+        height: 12px;
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        background: url(../img/icons/bullet.svg) center/contain no-repeat;
+      }
+    }
+    ol {
+      padding-left: 0;
+    }
+    ol li {
+      list-style: decimal;
+      margin-left: 48px;
+      padding-left: 8px;
+      &::marker {
+        font-weight: 500;
+        color: $carmine;
+      }
+    }
+    a {
+      color: #243245;
+      background: none;
+      text-decoration: underline;
+      &:hover {
+        color: $light-carmine;
+      }
+    }
+    img, figure, iframe, video, table {
+      margin: 0 auto 40px;  
+    }
+    @media (max-width: $bp1) {
+      img, figure, iframe, video, table {
+        margin-bottom: 32px;
+      }
+      p, li {
+        font-size: 16px!important;
+      }
+      ul {
+        padding-left: 11px;
+      }
+      ol li {
+        margin-left: 35px;
+      }
+    }
+    @media (max-width: $bp2) {
+      ul {
+        padding-left: 6px;
+      }
+      ul li {
+        padding-left: 28px;
+      }
+      ol li {
+        margin-left: 30px;
+        padding-left: 4px;
+      }   
+    }
+  }
+  .ck-button {
+    background: #fff;
+    z-index: 2;
+  }

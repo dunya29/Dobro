@@ -1,35 +1,3 @@
-/* @import "fonts";
-@import "null";
-@import "vars";
-@import "general";
-@import "header";
-@import "breadcrumbs";
-@import "pagination";
-@import "intro";
-@import "404";
-@import "about";
-@import "info";
-@import "events";
-@import "help";
-@import "ambassadors";
-@import "faq";
-@import "funds";
-@import "contacts";
-@import "footer";
-@import "modal";
-.fancybox__button--fullscreen,
-.fancybox__button--slideshow,
-.fancybox__button--thumbs,
-.fancybox__button--zoom,
-.fancybox__thumbs {
-  display: none;
-} 
-@import "tinymce"; */
-
-:root {
-  --vh: 1%;
-}
-
 ::-webkit-input-placeholder {
   color: #ff9bbf !important;
 }
@@ -363,6 +331,15 @@ body {
 }
 .stock__authors {
   margin-top: 42px;
+}
+.d-cover__item input:checked ~ label {
+  box-shadow: 0 0 0 1px #B71351;
+}
+.d-cover__item .d-cover__check svg circle{
+  fill: #B71351;
+}
+.d-cover__item label:hover {
+  box-shadow: 0 0 0 1px #B71351;
 }
 @media (any-hover: hover) {
   .pp-fund__item input:checked ~ .pp-fund__label:hover {

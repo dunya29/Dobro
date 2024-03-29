@@ -256,6 +256,7 @@ h5, .h5, p {
   }
   a {
     color: inherit;
+    text-decoration: underline;
     &:hover {
       color: $light-carmine;
     }
@@ -402,9 +403,24 @@ h5, .h5, p {
 }
 .main-link {
   color: $carmine;
+  padding-right: 11px;
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent; 
+    border-left: 6px solid $carmine;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s linear;
+  }
   &:after {
     content: "";
-    flex: 0  0 40px;
+    flex: 0 0 40px;
     width: 40px;
     height: 1px;
     background: $carmine;
@@ -417,6 +433,10 @@ h5, .h5, p {
     &:after {
       transform: scaleX(0.8);
       background: $light-carmine;
+    }
+    &:before {
+      right: 11px;
+      border-left: 6px solid $light-carmine;
     }
   }
 }
