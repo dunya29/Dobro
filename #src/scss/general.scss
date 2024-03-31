@@ -414,7 +414,7 @@ h5, .h5, p {
     border-left: 6px solid $carmine;
     position: absolute;
     right: 0;
-    top: 50%;
+    top: calc(50% - 0.25px);
     transform: translateY(-50%);
     transition: all .3s linear;
   }

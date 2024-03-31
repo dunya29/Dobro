@@ -714,7 +714,7 @@ h6,
   border-left: 6px solid #B71351;
   position: absolute;
   right: 0;
-  top: 50%;
+  top: calc(50% - 0.25px);
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
