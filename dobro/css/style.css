@@ -5671,6 +5671,15 @@ h6,
     font-size: 16px;
   }
 
+  .transactions__download svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 32px;
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+  }
+
   .desc-block__inner {
     padding: 60px 0;
   }
@@ -7234,15 +7243,6 @@ h6,
 
   .transactions__items {
     margin-bottom: 40px;
-  }
-
-  .transactions__download svg {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 32px;
-    flex: 0 0 32px;
-    width: 32px;
-    height: 32px;
-    margin-right: 16px;
   }
 
   .desc-block__inner {
