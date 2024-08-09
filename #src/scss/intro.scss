@@ -308,6 +308,19 @@
   &__info {
     flex-wrap: wrap;
   }
+  &__dates {
+    display: flex;
+    .intro-pg__date {
+      text-align: left;
+      margin-right: 32px;
+      &:last-child {
+        margin-right: 0;
+      }
+      span {
+        display: block;
+      }
+    }
+  }
   &__date, &__stat {
       font-size: 16px;
       color: $pol-blue;

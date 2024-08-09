@@ -377,3 +377,30 @@
         }          
     }
 }
+.success-modal, .error-modal {
+    p {
+        font-weight: 500;
+    }
+    .main-btn {
+        width: 100%;
+        margin-top: 40px;
+        &:empty {
+            display: none;
+        }
+    }
+}
+.error-modal {
+    .modal__top {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: $bp1) {
+            svg {
+                width: 32px;
+                height: 32px;;
+            }
+        }
+    }
+}

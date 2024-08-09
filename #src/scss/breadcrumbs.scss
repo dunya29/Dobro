@@ -1,13 +1,13 @@
 .breadcrumbs {
     padding-top: 185px;
     margin-bottom: 32px; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
     &.fixed-block{
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        white-space: nowrap;
-        text-overflow: ellipsis;
         z-index: 2;
     }
     ul {

@@ -164,12 +164,11 @@
                             <h1>Массажи для малышей с ДЦП</h1>
                             <div class="intro-pg__action">
                                 <a href="#" class="btn main-btn modal-show-btn" data-modal="donate-modal"><svg><use xlink:href="img/icons/sprite.svg#heart"></use></svg>Поддержать</a>
-                                <div class="intro-pg__date">Сбор заканчивается<span>29.05.24</span></div>
                             </div>
                         </div>
                         <div class="intro-pg__sec">
                             <div class="intro-pg__auth">
-                                <div class="media-cover"><picture><source srcset="img/help-pg-auth.webp" type="image/webp"><img src="img/help-pg-auth.jpg" alt="Черткова Инна"></picture></div>
+                                <div class="media-cover"><img src="img/help-avatar.svg" alt="Черткова Инна"></div>
                                 <h4>Черткова Инна</h4>
                             </div>
                             <div class="media-contain intro-pg__logo">
@@ -177,6 +176,10 @@
                             </div>
                         </div>
                         <div class="intro-pg__sec">
+                            <div class="intro-pg__dates">
+                                <div class="intro-pg__date">Опубликовано:<span>24.05.24</span></div>
+                                <div class="intro-pg__date">Сбор заканчивается:<span>29.05.24</span></div>
+                            </div>
                             <div class="trans-cards" data-coll="126000" data-aim="159000">
                                 <div class="trans-cards__items">
                                     <div class="trans-cards__item" style="--i: 0">
@@ -428,6 +431,22 @@
                         </div>
                     </div>
                 </section>
+                <!--transactions-->
+                <section class="transactions transactions--report">
+                    <div class="container">
+                        <div class="transactions__inner">
+                            <div class="transactions__content">
+                                <h2 class="text-l">Отчет</h2>
+                            </div>
+                            <div class="transactions__data">
+                                <a href="#" download class="transactions__download">
+                                    <svg><use xlink:href="img/icons/sprite.svg#download"></use></svg>
+                                    Скачать отчет о проведенной акции
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <!--gallery-->
                 <section class="mb-48 gallery">
                     <div class="container">
@@ -523,37 +542,37 @@
     </div>
 </div>
             <div class="item-help">
-    <div class="item-help__status"></div>
-    <div class="item-help__body">
-        <div class="media-cover">
-            <picture><source srcset="img/help-3.webp" type="image/webp"><img src="img/help-3.jpg" alt="Работа мечты для Хулиганодома"></picture>
-        </div>
-        <div class="item-help__content">
-            <div class="item-help__info">
-                <div class="item-help__auth">
-                    <picture><source srcset="img/help-auth-3.webp" type="image/webp"><img src="img/help-auth-3.jpg" alt="Калинина Александра"></picture>
-                    <span>Калинина Александра</span>
+                <div class="item-help__status"></div>
+                <div class="item-help__body">
+                    <div class="media-cover">
+                        <picture><source srcset="img/help-3.webp" type="image/webp"><img src="img/help-3.jpg" alt="Работа мечты для Хулиганодома"></picture>
+                    </div>
+                    <div class="item-help__content">
+                        <div class="item-help__info">
+                            <div class="item-help__auth">
+                                <img src="img/help-avatar.svg" alt="Калинина Александра">
+                                <span>Калинина Александра</span>
+                            </div>
+                            <div class="item-help__fund">Фонд «Нижегородский онкологический научный центр»</div>
+                        </div>
+                        <h3>Работа мечты для Хулиганодома</h3>
+                        <div class="progress-bar" data-coll="126000" data-aim="159000"><span></span></div>
+                        <div class="item-help__details">
+                            <div class="item-help__det">
+                                <span>Собрано:</span>
+                                <span class="h4 rub">126000</span>
+                            </div>
+                            <div class="item-help__det">
+                                <span>Осталось:</span>
+                                <span class="h4 rub">33000</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn main-btn">
+                            <svg><use xlink:href="img/icons/sprite.svg#heart"></use></svg>Поддержать
+                        </a>
+                    </div>
                 </div>
-                <div class="item-help__fund">Фонд «Нижегородский онкологический научный центр»</div>
             </div>
-            <h3>Работа мечты для Хулиганодома</h3>
-            <div class="progress-bar" data-coll="126000" data-aim="159000"><span></span></div>
-            <div class="item-help__details">
-                <div class="item-help__det">
-                    <span>Собрано:</span>
-                    <span class="h4 rub">126000</span>
-                </div>
-                <div class="item-help__det">
-                    <span>Осталось:</span>
-                    <span class="h4 rub">33000</span>
-                </div>
-            </div>
-            <a href="#" class="btn main-btn">
-                <svg><use xlink:href="img/icons/sprite.svg#heart"></use></svg>Поддержать
-            </a>
-        </div>
-    </div>
-</div>
         </div>
     </div>
 </section>
@@ -1018,7 +1037,8 @@
                 <button class="modal__close"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
                 <div class="modal__top"><h3></h3></div>
                 <div class="modal__body">
-                    <p></p>
+                    <p></p>                   
+                    <button type="button" class="btn main-btn mod-close-btn" data-modal="success-modal"></button>
                 </div>
             </div>
         </div>
@@ -1030,9 +1050,17 @@
         <div class="modal__content">
             <div class="modal__scroll">
                 <button class="modal__close"><svg><use xlink:href="img/icons/sprite.svg#modal-close"></use></svg></button>
-                <div class="modal__top"><h3></h3></div>
+                <div class="modal__top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <rect width="40" height="40" rx="20" fill="#B71351"/>
+                        <path d="M27.0703 13.0713L12.9282 27.2134" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M27.0703 27.2129L12.9282 13.0708" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <h3></h3>
+                </div>
                 <div class="modal__body">
                     <p></p>
+                    <button type="button" class="btn main-btn mod-close-btn" data-modal="error-modal"></button>
                 </div>
             </div>
         </div>

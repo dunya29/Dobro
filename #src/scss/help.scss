@@ -135,7 +135,7 @@
         }
     }
     &__items {
-        min-height: 500px;
+        min-height: 460px;
     }
     @media (min-width: $bp1) {
         &__top {
@@ -199,7 +199,10 @@
                     right: auto;
                 }
             }
-        }     
+        } 
+        &__items {
+            min-height: 430px;
+        }    
     }
     @media (max-width: $bp5) {
         &__tabs {
@@ -373,15 +376,10 @@
         }
     }
     &__info {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-        align-items: start;
         margin-bottom: 16px;
     }
     &__fund {
         color: $pol-blue;
-        align-self: center;
     }
     &__auth {
         color: $pol-blue;
@@ -389,7 +387,7 @@
         align-items: center;
         picture, img {
             flex: 0 0 48px;
-            margin-right: 20px;
+            margin-right: 16px;
         }
         img {
             width: 48px;
@@ -397,6 +395,10 @@
             border-radius: 50%;
             object-fit: cover;
         }
+    }
+    &__auth + .item-help__fund {
+        padding-left: 64px;
+        margin-top: 4px;
     }
     @media (max-width: $bp1) {
         h3 {
@@ -430,6 +432,9 @@
         &__info {
             margin-bottom: 24px;
         }
+        &__auth + .item-help__fund {
+            padding-left: 56px;
+        }
     }
     @media (max-width: $bp2) {
         &__status {
@@ -439,19 +444,9 @@
             }
         }
     }
-    @media (min-width: $bp5) and (max-width: $bp3) {
-        &__info {
-            grid-template-columns: 1fr;
-        }
-    }
     @media (max-width: $bp5) {
         &__info {
             font-size: 16px;
-        }
-    }
-    @media (max-width: $bp7) {
-        &__info {
-            grid-template-columns: 1fr;
         }
     }
 }
@@ -648,6 +643,29 @@
             }
         }
     }
+    &__download {
+        font-size: 18px;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 16px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        svg {
+            fill: $carmine;
+            flex: 0 0 40px;
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
+        }
+    }
+    @media (min-width: $bp3) {
+        &--report .transactions__data {
+            padding-top: 48px;
+            padding-bottom: 48px;
+        }
+    }
     @media (max-width: $bp1) {
         table {
             td {
@@ -686,6 +704,9 @@
         }
         &__det {
             margin-bottom: 24px;
+        }
+        &__download {
+            font-size: 16px;
         }
     }
     @media (max-width: $bp3) {
@@ -730,6 +751,14 @@
         &__items {
             margin-bottom: 40px;
         }  
+        &__download {
+            svg {
+                flex: 0 0 32px;
+                width: 32px;
+                height: 32px;
+                margin-right: 16px;
+            }
+        }
     }
     @media (max-width: $bp6) {
         table td {

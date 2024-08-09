@@ -320,7 +320,7 @@ body::-webkit-scrollbar {
 body {
   min-width: 320px;
   background: #E6ECFF;
-  font-family: "Graphik";
+  font-family: "Graphik", Arial, sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.2;
@@ -1764,6 +1764,8 @@ h6,
 .breadcrumbs {
   padding-top: 185px;
   margin-bottom: 32px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .breadcrumbs.fixed-block {
@@ -1771,8 +1773,6 @@ h6,
   top: 0;
   left: 0;
   width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   z-index: 2;
 }
 
@@ -2181,6 +2181,25 @@ h6,
 .intro-pg__info {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+.intro-pg__dates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.intro-pg__dates .intro-pg__date {
+  text-align: left;
+  margin-right: 32px;
+}
+
+.intro-pg__dates .intro-pg__date:last-child {
+  margin-right: 0;
+}
+
+.intro-pg__dates .intro-pg__date span {
+  display: block;
 }
 
 .intro-pg__date,
@@ -3209,7 +3228,7 @@ h6,
 }
 
 .help__items {
-  min-height: 500px;
+  min-height: 460px;
 }
 
 .item-help,
@@ -3382,19 +3401,11 @@ h6,
 }
 
 .item-help__info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
   margin-bottom: 16px;
 }
 
 .item-help__fund {
   color: #41536D;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 .item-help__auth {
@@ -3412,7 +3423,7 @@ h6,
   -webkit-box-flex: 0;
   -ms-flex: 0 0 48px;
   flex: 0 0 48px;
-  margin-right: 20px;
+  margin-right: 16px;
 }
 
 .item-help__auth img {
@@ -3421,6 +3432,11 @@ h6,
   border-radius: 50%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.item-help__auth + .item-help__fund {
+  padding-left: 64px;
+  margin-top: 4px;
 }
 
 .help-pg h1 {
@@ -3594,6 +3610,32 @@ h6,
 .transactions__det span:first-child {
   color: #41536D;
   margin-bottom: 4px;
+}
+
+.transactions__download {
+  font-size: 18px;
+  font-weight: 500;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.transactions__download:last-child {
+  margin-bottom: 0;
+}
+
+.transactions__download svg {
+  fill: #B71351;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
 }
 
 .gallery {
@@ -4612,6 +4654,34 @@ h6,
   gap: 16px;
 }
 
+.success-modal p,
+.error-modal p {
+  font-weight: 500;
+}
+
+.success-modal .main-btn,
+.error-modal .main-btn {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.success-modal .main-btn:empty,
+.error-modal .main-btn:empty {
+  display: none;
+}
+
+.error-modal .modal__top {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .fancybox__button--fullscreen,
 .fancybox__button--slideshow,
 .fancybox__button--thumbs,
@@ -4701,6 +4771,11 @@ h6,
     transform: translateY(0);
     -webkit-transition: all 0.5s 0.4s ease;
     transition: all 0.5s 0.4s ease;
+  }
+
+  .transactions--report .transactions__data {
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
   .fund .intro-pg__sec:nth-child(3) {
@@ -5520,6 +5595,10 @@ h6,
     margin-bottom: 24px;
   }
 
+  .item-help__auth + .item-help__fund {
+    padding-left: 56px;
+  }
+
   .help-pg h1 {
     max-width: 360px;
   }
@@ -5586,6 +5665,10 @@ h6,
 
   .transactions__det {
     margin-bottom: 24px;
+  }
+
+  .transactions__download {
+    font-size: 16px;
   }
 
   .desc-block__inner {
@@ -5839,6 +5922,11 @@ h6,
     background-size: 24px 24px;
     background-position: center left 32px;
     top: 32px;
+  }
+
+  .error-modal .modal__top svg {
+    width: 32px;
+    height: 32px;
   }
 }
 
@@ -6824,6 +6912,10 @@ h6,
     right: auto;
   }
 
+  .help__items {
+    min-height: 430px;
+  }
+
   .help-pg .progress-bar {
     margin-bottom: 24px;
   }
@@ -7142,6 +7234,15 @@ h6,
 
   .transactions__items {
     margin-bottom: 40px;
+  }
+
+  .transactions__download svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 32px;
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
   }
 
   .desc-block__inner {
@@ -7534,10 +7635,6 @@ h6,
     padding-top: 0;
   }
 
-  .item-help__info {
-    grid-template-columns: 1fr;
-  }
-
   .transactions table td {
     font-size: 13px;
     padding: 16px 5px 12px;
@@ -7562,10 +7659,6 @@ h6,
   .notfound__content h4 {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .item-help__info {
-    grid-template-columns: 1fr;
   }
 }
 

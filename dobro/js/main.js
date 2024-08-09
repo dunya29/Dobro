@@ -3,6 +3,7 @@ const iconMenu = document.querySelector('.header__menu--btn');
 const fixedBlocks = document.querySelectorAll(".fixed-block")
 const modal = document.querySelectorAll(".modal")
 const modalShowBtn = document.querySelectorAll(".modal-show-btn")
+const modCloseBtn = document.querySelectorAll(".mod-close-btn")
 const successModal = document.querySelector(".success-modal")
 const errorModal = document.querySelector(".error-modal")
 const customSelect = document.querySelectorAll(".custom-select")
@@ -70,20 +71,8 @@ function tabSwitch(nav, block) {
     })
   });
 }
-//formError
-function formError(introTxt = false, text = false) {
-  let modal = document.querySelector(".modal.open")
-  errorModal.querySelector("h3").textContent = introTxt ? introTxt : "Что-то пошло не так"
-  errorModal.querySelector(".modal__body p").textContent = text ? text : "Попробуйте снова"
-  if (modal) {
-    modal.classList.remove("open")
-    errorModal.classList.add("open")
-  } else {
-    openModal(errorModal)
-  }
-}
 // formSuccess
-function formSuccess(form, introTxt = false, text = false) {
+function formSuccess(form, introTxt = false, text = false, btnTxt = false) {
   form.querySelectorAll("input").forEach(inp => {
     if (!["hidden", "checkbox", "radio"].includes(inp.type)) {
       inp.value = ""
@@ -98,6 +87,7 @@ function formSuccess(form, introTxt = false, text = false) {
   let modal = document.querySelector(".modal.open")
   successModal.querySelector("h3").textContent = introTxt ? introTxt : "Заявка успешно оформлена"
   successModal.querySelector(".modal__body p").textContent = text ? text : "Заявка успешно оформлена"
+  successModal.querySelector(".modal__body .main-btn").textContent = btnTxt ? btnTxt : ""
   if (modal) {
     modal.classList.remove("open")
     if (modal.classList.contains(("recovery-modal"))) {
@@ -111,6 +101,18 @@ function formSuccess(form, introTxt = false, text = false) {
     }
   } else {
     openModal(successModal)
+  }
+}// formError
+function formError(introTxt = false, text = false, btnTxt = false) {
+  errorModal.querySelector("h3").textContent = introTxt ? introTxt : "Что-то пошло не так"
+  errorModal.querySelector(".modal__body p").textContent = text ? text : "Попробуйте снова"
+  errorModal.querySelector(".modal__body .main-btn").textContent = btnTxt ? btnTxt : ""
+  let modal = document.querySelector(".modal.open")
+  if (modal) {
+    modal.classList.remove("open")
+    errorModal.classList.add("open")
+  } else {
+    openModal(errorModal)
   }
 }
 //open modal
@@ -156,6 +158,13 @@ modalShowBtn.forEach(btn => {
       window.location.href = newURL;
     }
     openModal(document.getElementById(href))
+  })
+})
+modCloseBtn.forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault() 
+    let href = btn.getAttribute("data-modal")
+    closeModal(document.getElementById(href))
   })
 })
 //accordion
@@ -215,6 +224,13 @@ function openSelectCustom(select) {
       document.removeEventListener('click', clickOutside);
     }
   });
+  if (select.querySelector("input[type=radio]")) {
+    select.querySelectorAll("input[type=radio").forEach(inp => {
+      inp.addEventListener("change", () => {
+        select.querySelector(".custom-select__selected span").textContent = inp.nextElementSibling.textContent
+      })
+    })
+  }
 }
 //close custom select
 function closeSelectCustom(select) {
