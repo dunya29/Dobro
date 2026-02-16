@@ -1,9 +1,10 @@
-html, body {
+html,
+body {
   height: 100%;
   &::-webkit-scrollbar-thumb {
     background-color: $pol-blue;
     border-radius: 4px;
-  } 
+  }
   &::-webkit-scrollbar {
     width: 8px;
     border-radius: 4px;
@@ -37,22 +38,33 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
   visibility: hidden;
   opacity: 0;
-  transition: all .5s ease-out;
+  transition: all 0.5s ease-out;
   &.show {
     visibility: visible;
     opacity: 1;
   }
 }
-.text-l, h1, .h1, h2, .h2, h3, .h3 {
+.text-l,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
   font-weight: 500;
 }
-.text-l, h1, .h1, h2, .h2 {
+.text-l,
+h1,
+.h1,
+h2,
+.h2 {
   color: $carmine;
 }
-.text-l,.page-content h1 {
+.text-l,
+.page-content h1 {
   font-size: 84px;
   line-height: 1.04;
   @media (max-width: $bp1) {
@@ -65,14 +77,18 @@ body {
     font-size: 32px;
   }
 }
-h1, .h1, h2, .h2 {
+h1,
+.h1,
+h2,
+.h2 {
   font-size: 56px;
   line-height: 1.03;
   @media (max-width: $bp1) {
     font-size: 32px;
   }
 }
-h3, .h3 {
+h3,
+.h3 {
   font-size: 30px;
   line-height: 1.12;
   @media (max-width: $bp1) {
@@ -82,7 +98,8 @@ h3, .h3 {
     font-size: 22px;
   }
 }
-h4, .h4 {
+h4,
+.h4 {
   font-size: 24px;
   line-height: 1.25;
   @media (max-width: $bp1) {
@@ -92,26 +109,30 @@ h4, .h4 {
     font-size: 16px;
   }
 }
-h5, .h5 {
+h5,
+.h5 {
   font-size: 20px;
   line-height: 1.2;
   @media (max-width: $bp1) {
     font-size: 16px;
   }
 }
-h6, .h6 {
+h6,
+.h6 {
   font-size: 18px;
   line-height: 1.25;
   @media (max-width: $bp1) {
     font-size: 16px;
   }
 }
-h5, .h5, p {
+h5,
+.h5,
+p {
   @media (max-width: $bp2) {
     line-height: 1.25;
   }
 }
-.container{
+.container {
   width: 100%;
   max-width: 1920px;
   padding: 0 24px;
@@ -130,7 +151,9 @@ h5, .h5, p {
   display: block;
   position: relative;
   overflow: hidden;
-  img, video, iframe {
+  img,
+  video,
+  iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -143,7 +166,9 @@ h5, .h5, p {
   display: block;
   position: relative;
   overflow: hidden;
-  img, video, iframe {
+  img,
+  video,
+  iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -185,8 +210,32 @@ h5, .h5, p {
     margin-bottom: 40px;
   }
 }
+.mb-80,
+.events {
+  margin-bottom: 80px;
+  @media (max-width: $bp2) {
+    margin-bottom: 60px;
+  }
+  @media (max-width: $bp3) {
+    margin-bottom: 40px;
+  }
+  @media (max-width: $bp4) {
+    margin-bottom: 20px;
+  }
+}
+.mb-80 , .mb-40{
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
 .mb-48 {
   margin-bottom: 48px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+  @media (max-width: $bp1) {
+    margin-bottom: 24px;
+  }
 }
 .mb-60 {
   margin-bottom: 60px;
@@ -194,7 +243,9 @@ h5, .h5, p {
 .page-top {
   margin-bottom: 80px;
   text-align: center;
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     color: $carmine;
   }
   @media (max-width: $bp1) {
@@ -206,19 +257,29 @@ h5, .h5, p {
 }
 .page-content {
   max-width: 1027px;
-  h1, h2 {
+  h1,
+  h2 {
     color: $maincolor;
   }
-  h1, h2, ul, ol, p {
+  h1,
+  h2,
+  ul,
+  ol,
+  p {
     margin-bottom: 32px;
   }
-  h3, h4, h5, h6, hr {
+  h3,
+  h4,
+  h5,
+  h6,
+  hr {
     margin-bottom: 16px;
   }
   li {
     margin-bottom: 24px;
   }
-  p, li {
+  p,
+  li {
     font-size: 24px;
     line-height: 1.25;
     &:last-child {
@@ -261,36 +322,49 @@ h5, .h5, p {
       color: $light-carmine;
     }
   }
-  img, figure, iframe, video, table {
-    margin: 0 auto 40px;  
+  img,
+  figure,
+  iframe,
+  video,
+  table {
+    margin: 0 auto 40px;
   }
   table {
     thead {
-        tr {
-            padding-bottom: 24px;
-        }
-        td {
-            font-size: 24px;
-            font-weight: 500;
-            color: $carmine;
-        }
+      tr {
+        padding-bottom: 24px;
+      }
+      td {
+        font-size: 24px;
+        font-weight: 500;
+        color: $carmine;
+      }
     }
-    tbody{
-        tr {
-            padding: 16px 0;
-            border-bottom: 1px solid $light-carmine;
-        }
+    tbody {
+      tr {
+        padding: 16px 0;
+        border-bottom: 1px solid $light-carmine;
+      }
     }
   }
   @media (max-width: $bp1) {
     max-width: 628px;
-    img, figure, iframe, video, table {
+    img,
+    figure,
+    iframe,
+    video,
+    table {
       margin-bottom: 32px;
     }
-    h1, h2, ul, ol, p {
+    h1,
+    h2,
+    ul,
+    ol,
+    p {
       margin-bottom: 24px;
     }
-    p, li {
+    p,
+    li {
       font-size: 18px;
     }
     ul {
@@ -301,10 +375,11 @@ h5, .h5, p {
     }
   }
   @media (max-width: $bp2) {
-    p, li {
-      font-size: 16px; 
+    p,
+    li {
+      font-size: 16px;
       margin-bottom: 16px;
-    } 
+    }
     ul {
       padding-left: 6px;
     }
@@ -314,12 +389,12 @@ h5, .h5, p {
     ol li {
       margin-left: 30px;
       padding-left: 4px;
-    }   
+    }
   }
 }
 .page-content-gallery {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-bottom: 32px;
   img {
@@ -339,19 +414,22 @@ h5, .h5, p {
     margin-left: 3px;
   }
 }
-.btn, .btn-main {
+.btn,
+.btn-main {
   font-weight: 500;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
-.main-btn, .btn-main {
+.main-btn,
+.btn-main {
   color: $light-blue;
   padding: 18px 40px;
   border-radius: 66px;
   background: $carmine;
+  position: relative;
   svg {
     fill: $light-blue;
     flex: 0 0 24px;
@@ -361,6 +439,28 @@ h5, .h5, p {
   }
   &:hover {
     box-shadow: 0 12px 34px 0 rgba(188, 37, 91, 0.26);
+  }
+  span,
+  svg {
+    transition: all 0.3s linear;
+  }
+  &.page-loading {
+    pointer-events: none;
+    &:before {
+      content: "";
+      display: block;
+      width: 45px;
+      height: 45px;
+      background: url(../img/icons/loading.svg) center/contain no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    span,
+    svg {
+      opacity: 0;
+    }
   }
   @media (max-width: $bp1) {
     padding: 16px 32px;
@@ -410,13 +510,13 @@ h5, .h5, p {
     display: block;
     width: 0;
     height: 0;
-    border: 5px solid transparent; 
+    border: 5px solid transparent;
     border-left: 6px solid $carmine;
     position: absolute;
     right: 0;
     top: calc(50% - 0.25px);
     transform: translateY(-50%);
-    transition: all .3s linear;
+    transition: all 0.3s linear;
   }
   &:after {
     content: "";
@@ -424,7 +524,7 @@ h5, .h5, p {
     width: 40px;
     height: 1px;
     background: $carmine;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
     margin-left: 16px;
     transform-origin: left center;
   }
@@ -450,30 +550,30 @@ h5, .h5, p {
   h3 {
     color: $maincolor;
   }
-	&__header {
+  &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
     &.active {
-        svg {
-          fill: $light-carmine;
-          transform: rotate(180deg);
-        }
+      svg {
+        fill: $light-carmine;
+        transform: rotate(180deg);
+      }
     }
     svg {
-        fill: $carmine;
-        flex: 0 0 24px;
-        width: 24px;
-        height: 24px;
-        transition: all .3s linear;
-        margin-left: 16px;
+      fill: $carmine;
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      transition: all 0.3s linear;
+      margin-left: 16px;
     }
   }
-	&__body {
+  &__body {
     display: none;
   }
-	&__content {
+  &__content {
     padding-top: 16px;
     p {
       color: $pol-blue;
@@ -487,7 +587,7 @@ h5, .h5, p {
         svg {
           transform: scale(0.7) rotate(180deg);
         }
-    }
+      }
       svg {
         transform: scale(0.7);
       }
@@ -516,11 +616,12 @@ h5, .h5, p {
     display: flex;
     position: relative;
     text-align: left;
-    &:before, &:after {
+    &:before,
+    &:after {
       content: "";
       display: block;
-      transition: all .3s linear;
-  }
+      transition: all 0.3s linear;
+    }
     &:before {
       flex: 0 0 16px;
       width: 16px;
@@ -541,7 +642,7 @@ h5, .h5, p {
     }
   }
   @media (max-width: $bp1) {
-    span{
+    span {
       &:before {
         margin: 0 8px 0 0;
       }
@@ -561,7 +662,7 @@ h5, .h5, p {
       visibility: visible;
       opacity: 1;
       pointer-events: auto;
-    }  
+    }
     .custom-select__selected {
       svg {
         fill: $light-carmine;
@@ -585,9 +686,9 @@ h5, .h5, p {
       flex: 0 0 24px;
       width: 24px;
       height: 24px;
-      transition: all .4s ease;
+      transition: all 0.4s ease;
     }
-    span{
+    span {
       color: $carmine;
       display: block;
       white-space: nowrap;
@@ -599,7 +700,7 @@ h5, .h5, p {
     padding: 25px 12px;
     background-color: $light-blue;
     border-radius: 40px;
-    border:  1px solid $carmine;
+    border: 1px solid $carmine;
     position: absolute;
     top: calc(100% + 16px);
     left: 0;
@@ -607,7 +708,7 @@ h5, .h5, p {
     z-index: 1;
     visibility: hidden;
     opacity: 0;
-    transition: all .4s ease;
+    transition: all 0.4s ease;
     pointer-events: none;
     z-index: 2;
     .item-checkbox {
@@ -622,14 +723,14 @@ h5, .h5, p {
     max-height: 450px;
     overflow: auto;
     &::-webkit-scrollbar-thumb {
-        background-color: $light-carmine;
-        border-radius: 80px;
-    } 
+      background-color: $light-carmine;
+      border-radius: 80px;
+    }
     &::-webkit-scrollbar {
-        width: 8px;
-        border: 1px solid $light-carmine;
-        border-radius: 80px;
-        background-color: transparent;
+      width: 8px;
+      border: 1px solid $light-carmine;
+      border-radius: 80px;
+      background-color: transparent;
     }
   }
   @media (max-width: $bp1) {
@@ -690,23 +791,23 @@ h5, .h5, p {
   position: relative;
   z-index: 1;
   &:hover {
-      &:before {
-          opacity: 1;
-      }
+    &:before {
+      opacity: 1;
+    }
   }
   &:before {
-      content: "";
-      display: block;
-      background: rgba($light-carmine, 20%);
-      position: absolute;
-      top: -6px;
-      bottom: -6px;
-      left: -12px;
-      right: -12px;
-      border-radius: 40px;
-      z-index: -1;
-      opacity: 0;
-      transition: all .3s linear;
+    content: "";
+    display: block;
+    background: rgba($light-carmine, 20%);
+    position: absolute;
+    top: -6px;
+    bottom: -6px;
+    left: -12px;
+    right: -12px;
+    border-radius: 40px;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s linear;
   }
   @media (max-width: $bp1) {
     &:before {
@@ -726,8 +827,9 @@ h5, .h5, p {
   overflow: hidden;
   position: relative;
 }
-.swiper-fade, .swiper-wrapper {
-  transform: translate3d(0,0,0);
+.swiper-fade,
+.swiper-wrapper {
+  transform: translate3d(0, 0, 0);
 }
 .swiper-wrapper {
   height: 100%;
@@ -755,9 +857,9 @@ h5, .h5, p {
   margin-right: 8px;
   border: 1px solid $carmine;
   cursor: pointer;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
   &:last-child {
-    margin-right: 0!important;
+    margin-right: 0 !important;
   }
 }
 .swiper-pagination-bullet-active {
@@ -770,19 +872,21 @@ h5, .h5, p {
 .svg-path {
   position: absolute;
   pointer-events: none;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
   path {
-    transition: all .5s linear;
+    transition: all 0.5s linear;
   }
   @media (max-width: $bp2) {
     display: none;
   }
 }
-.tabs,.form-tabs {
+.tabs,
+.form-tabs {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  a, span {
+  a,
+  span {
     font-weight: 500;
     color: $carmine;
     display: block;
@@ -790,16 +894,18 @@ h5, .h5, p {
     border-radius: 20px;
     border: 1px solid $carmine;
     cursor: pointer;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
     user-select: none;
   }
   @media (max-width: $bp1) {
-    a, span {
+    a,
+    span {
       padding: 15px 23px;
     }
   }
   @media (max-width: $bp5) {
-    a,span {
+    a,
+    span {
       font-size: 15px;
       border-radius: 16px;
     }
@@ -807,12 +913,13 @@ h5, .h5, p {
 }
 .tabs {
   margin: -12px -8px;
-  a, span {
+  a,
+  span {
     margin: 12px 8px;
     &.active {
       color: $light-blue;
       background: $carmine;
-      pointer-events: none
+      pointer-events: none;
     }
   }
   @media (max-width: $bp3) {
@@ -825,26 +932,28 @@ h5, .h5, p {
       width: 0;
       height: 0;
     }
-    a, span {
+    a,
+    span {
       white-space: nowrap;
       margin: 0 4px;
       &:first-child {
-        margin-left: 15px
+        margin-left: 15px;
       }
       &:last-child {
-          margin-right: 15px
+        margin-right: 15px;
       }
     }
   }
   @media (max-width: $bp7) {
     margin-left: -10px;
     margin-right: -10px;
-    a, span {
+    a,
+    span {
       &:first-child {
-        margin-left: 10px
+        margin-left: 10px;
       }
       &:last-child {
-          margin-right: 10px
+        margin-right: 10px;
       }
     }
   }
@@ -860,41 +969,44 @@ h5, .h5, p {
       }
     }
   }
-  a, span {
+  a,
+  span {
     margin: 7px;
   }
   @media (max-width: $bp2) {
     margin: -4px;
-    a, span {
+    a,
+    span {
       margin: 4px;
     }
   }
 }
 .my-cursor {
- cursor: none;
- @media (max-width: $bp2) {
-  cursor: auto;
-}
+  cursor: none;
+  @media (max-width: $bp2) {
+    cursor: auto;
+  }
 }
 .cursor-img {
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
   opacity: 0;
-  pointer-events: none; 
-  z-index: 10000; 
-  transform: translate(-50%, -50%);  
-  transition: opacity 0.3s ease; 
-  overflow: show; 
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+  overflow: show;
   @media (max-width: $bp2) {
-    opacity: 0!important;
+    opacity: 0 !important;
   }
 }
 .item-contact {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  span, a {
+  span,
+  a {
     line-height: 1.2;
     font-weight: 500;
     color: $carmine;
@@ -921,13 +1033,13 @@ h5, .h5, p {
   position: relative;
   padding-right: 50px;
   &:after {
-      content: "";
-      display: block;
-      width: 36px;
-      height: 34px;
-      background: url(../img/icons/heart.svg) center / contain no-repeat;
-      position: absolute;
-      right: 0;
+    content: "";
+    display: block;
+    width: 36px;
+    height: 34px;
+    background: url(../img/icons/heart.svg) center / contain no-repeat;
+    position: absolute;
+    right: 0;
   }
 }
 .item-form {
@@ -953,13 +1065,14 @@ h5, .h5, p {
     font-weight: 500;
     color: $maincolor;
     padding: 14px 23px;
-    border: 1px solid #D2628C;
-    transition: all .3s linear;
+    border: 1px solid #d2628c;
+    transition: all 0.3s linear;
     &::placeholder {
       font-size: 18px;
-      color: #D2628C;
+      color: #d2628c;
     }
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border-color: $carmine;
     }
   }
@@ -1018,12 +1131,13 @@ h5, .h5, p {
   &__eye {
     background-image: url(../img/icons/eye-show.svg);
   }
-  @media  (max-width: $bp1) {
+  @media (max-width: $bp1) {
     margin-bottom: 12px;
     .error {
       font-size: 14px;
     }
-    input,textarea {
+    input,
+    textarea {
       font-size: 16px;
       padding-top: 13px;
       padding-bottom: 13px;
@@ -1038,29 +1152,30 @@ h5, .h5, p {
       min-height: 80px;
     }
   }
-  @media  (max-width: $bp2) {
+  @media (max-width: $bp2) {
     textarea {
       border-radius: 24px;
     }
   }
-  @media  (max-width: $bp3) {
+  @media (max-width: $bp3) {
     input {
       padding-right: 85px;
     }
-   &__btns {
-    top: 16px;
-    button {
-      width: 30px;
-      height: 20px;
-      margin-right: 10px;
-      &:last-child {
-        width: 20px;
+    &__btns {
+      top: 16px;
+      button {
+        width: 30px;
+        height: 20px;
+        margin-right: 10px;
+        &:last-child {
+          width: 20px;
+        }
       }
     }
-   }
   }
-  @media  (max-width: $bp7) {
-    input, textarea {
+  @media (max-width: $bp7) {
+    input,
+    textarea {
       padding: 14px 16px;
     }
     input {
@@ -1130,12 +1245,12 @@ h5, .h5, p {
       height: 122px;
     }
   }
-  @media (max-width: $bp2){
+  @media (max-width: $bp2) {
     p {
       font-size: 14px;
     }
   }
-  @media (max-width: $bp4){
+  @media (max-width: $bp4) {
     &__top {
       padding: 8px 16px;
       grid-template-columns: 80px 1fr;
@@ -1185,7 +1300,8 @@ h5, .h5, p {
   }
   &__fieldset {
     margin-bottom: 32px;
-    h4, h6 {
+    h4,
+    h6 {
       font-weight: 500;
       margin-bottom: 16px;
     }
@@ -1202,7 +1318,7 @@ h5, .h5, p {
         margin-bottom: 0;
       }
     }
-    & +.form__footer {
+    & + .form__footer {
       margin-top: 32px;
     }
   }
@@ -1215,7 +1331,7 @@ h5, .h5, p {
       margin-bottom: 0;
     }
     .item-form {
-      margin-bottom: 0!important;
+      margin-bottom: 0 !important;
     }
   }
   &__footer {
@@ -1224,7 +1340,7 @@ h5, .h5, p {
       width: 100%;
     }
   }
-  @media  (max-width: $bp1) {
+  @media (max-width: $bp1) {
     p {
       font-size: 16px;
     }
@@ -1243,11 +1359,11 @@ h5, .h5, p {
         font-size: 16px;
       }
     }
-    &__footer{
+    &__footer {
       margin-top: 32px;
     }
   }
-  @media  (max-width: $bp2) {
+  @media (max-width: $bp2) {
     &__grid {
       grid-template-columns: 1fr;
     }
@@ -1260,6 +1376,21 @@ h5, .h5, p {
           font-size: 14px;
         }
       }
+    }
+  }
+}
+.switch-block {
+  [data-tab] {
+    cursor: pointer;
+    &.active {
+      pointer-events: none;
+    }
+  }
+  [data-block] {
+    display: none;
+    transition: all 0.4s linear;
+    &.active {
+      display: block;
     }
   }
 }

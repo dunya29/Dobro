@@ -40,16 +40,16 @@
     }
     &__wrapper {
         min-height: calc(100vh - 130px);
+               padding: 48px 24px 24px;
+        background: $white-blue;
+        border-radius: 60px;
         position: relative;
-        padding: 48px 24px 24px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 24px;
         align-items: center;
-        background: $white-blue;
-        border-radius: 60px;
         @media (min-height: 1300px) {
-            min-height: calc(1300px - 60px);
+            min-height: 900px;
         }
     }
 	&__content {
@@ -100,15 +100,15 @@
         &__path {
             visibility: hidden;
         }
-    } 
+    }
     @media (max-width: $bp2) {
         .logo-nn {
             max-width: 232px;
         }
     }
-    @media (max-width: $bp3) {      
+    @media (max-width: $bp3) {
         &--sticky {
-           padding: 114px 0 60px; 
+           padding: 114px 0 60px;
         }
         .logo-nn {
             max-width: 200px;
@@ -174,8 +174,8 @@
             margin-bottom: 32px;
         }
     }
-    @media (max-width: $bp1) { 
-        padding: 50px 0;    
+    @media (max-width: $bp1) {
+        padding: 50px 0;
         h2 {
             padding-right: 40px;
             &:after {
@@ -208,7 +208,7 @@
     }
     &__path {
         position: absolute;
-        pointer-events: none;  
+        pointer-events: none;
         path {
             animation: path-anim 1s linear both;
         }
@@ -217,7 +217,7 @@
             left: 0;
             path {
                 stroke-dasharray: 1223px;
-                stroke-dashoffset: 1223px;             
+                stroke-dashoffset: 1223px;
             }
         }
         &:nth-child(2) {
@@ -225,7 +225,7 @@
             right: 0;
             path {
                 stroke-dasharray: 915px;
-                stroke-dashoffset: 915px;             
+                stroke-dashoffset: 915px;
             }
         }
         @media (max-width: $bp2) {
@@ -370,7 +370,7 @@
         margin-left: calc(100% / 24);
         margin-right: calc(100% / 24 * 2);
     }
-	&__left {        
+	&__left {
         min-height: 704px;
         border-radius: 60px;
         background: $carmine;

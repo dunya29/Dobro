@@ -1,0 +1,173 @@
+.main-steps {
+    &__wrapper {
+        padding: 100px 24px;
+        background: $white-blue;
+        border-radius: 60px;
+        @media (max-width: $bp1) {
+            padding: 56px 24px;
+        }
+        @media (max-width: $bp2) {
+            padding: 40px 24px;
+        }
+        @media (max-width: $bp4) {
+            border-radius: 40px;
+        }
+    }
+    &__items {
+        .item-step {
+            padding-bottom: 360px;
+            &:nth-child(2n) {
+                .item-step__info {
+                    max-width: 100%;
+                    margin-left: 53.8%;
+                }
+                .item-step__path {
+                    bottom: -55px;
+                }
+            }
+            &:nth-last-child(2) {
+                min-height: 310px;
+                padding-bottom: 50px;
+                .item-step__path {
+                    bottom: -70px;
+                }
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+            @media (max-width: $bp1) {
+                padding-bottom: 250px;
+                &:nth-last-child(2) {
+                    min-height: 220px;
+                    .item-step__path {
+                        bottom: -60px;
+                    }
+                }
+            }
+            @media (max-width: $bp2) {
+                &:nth-child(2n) {
+                    .item-step__path {
+                        bottom: -40px;
+                    }
+                    .item-step__info {
+                        margin-left: 53.9%;
+                    }
+                }
+                &:nth-last-child(2) {
+                    .item-step__path {
+                        bottom: -48px;
+                    }
+                }
+            }
+            @media (max-width: $bp3) {
+                padding-bottom: 50px;
+                &:nth-last-child(2) {
+                    min-height: 0;
+                }
+                &:nth-child(2n) {
+                    .item-step__info {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: $bp2) {
+        .page-top {
+            margin-left: calc(100% / 24 - 24px);
+            text-align: left;
+        }
+        &__inner {
+            max-width: calc(100% / 24 * 19);
+            margin: 0 auto;
+        }
+    }
+}
+.item-step {
+    position: relative;
+    &__path {
+        position: absolute;
+        bottom: -22px;
+        left: 0;
+        width: 100%;
+        top: 20px;
+        pointer-events: none;
+        svg {
+            width: 100%;
+            height: 100%;
+            max-height: none;
+        }
+    }
+    &__info {
+        max-width: 62.4%;
+        display: flex;
+        align-items: flex-start;
+    }
+    &__nmb {
+        flex-shrink: 0;
+        display: flex;
+        align-items: flex-start;
+        margin-right: 20px;
+    }
+    &__point {
+        flex-shrink: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: $carmine;
+        margin-top: 20px;
+        margin-right: 24px;
+    }
+    &__content {
+        p {
+            color: $pol-blue;
+            span {
+                color: $carmine;
+                font-weight: 500;
+            }
+        }
+    }
+    &--action {
+        p {
+            font-weight: 500;
+        }
+    }
+    @media (max-width: $bp1) {
+        &__info {
+            max-width: 65%;
+        }
+    }
+    @media (max-width: $bp2) {
+        &__path {
+            bottom: -16px;
+            top: 12px;
+        }
+        &__info {
+            max-width: 60%;
+        }
+        &__point {
+            width: 12px;
+            height: 12px;
+            margin-top: 12px;
+            margin-right: 12px;
+        }
+    }
+    @media (max-width: $bp3) {
+        &__info {
+            max-width: 100%;
+        }
+        &__path {
+            display: none;
+        }
+        &__point {
+            width: 10px;
+            height: 10px;
+            margin-top: 8px;
+        }
+    }
+    @media (max-width: $bp5) {
+        .main-btn {
+            width: 100%;
+        }
+    }
+}

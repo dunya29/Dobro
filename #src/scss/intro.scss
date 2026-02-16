@@ -1,4 +1,3 @@
-
 .intro {
   padding: 240px 0 24px;
   position: relative;
@@ -7,17 +6,17 @@
     max-width: 760px;
     margin-bottom: 32px;
   }
-	&__inner {
+  &__inner {
     display: grid;
     grid-template-columns: 15fr 8fr;
     gap: 24px;
     align-items: end;
     margin-left: calc(100% / 24);
   }
-	&__content {
+  &__content {
     margin-bottom: 100px;
   }
-	&__items {
+  &__items {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -34,7 +33,7 @@
       }
     }
   }
-	&__card {
+  &__card {
     display: block;
     padding: 59px 56px;
     border: 1px solid #f9faff;
@@ -45,7 +44,7 @@
     &:hover {
       border-color: $carmine;
       &:before {
-        animation: heart-fadeup 3s forwards
+        animation: heart-fadeup 3s forwards;
       }
       .main-btn {
         box-shadow: 0 12px 34px 0 rgba(188, 37, 91, 0.26);
@@ -61,7 +60,7 @@
       top: -40px;
       right: 80px;
       opacity: 0;
-      transition: all .3s linear;
+      transition: all 0.3s linear;
     }
     &:last-child {
       margin-bottom: 0;
@@ -73,6 +72,23 @@
       max-width: 406px;
       color: $pol-blue;
       margin-bottom: 40px;
+    }
+  }
+  &__btns {
+    text-align: center;
+    margin: -13px -13px 45px;
+    &:last-child {
+      margin-bottom: -13px;
+    }
+    .btn {
+      margin: 13px;
+    }
+    @media (max-width: $bp5) {
+      margin: 0 0 36px;
+      .btn {
+        width: 100%;
+        margin: 0 0 12px;
+      }
     }
   }
   @media (max-width: $bp1) {
@@ -181,20 +197,20 @@
     &:nth-child(2) {
       animation: bg-anim 7.5s 2.5s linear infinite both;
     }
-    &:nth-child(3){
+    &:nth-child(3) {
       animation: bg-anim 7.5s linear infinite both;
     }
   }
 }
 .intro-stat {
   padding: 32px 38px;
-  border: 1px solid #F9FAFF;
+  border: 1px solid #f9faff;
   border-radius: 40px;
   background: rgba(233, 238, 255, 0.3);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-	&__item {
+  &__item {
     display: flex;
     flex-direction: column;
     margin: 16px 10px;
@@ -203,8 +219,8 @@
       white-space: nowrap;
     }
     span {
-        display: block;
-        color: $carmine;
+      display: block;
+      color: $carmine;
     }
   }
   @media (max-width: $bp1) {
@@ -242,7 +258,7 @@
   left: 39%;
   pointer-events: none;
   path {
-    transition: all .5s linear;
+    transition: all 0.5s linear;
     stroke-dasharray: 840px;
     stroke-dashoffset: 840px;
     animation: path-anim 1s linear both;
@@ -267,7 +283,7 @@
     min-height: 1300px;
   }
   h1 {
-      margin-bottom: 32px;
+    margin-bottom: 32px;
   }
   .container {
     flex: 1;
@@ -295,15 +311,16 @@
       align-self: end;
     }
   }
-  &__info, &__action {
-      display: flex;
-      align-items: center;
-      margin-bottom: -16px;
-      .main-btn {
-          white-space: nowrap;
-          margin-right: 32px;
-          margin-bottom: 16px;
-      }
+  &__info,
+  &__action {
+    display: flex;
+    align-items: center;
+    margin-bottom: -16px;
+    .main-btn {
+      white-space: nowrap;
+      margin-right: 32px;
+      margin-bottom: 16px;
+    }
   }
   &__info {
     flex-wrap: wrap;
@@ -321,60 +338,62 @@
       }
     }
   }
-  &__date, &__stat {
-      font-size: 16px;
-      color: $pol-blue;
-      text-align: center;
-      margin-bottom: 16px;
-      .h3 {
-          font-weight: 400;
-      }
+  &__date,
+  &__stat {
+    font-size: 16px;
+    color: $pol-blue;
+    text-align: center;
+    margin-bottom: 16px;
+    .h3 {
+      font-weight: 400;
+    }
   }
-  &__auth, &__logo {
-      margin-right: calc(100% / 7 + 12px);
+  &__auth,
+  &__logo {
+    margin-right: calc(100% / 7 + 12px);
   }
   &__auth {
-      display: grid;
-      grid-template-columns: 138px 1fr;
-      gap: 24px;
-      align-items: start;
-      margin-bottom: 40px;
-      .media-cover {
-          padding-top: 100%;
-          border-radius: 50%;
-      }
-      h4 {
-          align-self: center;
-      }
+    display: grid;
+    grid-template-columns: 138px 1fr;
+    gap: 24px;
+    align-items: start;
+    margin-bottom: 40px;
+    .media-cover {
+      padding-top: 100%;
+      border-radius: 50%;
+    }
+    h4 {
+      align-self: center;
+    }
   }
-  &__logo {     
-      &.media-contain {
-          padding-top: 29.73%;
-          //background: #D4DEFE;
-          img {
-              margin: auto 0;
-          }
-      }
+  &__logo {
+    &.media-contain {
+      padding-top: 29.73%;
+      //background: #D4DEFE;
       img {
-        max-height: 160px;
+        margin: auto 0;
       }
+    }
+    img {
+      max-height: 160px;
+    }
   }
   &__tags {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      margin: -8px -8px;
-      margin-top: auto;
-      span {
-        min-width: 108px;
-        text-align: center;
-        color: $pol-blue;
-        display: block;
-        padding: 15px 31px;
-        border-radius: 20px;
-        border: 1px solid $pol-blue;
-        margin: 8px;
-      }
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: -8px -8px;
+    margin-top: auto;
+    span {
+      min-width: 108px;
+      text-align: center;
+      color: $pol-blue;
+      display: block;
+      padding: 15px 31px;
+      border-radius: 20px;
+      border: 1px solid $pol-blue;
+      margin: 8px;
+    }
   }
   @media (max-width: $bp1) {
     padding-top: 180px;
@@ -392,12 +411,12 @@
       margin-bottom: 32px;
       margin-right: 0;
     }
-    &__logo {  
+    &__logo {
       img {
         max-height: 120px;
-      }     
+      }
       &.media-contain {
-          padding-top: 37.71%;
+        padding-top: 37.71%;
       }
     }
     &__tags {
@@ -406,7 +425,7 @@
         padding: 15px;
         margin: 4px;
       }
-  }
+    }
   }
   @media (max-width: $bp2) {
     &__row {
@@ -470,7 +489,8 @@
         margin-right: 10px;
       }
     }
-    &__stat, &__date {
+    &__stat,
+    &__date {
       font-size: 14px;
     }
     &__stat {
@@ -485,17 +505,17 @@
     }
   }
 }
-@keyframes heart-fadeup{
-    0% {
-      opacity: 1;
-    }
-    50% {
-      transform: translate(-0%, -700%);
-    }
-    100% {
-      opacity: 0;
-      transform: translate(-0%, -500%);
-    }
+@keyframes heart-fadeup {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-0%, -700%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-0%, -500%);
+  }
 }
 @keyframes bg-anim {
   0% {
@@ -519,7 +539,8 @@
     stroke-dashoffset: 0;
   }
 }
-.help-pg, .fund {
+.help-pg,
+.fund {
   @media (max-width: $bp4) {
     min-height: 0;
   }
