@@ -1067,9 +1067,8 @@ if (mainStepsItems && itemSteps.length) {
         },
         scrollTrigger: {
             trigger: mainStepsItems,
-            start: "top bottom-=200",
+            start: "top bottom-=30%",
             end: "bottom bottom",
-            markers: true,
             invalidateOnRefresh: true,
             markers: true
         },
