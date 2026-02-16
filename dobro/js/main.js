@@ -1070,7 +1070,6 @@ if (mainStepsItems && itemSteps.length) {
             start: "top bottom-=30%",
             end: "bottom bottom",
             invalidateOnRefresh: true,
-            markers: true
         },
     })
     itemSteps.forEach((item, idx) => {
