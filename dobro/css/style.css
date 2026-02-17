@@ -2655,10 +2655,14 @@ h6,
   max-width: 1161px;
 }
 
-.about__inner h1 {
+.about__content {
   max-width: 1065px;
   text-align: center;
   margin: 0 auto 60px;
+}
+
+.about__content p {
+  color: #B71351;
 }
 
 .fundraising h2 {
@@ -5515,7 +5519,8 @@ h6,
     max-width: 760px;
   }
 
-  .about__inner h1 {
+  .about__content {
+    max-width: 600px;
     margin-bottom: 48px;
   }
 
