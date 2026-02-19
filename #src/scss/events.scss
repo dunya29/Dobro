@@ -1,4 +1,5 @@
-.events, .news {
+.events,
+.news {
     .swiper {
         max-width: calc(100% / 24 * 22);
         margin: 0 auto;
@@ -7,7 +8,7 @@
     }
     &__items {
         display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 64px 24px;
     }
     @media (max-width: $bp1) {
@@ -20,7 +21,7 @@
             max-width: 100%;
         }
         &__items {
-            grid-template-columns:  repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 16px;
         }
     }
@@ -40,8 +41,9 @@
         }
     }
 }
-.item-event, .item-news {
-    border: 1px solid #F9FAFF;
+.item-event,
+.item-news {
+    border: 1px solid #f9faff;
     border-radius: 60px;
     @media (max-width: $bp1) {
         border-radius: 40px;
@@ -57,21 +59,22 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    transition: all .3s .3s linear;
+    transition: all 0.3s 0.3s linear;
     &:hover {
         border-color: transparent;
-        transition: all .3s linear;
-        .media-cover, .item-event__content {
+        transition: all 0.3s linear;
+        .media-cover,
+        .item-event__content {
             border-radius: 60px;
         }
         .item-event__content {
-            border-color:#F9FAFF;
+            border-color: #f9faff;
         }
     }
     .media-cover {
         padding-top: 80.35%;
         border-radius: 60px 60px 0 0;
-        transition: all .3s linear;
+        transition: all 0.3s linear;
     }
     &__content {
         padding: 32px 48px 48px;
@@ -82,7 +85,7 @@
         flex-direction: column;
         border-radius: 0 0 60px 60px;
         box-shadow: 0 16px 40px 0 rgba(202, 215, 250, 0.24);
-        transition: all .3s linear;
+        transition: all 0.3s linear;
         h3 {
             max-width: 304px;
             margin-bottom: 16px;
@@ -95,12 +98,13 @@
     }
     @media (max-width: $bp1) {
         &:hover {
-            .media-cover, .item-event__content {
+            .media-cover,
+            .item-event__content {
                 border-radius: 40px;
             }
         }
         .media-cover {
-            border-radius: 40px 40px 0 0
+            border-radius: 40px 40px 0 0;
         }
         &__content {
             padding: 16px 24px 32px;
@@ -133,7 +137,7 @@
     &__content {
         h3 {
             margin-bottom: 16px;
-            transition: all .3s linear;
+            transition: all 0.3s linear;
         }
         span {
             display: block;
@@ -156,8 +160,27 @@
             margin-bottom: 24px;
         }
         &__content {
-            span, h3 {
+            span,
+            h3 {
                 margin-bottom: 8px;
+            }
+        }
+    }
+}
+.news--ideas {
+    .item-news {
+        border-color: $carmine;
+        cursor: default;
+        &:hover {
+            .item-news__content h3 {
+                color: $maincolor;
+            }
+        }
+        @media (min-width: $bp1) {
+            &__content {
+                p {
+                    font-size: 18px;
+                }
             }
         }
     }
@@ -181,7 +204,7 @@
     }
     &__inner {
         border-radius: 60px;
-        border: 1px solid #F9FAFF;
+        border: 1px solid #f9faff;
         background: $white-blue;
         padding: 60px calc(100% / 24);
     }
@@ -205,7 +228,8 @@
         top: 120px;
     }
     @media (max-width: $bp1) {
-        &__date, &__img {
+        &__date,
+        &__img {
             margin-bottom: 32px;
         }
         &__sticky {
@@ -220,7 +244,7 @@
     }
     @media (max-width: $bp2) {
         &__inner {
-            border-radius: 40px
+            border-radius: 40px;
         }
         &__row {
             grid-template-columns: 19fr 5fr;
@@ -262,7 +286,7 @@
     .tabs {
         margin-bottom: 32px;
     }
-	&__items {
+    &__items {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 64px 140px;
@@ -299,7 +323,7 @@
         padding-top: 100%;
         border-radius: 50%;
     }
-	&__content {
+    &__content {
         h4 {
             font-weight: 500;
             color: $pol-blue;
@@ -317,7 +341,7 @@
     @media (max-width: $bp1) {
         align-items: start;
         &__content {
-           align-self: center;
+            align-self: center;
         }
     }
     @media (max-width: $bp4) {
@@ -333,7 +357,3 @@
         }
     }
 }
-
-
-
-
